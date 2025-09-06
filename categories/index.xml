@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on Serhat Giydiren</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://serhatgiydiren.com/categories/</link>
     <description>Recent content in Categories on Serhat Giydiren</description>
     <generator>Hugo -- 0.149.1</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 02 Sep 2025 18:07:18 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://serhatgiydiren.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI Safety</title>
-      <link>http://localhost:1313/categories/ai-safety/</link>
+      <link>https://serhatgiydiren.com/categories/ai-safety/</link>
       <pubDate>Tue, 02 Sep 2025 18:07:18 +0000</pubDate>
-      <guid>http://localhost:1313/categories/ai-safety/</guid>
+      <guid>https://serhatgiydiren.com/categories/ai-safety/</guid>
       <description></description>
     </item>
   </channel>

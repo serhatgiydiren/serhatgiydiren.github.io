@@ -2,24 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/categories/ai-safety/</loc>
+    <loc>https://serhatgiydiren.com/categories/ai-safety/</loc>
     <lastmod>2025-09-02T18:07:18+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ai-safety-diary-september-2-2025/</loc>
+    <loc>https://serhatgiydiren.com/ai-safety-diary-september-2-2025/</loc>
     <lastmod>2025-09-02T18:07:18+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://serhatgiydiren.com/categories/</loc>
     <lastmod>2025-09-02T18:07:18+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://serhatgiydiren.com/posts/</loc>
     <lastmod>2025-09-02T18:07:18+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://serhatgiydiren.com/</loc>
     <lastmod>2025-09-02T18:07:18+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ai-safety-diary-september-1-2025/</loc>
+    <loc>https://serhatgiydiren.com/ai-safety-diary-september-1-2025/</loc>
     <lastmod>2025-09-01T18:07:03+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://serhatgiydiren.com/ai-safety-diary-august-31-2025/</loc>
+    <lastmod>2025-08-31T18:06:49+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/</loc>
   </url>
 </urlset>
