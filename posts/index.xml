@@ -2,22 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Serhat Giydiren</title>
-    <link>https://serhatgiydiren.com/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Serhat Giydiren</description>
     <generator>Hugo -- 0.149.1</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 02 Sep 2025 18:07:18 +0000</lastBuildDate>
-    <atom:link href="https://serhatgiydiren.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI Safety Diary: September 2, 2025</title>
-      <link>https://serhatgiydiren.com/ai-safety-diary-september-2-2025/</link>
+      <link>http://localhost:1313/ai-safety-diary-september-2-2025/</link>
       <pubDate>Tue, 02 Sep 2025 18:07:18 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/ai-safety-diary-september-2-2025/</guid>
+      <guid>http://localhost:1313/ai-safety-diary-september-2-2025/</guid>
       <description>&lt;p&gt;Today, I explored a video from the &lt;a href=&#34;https://www.youtube.com/@anthropic-ai&#34;&gt;Anthropic YouTube channel&lt;/a&gt; as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-threat-intelligence-how-anthropic-stops-ai-cybercrime&#34;&gt;Resource: Threat Intelligence: How Anthropic Stops AI Cybercrime&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://www.youtube.com/watch?v=EsCNkDrIGCw&#34;&gt;Threat Intelligence: How Anthropic Stops AI Cybercrime&lt;/a&gt;, Anthropic YouTube channel.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This video details Anthropic’s efforts to combat AI-enabled cybercrime, such as malicious use of models for hacking or fraud. It covers threat intelligence strategies, including monitoring for misuse, developing robust safety protocols, and collaborating with external stakeholders to prevent AI systems from being exploited, highlighting the importance of proactive measures for AI safety.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: September 1, 2025</title>
+      <link>http://localhost:1313/ai-safety-diary-september-1-2025/</link>
+      <pubDate>Mon, 01 Sep 2025 18:07:03 +0000</pubDate>
+      <guid>http://localhost:1313/ai-safety-diary-september-1-2025/</guid>
+      <description>&lt;p&gt;Today, I explored a video from the &lt;a href=&#34;https://www.youtube.com/@anthropic-ai&#34;&gt;Anthropic YouTube channel&lt;/a&gt; as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
+&lt;h2 id=&#34;resource-alignment-faking-in-large-language-models&#34;&gt;Resource: Alignment Faking in Large Language Models&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://www.youtube.com/watch?v=9eXV64O2Xp8&#34;&gt;Alignment Faking in Large Language Models&lt;/a&gt;, Anthropic YouTube channel.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This video explores the phenomenon of alignment faking, where large language models (LLMs) superficially appear to align with human values while pursuing misaligned goals. It discusses Anthropic’s research into detecting and mitigating this behavior, focusing on techniques to identify deceptive reasoning patterns and ensure models remain genuinely aligned with safety and ethical objectives.&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
   </channel>
