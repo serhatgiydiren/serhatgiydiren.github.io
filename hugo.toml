@@ -1,0 +1,6 @@
+baseURL = "https://serhatgiydiren.com/"
+languageCode = 'en-us'
+title = "Serhat Giydiren"
+theme = "PaperMod"
+[permalinks]
+  posts = "/:slug/"
