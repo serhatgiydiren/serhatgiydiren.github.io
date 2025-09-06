@@ -4,7 +4,7 @@ title: 'About me'
 date: '2022-10-21T20:41:06+00:00'
 author: 'Serhat Giydiren'
 layout: page
-guid: 'https://serhatgiydiren.com/?page_id=293'
+permalink: /about/
 ---
 
 Hi, I'm Serhat.
