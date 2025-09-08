@@ -5,17 +5,15 @@ theme = "PaperMod"
 publishDir = "docs"
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"] # Arama özelliği için JSON output'u ekliyoruz
+  home = ["HTML", "RSS", "JSON"]
 
 [permalinks]
   posts = "/:slug/"
 
 [params]
-  favicon = "/favicon.svg"
-  # Önerilen yeni parametreler
   ShowCodeCopyButtons = true
   ShowReadingTime = true
-  defaultTheme = "auto" # 'dark' veya 'light' olarak da ayarlanabilir
+  defaultTheme = "auto"
 
   [params.homeInfoParams]
     Title = "Let's Talk About AI Safety, Computer Science"
