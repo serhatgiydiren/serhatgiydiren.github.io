@@ -11,6 +11,7 @@ publishDir = "docs"
   posts = "/:slug/"
 
 [params]
+  favicon = "/favicon.svg"
   # Önerilen yeni parametreler
   ShowCodeCopyButtons = true
   ShowReadingTime = true
