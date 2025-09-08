@@ -10,9 +10,9 @@
     <atom:link href="https://serhatgiydiren.com/categories/google-interview/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>3-way Partitioning &amp; Quick Select &amp; Quick Sort &amp; Find Kth Largest Element</title>
-      <link>https://serhatgiydiren.com/posts/3-way-partition-quick-select-quick-sort/</link>
+      <link>https://serhatgiydiren.com/3-way-partitioning-quick-select-quick-sort-find-kth-largest-element/</link>
       <pubDate>Sat, 01 Jan 2022 18:45:49 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/3-way-partition-quick-select-quick-sort/</guid>
+      <guid>https://serhatgiydiren.com/3-way-partitioning-quick-select-quick-sort-find-kth-largest-element/</guid>
       <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;struct bound
 {
  int lt, gt;

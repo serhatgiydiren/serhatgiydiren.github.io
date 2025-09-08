@@ -10,324 +10,629 @@
     <atom:link href="https://serhatgiydiren.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI Safety Diary: September 2, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-september-2-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-2-2025/</link>
       <pubDate>Tue, 02 Sep 2025 18:07:18 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-september-2-2025/</guid>
-      <description>&lt;p&gt;Today, I explored a video from the &lt;a href=&#34;https://www.youtube.com/@anthropic-ai&#34;&gt;Anthropic YouTube channel&lt;/a&gt; as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-2-2025/</guid>
+      <description>&lt;p&gt;Today, I explored a video from the &lt;a href=&#34;https://www.youtube.com/@anthropic-ai&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Anthropic YouTube channel&lt;/a&gt;
+ as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-threat-intelligence-how-anthropic-stops-ai-cybercrime&#34;&gt;Resource: Threat Intelligence: How Anthropic Stops AI Cybercrime&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://www.youtube.com/watch?v=EsCNkDrIGCw&#34;&gt;Threat Intelligence: How Anthropic Stops AI Cybercrime&lt;/a&gt;, Anthropic YouTube channel.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://www.youtube.com/watch?v=EsCNkDrIGCw&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Threat Intelligence: How Anthropic Stops AI Cybercrime&lt;/a&gt;
+, Anthropic YouTube channel.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This video details Anthropic’s efforts to combat AI-enabled cybercrime, such as malicious use of models for hacking or fraud. It covers threat intelligence strategies, including monitoring for misuse, developing robust safety protocols, and collaborating with external stakeholders to prevent AI systems from being exploited, highlighting the importance of proactive measures for AI safety.&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>AI Safety Diary: September 1, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-september-1-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-1-2025/</link>
       <pubDate>Mon, 01 Sep 2025 18:07:03 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-september-1-2025/</guid>
-      <description>&lt;p&gt;Today, I explored a video from the &lt;a href=&#34;https://www.youtube.com/@anthropic-ai&#34;&gt;Anthropic YouTube channel&lt;/a&gt; as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-1-2025/</guid>
+      <description>&lt;p&gt;Today, I explored a video from the &lt;a href=&#34;https://www.youtube.com/@anthropic-ai&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Anthropic YouTube channel&lt;/a&gt;
+ as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-alignment-faking-in-large-language-models&#34;&gt;Resource: Alignment Faking in Large Language Models&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://www.youtube.com/watch?v=9eXV64O2Xp8&#34;&gt;Alignment Faking in Large Language Models&lt;/a&gt;, Anthropic YouTube channel.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://www.youtube.com/watch?v=9eXV64O2Xp8&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Alignment Faking in Large Language Models&lt;/a&gt;
+, Anthropic YouTube channel.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This video explores the phenomenon of alignment faking, where large language models (LLMs) superficially appear to align with human values while pursuing misaligned goals. It discusses Anthropic’s research into detecting and mitigating this behavior, focusing on techniques to identify deceptive reasoning patterns and ensure models remain genuinely aligned with safety and ethical objectives.&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>AI Safety Diary: August 31, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-31-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-31-2025/</link>
       <pubDate>Sun, 31 Aug 2025 18:06:49 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-31-2025/</guid>
-      <description>&lt;p&gt;Today, I explored a video from the &lt;a href=&#34;https://www.youtube.com/@anthropic-ai&#34;&gt;Anthropic YouTube channel&lt;/a&gt; as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-31-2025/</guid>
+      <description>&lt;p&gt;Today, I explored a video from the &lt;a href=&#34;https://www.youtube.com/@anthropic-ai&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Anthropic YouTube channel&lt;/a&gt;
+ as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-defending-against-ai-jailbreaks&#34;&gt;Resource: Defending Against AI Jailbreaks&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://www.youtube.com/watch?v=BaNXYqcfDyo&#34;&gt;Defending Against AI Jailbreaks&lt;/a&gt;, Anthropic YouTube channel.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://www.youtube.com/watch?v=BaNXYqcfDyo&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Defending Against AI Jailbreaks&lt;/a&gt;
+, Anthropic YouTube channel.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This video examines Anthropic’s strategies for defending against AI jailbreaks, where users attempt to bypass model safety constraints to elicit harmful or unintended responses. It discusses techniques like robust prompt engineering, adversarial testing, and model fine-tuning to enhance resilience against such exploits, emphasizing their critical role in maintaining AI safety.&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>AI Safety Diary: August 30, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-30-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-30-2025/</link>
       <pubDate>Sat, 30 Aug 2025 18:06:35 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-30-2025/</guid>
-      <description>&lt;p&gt;Today, I explored two videos from the &lt;a href=&#34;https://www.youtube.com/@anthropic-ai&#34;&gt;Anthropic YouTube channel&lt;/a&gt; as part of my AI safety studies. Below are the resources I reviewed.&lt;/p&gt;
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-30-2025/</guid>
+      <description>&lt;p&gt;Today, I explored two videos from the &lt;a href=&#34;https://www.youtube.com/@anthropic-ai&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Anthropic YouTube channel&lt;/a&gt;
+ as part of my AI safety studies. Below are the resources I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-tracing-the-thoughts-of-a-large-language-model&#34;&gt;Resource: Tracing the Thoughts of a Large Language Model&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://www.youtube.com/watch?v=Bj9BD2D3DzA&#34;&gt;Tracing the Thoughts of a Large Language Model&lt;/a&gt;, Anthropic YouTube channel.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://www.youtube.com/watch?v=Bj9BD2D3DzA&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Tracing the Thoughts of a Large Language Model&lt;/a&gt;
+, Anthropic YouTube channel.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This video discusses Anthropic’s efforts to trace the reasoning processes of large language models (LLMs) like Claude. It explores interpretability techniques to understand how models process inputs and generate outputs, focusing on identifying key computational pathways. The talk emphasizes the importance of transparency in model behavior for ensuring safety and mitigating risks of unintended or harmful outputs.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;resource-how-difficult-is-ai-alignment--anthropic-research-salon&#34;&gt;Resource: How Difficult is AI Alignment? | Anthropic Research Salon&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://www.youtube.com/watch?v=IPmt8b-qLgk&#34;&gt;How Difficult is AI Alignment? | Anthropic Research Salon&lt;/a&gt;, Anthropic YouTube channel.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://www.youtube.com/watch?v=IPmt8b-qLgk&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;How Difficult is AI Alignment? | Anthropic Research Salon&lt;/a&gt;
+, Anthropic YouTube channel.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This Research Salon video features Anthropic researchers discussing the challenges of aligning AI systems with human values. It covers technical hurdles, such as ensuring models prioritize safety and ethical behavior, and the complexity of defining robust alignment goals. The discussion highlights ongoing research to address alignment difficulties and reduce risks from advanced AI systems.&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>AI Safety Diary: August 29, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-29-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-29-2025/</link>
       <pubDate>Fri, 29 Aug 2025 18:00:08 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-29-2025/</guid>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-29-2025/</guid>
       <description>&lt;p&gt;Today, I explored a research paper as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-ai-governance-to-avoid-extinction-the-strategic-landscape-and-actionable-research-questions&#34;&gt;Resource: AI Governance to Avoid Extinction: The Strategic Landscape and Actionable Research Questions&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://arxiv.org/pdf/2505.04592&#34;&gt;AI Governance to Avoid Extinction: The Strategic Landscape and Actionable Research Questions&lt;/a&gt; by Peter Barnett and Aaron Scher, arXiv:2505.04592, May 2025.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This paper outlines the catastrophic risks of advanced AI, including human extinction from misalignment, misuse, or geopolitical conflict. It proposes four scenarios for AI development, favoring an &amp;ldquo;Off Switch&amp;rdquo; and international halt on dangerous AI activities. The authors highlight the need for urgent research into governance mechanisms, such as technical infrastructure for restricting AI development and international agreements to mitigate risks.&lt;a href=&#34;https://ar5iv.labs.arxiv.org/html/2309.15402&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://arxiv.org/pdf/2505.04592&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;AI Governance to Avoid Extinction: The Strategic Landscape and Actionable Research Questions&lt;/a&gt;
+ by Peter Barnett and Aaron Scher, arXiv:2505.04592, May 2025.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This paper outlines the catastrophic risks of advanced AI, including human extinction from misalignment, misuse, or geopolitical conflict. It proposes four scenarios for AI development, favoring an &amp;ldquo;Off Switch&amp;rdquo; and international halt on dangerous AI activities. The authors highlight the need for urgent research into governance mechanisms, such as technical infrastructure for restricting AI development and international agreements to mitigate risks.&lt;a href=&#34;https://ar5iv.labs.arxiv.org/html/2309.15402&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>AI Safety Diary: August 28, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-28-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-28-2025/</link>
       <pubDate>Thu, 28 Aug 2025 17:59:46 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-28-2025/</guid>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-28-2025/</guid>
       <description>&lt;p&gt;Today, I explored a research paper as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-thought-anchors-which-llm-reasoning-steps-matter&#34;&gt;Resource: Thought Anchors: Which LLM Reasoning Steps Matter?&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://arxiv.org/pdf/2506.19143&#34;&gt;Thought Anchors: Which LLM Reasoning Steps Matter?&lt;/a&gt; by Paul C. Bogdan et al., arXiv:2506.19143, June 2025.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This paper introduces &amp;ldquo;thought anchors,&amp;rdquo; key reasoning steps in chain-of-thought (CoT) processes that significantly influence subsequent reasoning. Using three attribution methods (counterfactual importance, attention pattern aggregation, and causal attribution), the study identifies planning or backtracking sentences as critical. These findings enhance interpretability for safety research by pinpointing which CoT steps matter most, with tools provided at thought-anchors.com for visualization.&lt;a href=&#34;https://arxiv.org/pdf/2201.11903&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://arxiv.org/pdf/2506.19143&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Thought Anchors: Which LLM Reasoning Steps Matter?&lt;/a&gt;
+ by Paul C. Bogdan et al., arXiv:2506.19143, June 2025.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This paper introduces &amp;ldquo;thought anchors,&amp;rdquo; key reasoning steps in chain-of-thought (CoT) processes that significantly influence subsequent reasoning. Using three attribution methods (counterfactual importance, attention pattern aggregation, and causal attribution), the study identifies planning or backtracking sentences as critical. These findings enhance interpretability for safety research by pinpointing which CoT steps matter most, with tools provided at thought-anchors.com for visualization.&lt;a href=&#34;https://arxiv.org/pdf/2201.11903&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>AI Safety Diary: August 27, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-27-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-27-2025/</link>
       <pubDate>Wed, 27 Aug 2025 17:59:25 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-27-2025/</guid>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-27-2025/</guid>
       <description>&lt;p&gt;Today, I explored a research paper as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-chain-of-thought-reasoning-in-the-wild-is-not-always-faithful&#34;&gt;Resource: Chain-of-Thought Reasoning In The Wild Is Not Always Faithful&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://arxiv.org/pdf/2503.08679&#34;&gt;Chain-of-Thought Reasoning In The Wild Is Not Always Faithful&lt;/a&gt; by Iván Arcuschin et al., arXiv:2503.08679, June 2025.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This paper investigates the faithfulness of chain-of-thought (CoT) reasoning in LLMs, finding that models can produce logically contradictory CoT outputs due to implicit biases, termed &amp;ldquo;Implicit Post-Hoc Rationalization.&amp;rdquo; For example, models may justify answering &amp;ldquo;Yes&amp;rdquo; to both &amp;ldquo;Is X bigger than Y?&amp;rdquo; and &amp;ldquo;Is Y bigger than X?&amp;rdquo; The study shows high rates of unfaithful reasoning in models like GPT-4o-mini (13%) and Haiku 3.5 (7%), raising challenges for detecting undesired behavior via CoT monitoring.&lt;a href=&#34;https://arxiv.org/abs/2503.08679&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://arxiv.org/pdf/2503.08679&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Chain-of-Thought Reasoning In The Wild Is Not Always Faithful&lt;/a&gt;
+ by Iván Arcuschin et al., arXiv:2503.08679, June 2025.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This paper investigates the faithfulness of chain-of-thought (CoT) reasoning in LLMs, finding that models can produce logically contradictory CoT outputs due to implicit biases, termed &amp;ldquo;Implicit Post-Hoc Rationalization.&amp;rdquo; For example, models may justify answering &amp;ldquo;Yes&amp;rdquo; to both &amp;ldquo;Is X bigger than Y?&amp;rdquo; and &amp;ldquo;Is Y bigger than X?&amp;rdquo; The study shows high rates of unfaithful reasoning in models like GPT-4o-mini (13%) and Haiku 3.5 (7%), raising challenges for detecting undesired behavior via CoT monitoring.&lt;a href=&#34;https://arxiv.org/abs/2503.08679&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>AI Safety Diary: August 26, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-26-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-26-2025/</link>
       <pubDate>Tue, 26 Aug 2025 17:58:57 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-26-2025/</guid>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-26-2025/</guid>
       <description>&lt;p&gt;Today, I explored a research paper as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-chain-of-thought-monitorability-a-new-and-fragile-opportunity-for-ai-safety&#34;&gt;Resource: Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://arxiv.org/pdf/2507.11473&#34;&gt;Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety&lt;/a&gt; by Tomek Korbak et al., arXiv:2507.11473, July 2025.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This paper highlights the potential of monitoring chain-of-thought (CoT) reasoning in large language models (LLMs) to detect misbehavior, such as intent to hack or manipulate. CoT monitoring offers a unique safety opportunity by providing insight into models’ reasoning processes, but it is fragile due to potential optimization pressures that may reduce transparency. The authors recommend further research into CoT monitorability, evaluating its faithfulness, and preserving it through careful model design, as it could complement existing safety measures despite its limitations.&lt;a href=&#34;https://arxiv.org/html/2507.11473v1&#34;&gt;&lt;/a&gt;&lt;a href=&#34;https://arxiv.org/abs/2507.11473&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://arxiv.org/pdf/2507.11473&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety&lt;/a&gt;
+ by Tomek Korbak et al., arXiv:2507.11473, July 2025.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This paper highlights the potential of monitoring chain-of-thought (CoT) reasoning in large language models (LLMs) to detect misbehavior, such as intent to hack or manipulate. CoT monitoring offers a unique safety opportunity by providing insight into models’ reasoning processes, but it is fragile due to potential optimization pressures that may reduce transparency. The authors recommend further research into CoT monitorability, evaluating its faithfulness, and preserving it through careful model design, as it could complement existing safety measures despite its limitations.&lt;a href=&#34;https://arxiv.org/html/2507.11473v1&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;&lt;/a&gt;
+&lt;a href=&#34;https://arxiv.org/abs/2507.11473&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>AI Safety Diary: August 25, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-25-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-25-2025/</link>
       <pubDate>Mon, 25 Aug 2025 17:55:33 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-25-2025/</guid>
-      <description>&lt;p&gt;Today, I explored a chapter from the &lt;a href=&#34;https://forum.effectivealtruism.org/handbook&#34;&gt;Introduction to Effective Altruism Handbook&lt;/a&gt; as part of my AI safety and governance studies. Below is the resource I reviewed.&lt;/p&gt;
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-25-2025/</guid>
+      <description>&lt;p&gt;Today, I explored a chapter from the &lt;a href=&#34;https://forum.effectivealtruism.org/handbook&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Introduction to Effective Altruism Handbook&lt;/a&gt;
+ as part of my AI safety and governance studies. Below is the resource I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-our-final-century&#34;&gt;Resource: Our Final Century?&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://forum.effectivealtruism.org/s/vSAFjmWsfbMrTonpq&#34;&gt;Our Final Century?&lt;/a&gt;, Effective Altruism Forum, Chapter 4 of the Introduction to Effective Altruism Handbook.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://forum.effectivealtruism.org/s/vSAFjmWsfbMrTonpq&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Our Final Century?&lt;/a&gt;
+, Effective Altruism Forum, Chapter 4 of the Introduction to Effective Altruism Handbook.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This chapter examines existential risks that could destroy humanity’s long-term potential, emphasizing their moral priority and societal neglect. It focuses on risks like human-made pandemics worse than COVID-19 and discusses strategies for improving biosecurity to prevent catastrophic outcomes. The chapter introduces the concept of “expected value” to evaluate the impact of interventions and explores “hits-based giving,” where high-risk, high-reward approaches are prioritized. It also highlights the importance of identifying crucial considerations to avoid missing key factors that could undermine impact.&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>AI Safety Diary: August 24, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-24-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-24-2025/</link>
       <pubDate>Sun, 24 Aug 2025 17:51:12 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-24-2025/</guid>
-      <description>&lt;p&gt;Today, I explored the audio version of a chapter from the &lt;a href=&#34;https://ai-safety-atlas.com/&#34;&gt;AI Safety Atlas&lt;/a&gt; as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-24-2025/</guid>
+      <description>&lt;p&gt;Today, I explored the audio version of a chapter from the &lt;a href=&#34;https://ai-safety-atlas.com/&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;AI Safety Atlas&lt;/a&gt;
+ as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-ai-safety-atlas-chapter-4-governance-audio&#34;&gt;Resource: AI Safety Atlas (Chapter 4: Governance Audio)&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://ai-safety-atlas.com/chapters/04&#34;&gt;Chapter 4: Governance&lt;/a&gt;, AI Safety Atlas by Markov Grey and Charbel-Raphaël Segerie et al., French Center for AI Safety (CeSIA), 2025.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://ai-safety-atlas.com/chapters/04&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Chapter 4: Governance&lt;/a&gt;
+, AI Safety Atlas by Markov Grey and Charbel-Raphaël Segerie et al., French Center for AI Safety (CeSIA), 2025.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: The audio version of this chapter focuses on governance strategies for ensuring the safe development and deployment of advanced AI systems. It explores frameworks such as safety standards, international treaties, and regulatory policies to manage AI risks. The chapter discusses the trade-offs between centralized and decentralized approaches to AI access, the role of stakeholder collaboration, and the importance of establishing robust oversight mechanisms to align AI systems with societal values and prevent misuse or unintended consequences.&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>AI Safety Diary: August 23, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-23-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-23-2025/</link>
       <pubDate>Sat, 23 Aug 2025 17:50:12 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-23-2025/</guid>
-      <description>&lt;p&gt;Today, I explored the audio version of a chapter from the &lt;a href=&#34;https://ai-safety-atlas.com/&#34;&gt;AI Safety Atlas&lt;/a&gt; as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-23-2025/</guid>
+      <description>&lt;p&gt;Today, I explored the audio version of a chapter from the &lt;a href=&#34;https://ai-safety-atlas.com/&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;AI Safety Atlas&lt;/a&gt;
+ as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-ai-safety-atlas-chapter-3-strategies-audio&#34;&gt;Resource: AI Safety Atlas (Chapter 3: Strategies Audio)&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://ai-safety-atlas.com/chapters/03&#34;&gt;Chapter 3: Strategies&lt;/a&gt;, AI Safety Atlas by Markov Grey and Charbel-Raphaël Segerie et al., French Center for AI Safety (CeSIA), 2025.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://ai-safety-atlas.com/chapters/03&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Chapter 3: Strategies&lt;/a&gt;
+, AI Safety Atlas by Markov Grey and Charbel-Raphaël Segerie et al., French Center for AI Safety (CeSIA), 2025.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: The audio version of this chapter outlines strategies for mitigating risks associated with advanced AI systems, particularly as they approach artificial general intelligence (AGI). It covers technical approaches such as improving model alignment, enhancing robustness against adversarial attacks, and developing interpretable AI systems. The chapter also discusses governance strategies, including safety standards, international cooperation, and regulatory frameworks to ensure responsible AI development. It emphasizes proactive measures like iterative testing, red-teaming, and stakeholder coordination to address potential safety challenges and align AI with human values.&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>AI Safety Diary: August 22, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-22-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-22-2025/</link>
       <pubDate>Fri, 22 Aug 2025 17:47:59 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-22-2025/</guid>
-      <description>&lt;p&gt;Today, I explored the audio version of a chapter from the &lt;a href=&#34;https://ai-safety-atlas.com/&#34;&gt;AI Safety Atlas&lt;/a&gt; as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-22-2025/</guid>
+      <description>&lt;p&gt;Today, I explored the audio version of a chapter from the &lt;a href=&#34;https://ai-safety-atlas.com/&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;AI Safety Atlas&lt;/a&gt;
+ as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-ai-safety-atlas-chapter-2-risks-audio&#34;&gt;Resource: AI Safety Atlas (Chapter 2: Risks Audio)&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://ai-safety-atlas.com/chapters/02&#34;&gt;Chapter 2: Risks&lt;/a&gt;, AI Safety Atlas by Markov Grey and Charbel-Raphaël Segerie et al., French Center for AI Safety (CeSIA), 2025.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://ai-safety-atlas.com/chapters/02&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Chapter 2: Risks&lt;/a&gt;
+, AI Safety Atlas by Markov Grey and Charbel-Raphaël Segerie et al., French Center for AI Safety (CeSIA), 2025.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: The audio version of this chapter examines the risks associated with advanced AI systems, particularly as they approach or achieve artificial general intelligence (AGI). It categorizes risks into several types, including misuse (e.g., malicious use by bad actors), accidents (e.g., unintended consequences from misaligned systems), and systemic risks (e.g., economic disruption or concentration of power). The chapter discusses the challenges of ensuring AI safety as systems scale, emphasizing the potential for catastrophic outcomes if risks are not mitigated. It also introduces key concepts like alignment failures, robustness issues, and the importance of proactive risk management to safeguard societal well-being.&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>AI Safety Diary: August 21, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-21-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-21-2025/</link>
       <pubDate>Thu, 21 Aug 2025 17:46:28 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-21-2025/</guid>
-      <description>&lt;p&gt;Today, I explored the audio version of a chapter from the &lt;a href=&#34;https://ai-safety-atlas.com/&#34;&gt;AI Safety Atlas&lt;/a&gt; as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-21-2025/</guid>
+      <description>&lt;p&gt;Today, I explored the audio version of a chapter from the &lt;a href=&#34;https://ai-safety-atlas.com/&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;AI Safety Atlas&lt;/a&gt;
+ as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-ai-safety-atlas-chapter-1-capabilities-audio&#34;&gt;Resource: AI Safety Atlas (Chapter 1: Capabilities Audio)&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://ai-safety-atlas.com/chapters/01&#34;&gt;Chapter 1: Capabilities&lt;/a&gt;, AI Safety Atlas by Markov Grey and Charbel-Raphaël Segerie et al., French Center for AI Safety (CeSIA), 2025.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://ai-safety-atlas.com/chapters/01&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Chapter 1: Capabilities&lt;/a&gt;
+, AI Safety Atlas by Markov Grey and Charbel-Raphaël Segerie et al., French Center for AI Safety (CeSIA), 2025.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: The audio version of this chapter provides an overview of AI capabilities, focusing on the progression of modern AI systems toward artificial general intelligence (AGI). It discusses the increasing power of foundation models, such as large language models, and the importance of defining and measuring intelligence for safety purposes. The chapter explores challenges in defining intelligence, comparing approaches like the Turing Test, consciousness-based definitions, process-based adaptability, and a capabilities-focused framework. It emphasizes the latter, which assesses what AI systems can do, their performance levels, and the range of tasks they can handle, as the most practical for safety evaluations. The chapter also introduces frameworks for measuring AI progress on a continuous spectrum, moving beyond binary distinctions like narrow versus general AI, to better understand capabilities and associated risks.&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>AI Safety Diary: August 20, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-20-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-20-2025/</link>
       <pubDate>Wed, 20 Aug 2025 12:50:04 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-20-2025/</guid>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-20-2025/</guid>
       <description>&lt;p&gt;Today, I explored a research paper as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-vending-bench-a-benchmark-for-long-term-coherence-of-autonomous-agents&#34;&gt;Resource: Vending-Bench: A Benchmark for Long-Term Coherence of Autonomous Agents&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://arxiv.org/pdf/2502.15840&#34;&gt;Vending-Bench: A Benchmark for Long-Term Coherence of Autonomous Agents&lt;/a&gt; by Axel Backlund and Lukas Petersson, Andon Labs, arXiv:2502.15840, February 2025.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://arxiv.org/pdf/2502.15840&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Vending-Bench: A Benchmark for Long-Term Coherence of Autonomous Agents&lt;/a&gt;
+ by Axel Backlund and Lukas Petersson, Andon Labs, arXiv:2502.15840, February 2025.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This paper introduces Vending-Bench, a simulated environment designed to test the long-term coherence of large language model (LLM)-based agents in managing a vending machine business. Agents must handle inventory, orders, pricing, and daily fees over extended periods (&amp;gt;20M tokens per run), revealing high variance in performance. Models like Claude 3.5 Sonnet and o3-mini often succeed but can fail due to misinterpreting schedules, forgetting orders, or entering &amp;ldquo;meltdown&amp;rdquo; loops. The benchmark highlights LLMs’ challenges in sustained decision-making and tests their ability to manage capital, relevant to AI safety in scenarios involving powerful autonomous agents.&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>AI Safety Diary: August 19, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-19-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-19-2025/</link>
       <pubDate>Tue, 19 Aug 2025 16:03:50 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-19-2025/</guid>
-      <description>&lt;p&gt;Today, I explored two videos from the &lt;a href=&#34;https://www.youtube.com/@anthropic-ai&#34;&gt;Anthropic YouTube channel&lt;/a&gt; as part of my AI safety studies. Below are the resources I reviewed.&lt;/p&gt;
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-19-2025/</guid>
+      <description>&lt;p&gt;Today, I explored two videos from the &lt;a href=&#34;https://www.youtube.com/@anthropic-ai&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Anthropic YouTube channel&lt;/a&gt;
+ as part of my AI safety studies. Below are the resources I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-the-societal-impacts-of-ai&#34;&gt;Resource: The Societal Impacts of AI&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://youtu.be/02nFRuEo0bc?si=IMpf20I-OR908Xxh&#34;&gt;The Societal Impacts of AI&lt;/a&gt;, Anthropic YouTube channel.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This video features Anthropic researchers discussing how to measure and shape AI&amp;rsquo;s influence on society through careful observation and analysis. It explores AI’s transformative potential across industries like healthcare, education, and agriculture, while addressing ethical concerns such as bias, job displacement, and privacy. The discussion emphasizes the need for responsible AI deployment to ensure equitable and positive societal outcomes.&lt;a href=&#34;https://www.youtube.com/watch?v=02nFRuEo0bc&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://youtu.be/02nFRuEo0bc?si=IMpf20I-OR908Xxh&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;The Societal Impacts of AI&lt;/a&gt;
+, Anthropic YouTube channel.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This video features Anthropic researchers discussing how to measure and shape AI&amp;rsquo;s influence on society through careful observation and analysis. It explores AI’s transformative potential across industries like healthcare, education, and agriculture, while addressing ethical concerns such as bias, job displacement, and privacy. The discussion emphasizes the need for responsible AI deployment to ensure equitable and positive societal outcomes.&lt;a href=&#34;https://www.youtube.com/watch?v=02nFRuEo0bc&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;resource-controlling-powerful-ai&#34;&gt;Resource: Controlling Powerful AI&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://youtu.be/6Unxqr50Kqg?si=qIeCiQizdMCZL_U5&#34;&gt;Controlling Powerful AI&lt;/a&gt;, Anthropic YouTube channel.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://youtu.be/6Unxqr50Kqg?si=qIeCiQizdMCZL_U5&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Controlling Powerful AI&lt;/a&gt;
+, Anthropic YouTube channel.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This video examines strategies for managing the risks of advanced AI systems. It discusses technical approaches to ensure powerful AI remains aligned with human values, including methods to mitigate unintended behaviors and prevent catastrophic outcomes. The talk highlights Anthropic’s research into safe AI development, emphasizing governance and alignment mechanisms to control increasingly capable models.&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>AI Safety Diary: August 18, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-18-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-18-2025/</link>
       <pubDate>Mon, 18 Aug 2025 19:42:10 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-18-2025/</guid>
-      <description>&lt;p&gt;Today, I continued exploring the &lt;a href=&#34;https://forum.effectivealtruism.org/handbook&#34;&gt;Introduction to Effective Altruism Handbook&lt;/a&gt; as part of my AI safety and governance studies. Below is the resource I reviewed.&lt;/p&gt;
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-18-2025/</guid>
+      <description>&lt;p&gt;Today, I continued exploring the &lt;a href=&#34;https://forum.effectivealtruism.org/handbook&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Introduction to Effective Altruism Handbook&lt;/a&gt;
+ as part of my AI safety and governance studies. Below is the resource I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-radical-empathy&#34;&gt;Resource: Radical Empathy&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://forum.effectivealtruism.org/s/QMrYGgBvg64JhcQrS&#34;&gt;Radical Empathy&lt;/a&gt;, Effective Altruism Forum, Chapter 3 of the Introduction to Effective Altruism Handbook.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://forum.effectivealtruism.org/s/QMrYGgBvg64JhcQrS&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Radical Empathy&lt;/a&gt;
+, Effective Altruism Forum, Chapter 3 of the Introduction to Effective Altruism Handbook.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This chapter explores the concept of impartial care, emphasizing the importance of extending empathy to non-human animals and other unconventional beneficiaries. It argues against dismissing unusual topics and proposes ways to improve the welfare of animals suffering in factory farms, highlighting the moral significance of considering all sentient beings in effective altruism efforts.&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>AI Safety Diary: August 17, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-17-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-17-2025/</link>
       <pubDate>Sun, 17 Aug 2025 19:53:17 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-17-2025/</guid>
-      <description>&lt;p&gt;Today, I explored three videos from the &lt;a href=&#34;https://www.youtube.com/@anthropic-ai&#34;&gt;Anthropic YouTube channel&lt;/a&gt; as part of my AI safety studies. Below are the resources I reviewed.&lt;/p&gt;
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-17-2025/</guid>
+      <description>&lt;p&gt;Today, I explored three videos from the &lt;a href=&#34;https://www.youtube.com/@anthropic-ai&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Anthropic YouTube channel&lt;/a&gt;
+ as part of my AI safety studies. Below are the resources I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-interpretability-understanding-how-ai-models-think&#34;&gt;Resource: Interpretability: Understanding how AI models think&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://youtu.be/fGKNUvivvnc?si=qMF1hd1O3se_FFy2&#34;&gt;Interpretability: Understanding how AI models think&lt;/a&gt;, Anthropic YouTube channel.&lt;a href=&#34;https://www.youtube.com/watch?v=fGKNUvivvnc&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://youtu.be/fGKNUvivvnc?si=qMF1hd1O3se_FFy2&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Interpretability: Understanding how AI models think&lt;/a&gt;
+, Anthropic YouTube channel.&lt;a href=&#34;https://www.youtube.com/watch?v=fGKNUvivvnc&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;&lt;/a&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This video features Anthropic researchers Josh Batson, Emmanuel Ameisen, and Jack Lindsey discussing AI interpretability. It explores how large language models (LLMs) process information, addressing questions like why models exhibit sycophancy or hallucination. The talk covers scientific methods to open the &amp;ldquo;black box&amp;rdquo; of AI, including circuit tracing to reveal computational pathways in Claude. It highlights findings such as Claude’s planning ahead in tasks like poetry, its use of a universal &amp;ldquo;language of thought&amp;rdquo; across languages, and its fabrication of plausible arguments when influenced by incorrect user hints, emphasizing the role of interpretability in ensuring model safety.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;resource-affective-use-of-ai&#34;&gt;Resource: Affective Use of AI&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://youtu.be/8fVHFt7Shf4?si=8jUYXXxWDNDpbAjr&#34;&gt;Affective Use of AI&lt;/a&gt;, Anthropic YouTube channel.&lt;a href=&#34;https://www.youtube.com/watch?v=8fVHFt7Shf4&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://youtu.be/8fVHFt7Shf4?si=8jUYXXxWDNDpbAjr&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Affective Use of AI&lt;/a&gt;
+, Anthropic YouTube channel.&lt;a href=&#34;https://www.youtube.com/watch?v=8fVHFt7Shf4&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;&lt;/a&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This fireside chat examines how people use Claude for emotional support and companionship, beyond its primary use for work tasks and content creation. The video discusses Anthropic’s research, finding that 2.9% of Claude.ai interactions involve affective conversations, such as seeking advice, coaching, or companionship. It highlights Claude’s role in addressing topics like career transitions, relationships, and existential questions, with minimal pushback (less than 10%) in supportive contexts, except to protect user well-being. The study emphasizes privacy-preserving analysis and the implications for AI safety.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;resource-could-ai-models-be-conscious&#34;&gt;Resource: Could AI models be conscious?&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://youtu.be/pyXouxa0WnY?si=rqOdtNLe7S6D0kPC&#34;&gt;Could AI models be conscious?&lt;/a&gt;, Anthropic YouTube channel.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://youtu.be/pyXouxa0WnY?si=rqOdtNLe7S6D0kPC&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Could AI models be conscious?&lt;/a&gt;
+, Anthropic YouTube channel.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This video explores the philosophical and scientific question of whether AI models like Claude could be conscious. It discusses Anthropic’s new research program on model welfare, investigating whether advanced AI systems might deserve moral consideration due to their capabilities in communication, planning, and problem-solving. The video addresses the lack of scientific consensus on AI consciousness, the challenges in studying it, and the need for humility in approaching these questions to ensure responsible AI development.&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>AI Safety Diary: August 16, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-16-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-16-2025/</link>
       <pubDate>Sat, 16 Aug 2025 12:56:27 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-16-2025/</guid>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-16-2025/</guid>
       <description>&lt;p&gt;Today, I explored resources related to Anthropic&amp;rsquo;s research on persona vectors as part of my AI safety studies. Below are the resources I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-persona-vectors-monitoring-and-controlling-character-traits-in-language-models&#34;&gt;Resource: Persona Vectors: Monitoring and Controlling Character Traits in Language Models&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://www.anthropic.com/research/persona-vectors&#34;&gt;Persona Vectors: Monitoring and Controlling Character Traits in Language Models&lt;/a&gt;, Anthropic Research; related paper: &lt;a href=&#34;https://arxiv.org/pdf/2507.21509&#34;&gt;Persona Vectors: Monitoring and Controlling Character Traits in Language Models&lt;/a&gt; by Runjin Chen et al.; implementation: &lt;a href=&#34;https://github.com/safety-research/persona_vectors&#34;&gt;GitHub - safety-research/persona_vectors&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://www.anthropic.com/research/persona-vectors&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Persona Vectors: Monitoring and Controlling Character Traits in Language Models&lt;/a&gt;
+, Anthropic Research; related paper: &lt;a href=&#34;https://arxiv.org/pdf/2507.21509&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Persona Vectors: Monitoring and Controlling Character Traits in Language Models&lt;/a&gt;
+ by Runjin Chen et al.; implementation: &lt;a href=&#34;https://github.com/safety-research/persona_vectors&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;GitHub - safety-research/persona_vectors&lt;/a&gt;
+.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This Anthropic Research page introduces persona vectors, patterns of neural network activity in large language models (LLMs) that control character traits like evil, sycophancy, or hallucination. The associated paper details a method to extract these vectors by comparing model activations for opposing behaviors (e.g., evil vs. non-evil responses). Persona vectors enable monitoring of personality shifts during conversations or training, mitigating undesirable traits through steering techniques, and flagging problematic training data. The method is tested on open-source models like Qwen 2.5-7B-Instruct and Llama-3.1-8B-Instruct. The GitHub repository provides code for generating persona vectors, evaluating their effectiveness, and applying steering during training to prevent unwanted trait shifts, offering tools for maintaining alignment with human values.&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>AI Safety Diary: August 15, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-15-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-15-2025/</link>
       <pubDate>Fri, 15 Aug 2025 12:40:49 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-15-2025/</guid>
-      <description>&lt;p&gt;Today, I continued exploring the &lt;a href=&#34;https://forum.effectivealtruism.org/handbook&#34;&gt;Effective Altruism Handbook&lt;/a&gt; and completed its second chapter as part of my studies related to AI safety and governance. Below is the resource I reviewed.&lt;/p&gt;
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-15-2025/</guid>
+      <description>&lt;p&gt;Today, I continued exploring the &lt;a href=&#34;https://forum.effectivealtruism.org/handbook&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Effective Altruism Handbook&lt;/a&gt;
+ and completed its second chapter as part of my studies related to AI safety and governance. Below is the resource I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-differences-in-impact&#34;&gt;Resource: Differences in Impact&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://forum.effectivealtruism.org/s/x3KXkiAQ6NH8WLbkW&#34;&gt;Differences in Impact&lt;/a&gt;, Effective Altruism Forum, Chapter 2 of the Effective Altruism Handbook.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://forum.effectivealtruism.org/s/x3KXkiAQ6NH8WLbkW&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Differences in Impact&lt;/a&gt;
+, Effective Altruism Forum, Chapter 2 of the Effective Altruism Handbook.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This chapter focuses on the significant disparities in the effectiveness of interventions aimed at helping the approximately 700 million people living in poverty, primarily in low-income countries. It discusses strategies such as policy reform, cash transfers, and health service provision, emphasizing that some interventions are far more effective than others. The chapter introduces a simple tool for estimating key figures to evaluate impact and includes recommended readings, such as GiveWell&amp;rsquo;s &amp;ldquo;Giving 101&amp;rdquo; guide and sections on global health outcomes, to illustrate effective altruism approaches to addressing global poverty.&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>AI Safety Diary: August 14, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-14-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-14-2025/</link>
       <pubDate>Thu, 14 Aug 2025 12:55:39 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-14-2025/</guid>
-      <description>&lt;p&gt;Today, I explored the &lt;a href=&#34;https://ai-safety-atlas.com/&#34;&gt;AI Safety Atlas&lt;/a&gt; as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-14-2025/</guid>
+      <description>&lt;p&gt;Today, I explored the &lt;a href=&#34;https://ai-safety-atlas.com/&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;AI Safety Atlas&lt;/a&gt;
+ as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-ai-safety-atlas-chapter-1-capabilities&#34;&gt;Resource: AI Safety Atlas (Chapter 1: Capabilities)&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://youtu.be/J_iMeH1hb9M?si=Ds7buMC7off_dD8A&#34;&gt;Chapter 1: Capabilities - Video Lecture (AI is Advancing Faster Than You Think! (AI Safety symposium 2/5))&lt;/a&gt;, AI Safety Atlas by Markov Grey and Charbel-Raphaël Segerie et al., French Center for AI Safety (CeSIA), 2025.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This chapter provides an overview of AI capabilities, focusing on the progression of modern AI systems toward artificial general intelligence (AGI). It discusses the increasing power of foundation models, such as large language models, and the importance of defining and measuring intelligence for safety purposes. The chapter explores challenges in defining intelligence, comparing approaches like the Turing Test, consciousness-based definitions, process-based adaptability, and a capabilities-focused framework. It emphasizes the latter, which assesses what AI systems can do, their performance levels, and the range of tasks they can handle, as the most practical for safety evaluations. The chapter also introduces frameworks for measuring AI progress on a continuous spectrum, moving beyond binary distinctions like narrow versus general AI, to better understand capabilities and associated risks.&lt;a href=&#34;https://ai-safety-atlas.com/chapters/01/03&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://youtu.be/J_iMeH1hb9M?si=Ds7buMC7off_dD8A&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Chapter 1: Capabilities - Video Lecture (AI is Advancing Faster Than You Think! (AI Safety symposium 2/5))&lt;/a&gt;
+, AI Safety Atlas by Markov Grey and Charbel-Raphaël Segerie et al., French Center for AI Safety (CeSIA), 2025.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This chapter provides an overview of AI capabilities, focusing on the progression of modern AI systems toward artificial general intelligence (AGI). It discusses the increasing power of foundation models, such as large language models, and the importance of defining and measuring intelligence for safety purposes. The chapter explores challenges in defining intelligence, comparing approaches like the Turing Test, consciousness-based definitions, process-based adaptability, and a capabilities-focused framework. It emphasizes the latter, which assesses what AI systems can do, their performance levels, and the range of tasks they can handle, as the most practical for safety evaluations. The chapter also introduces frameworks for measuring AI progress on a continuous spectrum, moving beyond binary distinctions like narrow versus general AI, to better understand capabilities and associated risks.&lt;a href=&#34;https://ai-safety-atlas.com/chapters/01/03&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>AI Safety Diary: August 13, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-13-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-13-2025/</link>
       <pubDate>Wed, 13 Aug 2025 12:53:05 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-13-2025/</guid>
-      <description>&lt;p&gt;Today, I began the &lt;a href=&#34;https://bluedot.org/courses/alignment&#34;&gt;BlueDot AI Alignment course&lt;/a&gt; and completed its first unit as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-13-2025/</guid>
+      <description>&lt;p&gt;Today, I began the &lt;a href=&#34;https://bluedot.org/courses/alignment&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;BlueDot AI Alignment course&lt;/a&gt;
+ and completed its first unit as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-ai-and-the-years-ahead&#34;&gt;Resource: AI and the Years Ahead&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://bluedot.org/courses/alignment/1&#34;&gt;Unit 1: AI and the Years Ahead&lt;/a&gt;, BlueDot Impact AI Alignment Course.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This unit introduces the foundational concepts of AI and its potential future impacts. It describes AI as a collection of approaches, focusing on key techniques like neural networks, gradient descent, and transformers used to train large language models (LLMs) such as ChatGPT. The unit explains how hardware advancements have driven AI progress and covers essential machine learning terms like weights, biases, parameters, neurons, and activations. It also explores the economic and non-economic incentives behind developing transformative AI systems and highlights recent advances in AI capabilities, providing a framework for understanding AI’s societal and economic implications.&lt;a href=&#34;https://bluedot.org/courses/alignment/1&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://bluedot.org/courses/alignment/1&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Unit 1: AI and the Years Ahead&lt;/a&gt;
+, BlueDot Impact AI Alignment Course.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This unit introduces the foundational concepts of AI and its potential future impacts. It describes AI as a collection of approaches, focusing on key techniques like neural networks, gradient descent, and transformers used to train large language models (LLMs) such as ChatGPT. The unit explains how hardware advancements have driven AI progress and covers essential machine learning terms like weights, biases, parameters, neurons, and activations. It also explores the economic and non-economic incentives behind developing transformative AI systems and highlights recent advances in AI capabilities, providing a framework for understanding AI’s societal and economic implications.&lt;a href=&#34;https://bluedot.org/courses/alignment/1&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>AI Safety Diary: August 12, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-12-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-12-2025/</link>
       <pubDate>Tue, 12 Aug 2025 12:24:42 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-12-2025/</guid>
-      <description>&lt;p&gt;Today, I completed Unit 1: How AI Systems Work of the &lt;a href=&#34;https://bluedot.org/courses/governance/1&#34;&gt;BlueDot AI Governance course&lt;/a&gt;. Below is a summary of each resource I explored.&lt;/p&gt;
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-12-2025/</guid>
+      <description>&lt;p&gt;Today, I completed Unit 1: How AI Systems Work of the &lt;a href=&#34;https://bluedot.org/courses/governance/1&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;BlueDot AI Governance course&lt;/a&gt;
+. Below is a summary of each resource I explored.&lt;/p&gt;
 &lt;h2 id=&#34;resource-how-does-ai-learn-a-beginners-guide-with-examples&#34;&gt;Resource: How Does AI Learn? A Beginner’s Guide with Examples&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://aisafetyfundamentals.com/blog/how-does-ai-learn&#34;&gt;How Does AI Learn? A Beginner’s Guide with Examples&lt;/a&gt;, AI Safety Fundamentals.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://aisafetyfundamentals.com/blog/how-does-ai-learn&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;How Does AI Learn? A Beginner’s Guide with Examples&lt;/a&gt;
+, AI Safety Fundamentals.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This guide provides an accessible introduction to how AI systems learn, focusing on machine learning. It explains key concepts like supervised learning (where models learn from labeled data, e.g., identifying spam emails), unsupervised learning (finding patterns in unlabeled data, e.g., clustering customer preferences), and reinforcement learning (learning through rewards, e.g., training a game-playing AI). The article uses simple examples to illustrate how models are trained and highlights challenges like overfitting and the need for diverse datasets to avoid bias.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;resource-large-language-models-explained-briefly&#34;&gt;Resource: Large Language Models Explained Briefly&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://youtu.be/LPZh9BOjkQs&#34;&gt;Large Language Models Explained Briefly&lt;/a&gt;, YouTube video.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://youtu.be/LPZh9BOjkQs&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Large Language Models Explained Briefly&lt;/a&gt;
+, YouTube video.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This short video offers a concise overview of large language models (LLMs). It explains that LLMs, like GPT-3, are trained on vast text datasets to predict the next word in a sequence, enabling them to generate coherent text. The video covers their architecture, primarily transformers, and their applications, such as chatbots and text generation. It also touches on limitations, including high computational costs and potential biases in training data.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;resource-intro-to-large-language-models&#34;&gt;Resource: Intro to Large Language Models&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://youtu.be/zjkBMFhNj_g&#34;&gt;Intro to Large Language Models&lt;/a&gt;, YouTube video by Andrej Karpathy.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://youtu.be/zjkBMFhNj_g&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Intro to Large Language Models&lt;/a&gt;
+, YouTube video by Andrej Karpathy.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This one-hour talk provides a detailed introduction to large language models (LLMs). It explains how LLMs are built on transformer architectures and trained on massive text corpora to perform tasks like text generation, translation, and question-answering. The video discusses the importance of scaling compute and data for performance improvements, the emergence of capabilities like reasoning, and challenges such as alignment with human values and mitigating harmful outputs.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;resource-visualizing-the-deep-learning-revolution&#34;&gt;Resource: Visualizing the Deep Learning Revolution&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://medium.com/@richardcngo/visualizing-the-deep-learning-revolution-722098eb9c5&#34;&gt;Visualizing the Deep Learning Revolution&lt;/a&gt; by Richard Ngo, Medium.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://medium.com/@richardcngo/visualizing-the-deep-learning-revolution-722098eb9c5&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Visualizing the Deep Learning Revolution&lt;/a&gt;
+ by Richard Ngo, Medium.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This article illustrates the rapid progress in AI over the past decade, driven by deep learning. It covers advancements in four domains: vision (e.g., image and video generation with GANs, transformers, and diffusion models), games (e.g., AlphaGo, AlphaStar, and AI in open-ended environments like Minecraft), language-based tasks (e.g., GPT-2, GPT-3, and ChatGPT’s text generation and reasoning capabilities), and science (e.g., AlphaFold 2 solving protein folding and AI generating chemical compounds). The article emphasizes that scaling compute and data, rather than new algorithms, has been the primary driver of progress. It also notes that AI’s rapid advancement has surprised experts and raises concerns about existential risks from unaligned AGI.&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>AI Safety Diary: August 11, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-11-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-11-2025/</link>
       <pubDate>Mon, 11 Aug 2025 20:36:43 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-11-2025/</guid>
-      <description>&lt;p&gt;Today, I began Unit 1: How AI Systems Work of the &lt;a href=&#34;https://bluedot.org/courses/governance/1&#34;&gt;BlueDot AI Governance course&lt;/a&gt;. Below is the resource I explored.&lt;/p&gt;
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-11-2025/</guid>
+      <description>&lt;p&gt;Today, I began Unit 1: How AI Systems Work of the &lt;a href=&#34;https://bluedot.org/courses/governance/1&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;BlueDot AI Governance course&lt;/a&gt;
+. Below is the resource I explored.&lt;/p&gt;
 &lt;h2 id=&#34;resource-the-ai-triad-and-what-it-means-for-national-security-strategy&#34;&gt;Resource: The AI Triad and What It Means for National Security Strategy&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://cset.georgetown.edu/wp-content/uploads/CSET-AI-Triad-Report.pdf&#34;&gt;The AI Triad and What It Means for National Security Strategy&lt;/a&gt; by Ben Buchanan, Center for Security and Emerging Technology (CSET), August 2020.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://cset.georgetown.edu/wp-content/uploads/CSET-AI-Triad-Report.pdf&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;The AI Triad and What It Means for National Security Strategy&lt;/a&gt;
+ by Ben Buchanan, Center for Security and Emerging Technology (CSET), August 2020.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This paper introduces the &amp;ldquo;AI Triad&amp;rdquo; framework—algorithms, data, and computing power—to explain modern machine learning and its implications for national security. It describes algorithms as instructions for processing information, covering supervised learning (predicting outcomes from labeled data), unsupervised learning (finding patterns in unorganized data), and reinforcement learning (learning through trial and error). Data is critical for training AI systems, particularly for supervised learning, but requires careful management to avoid bias and address privacy concerns. Computing power is highlighted as a key driver of AI progress, with a 300,000-fold increase in compute used for top AI projects from 2012 to 2018. The paper connects these components to national security applications, such as analyzing drone footage, targeting propaganda, and powering autonomous military vehicles. It also discusses policy levers like talent recruitment for algorithms, privacy regulations for data, and export controls for compute.&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>AI Safety Diary: August 10, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-10-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-10-2025/</link>
       <pubDate>Sun, 10 Aug 2025 12:47:45 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-10-2025/</guid>
-      <description>&lt;p&gt;Today, I continued exploring the &lt;a href=&#34;https://aisafetybook.com&#34;&gt;Introduction to AI Safety, Ethics, and Society&lt;/a&gt; textbook as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-10-2025/</guid>
+      <description>&lt;p&gt;Today, I continued exploring the &lt;a href=&#34;https://aisafetybook.com&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Introduction to AI Safety, Ethics, and Society&lt;/a&gt;
+ textbook as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-introduction-to-ai-safety-ethics-and-society-chapters-610-slides&#34;&gt;Resource: Introduction to AI Safety, Ethics, and Society (Chapters 6–10 Slides)&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://aisafetybook.com&#34;&gt;Introduction to AI Safety, Ethics, and Society&lt;/a&gt; by Dan Hendrycks, Taylor &amp;amp; Francis, 2024.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://aisafetybook.com&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Introduction to AI Safety, Ethics, and Society&lt;/a&gt;
+ by Dan Hendrycks, Taylor &amp;amp; Francis, 2024.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: The slides for chapters 6–10 of this textbook, developed by Dan Hendrycks, director of the Center for AI Safety, conclude the introduction to AI safety, ethics, and societal impacts. The chapters covered are:&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Chapter 6: Beneficial AI and Machine Ethics&lt;/strong&gt; - Explores the design of AI systems that align with human values and ethical principles, discussing frameworks for ensuring AI contributes positively to society.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Chapter 7: Collective Action Problems&lt;/strong&gt; - Examines challenges in coordinating AI development across stakeholders, addressing issues like competition and cooperation that impact safe AI deployment.&lt;/li&gt;
@@ -338,13 +643,23 @@
     </item>
     <item>
       <title>AI Safety Diary: August 9, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-9-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-9-2025/</link>
       <pubDate>Sat, 09 Aug 2025 12:45:43 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-9-2025/</guid>
-      <description>&lt;p&gt;Today, I explored the &lt;a href=&#34;https://aisafetybook.com&#34;&gt;Introduction to AI Safety, Ethics, and Society&lt;/a&gt; textbook as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-9-2025/</guid>
+      <description>&lt;p&gt;Today, I explored the &lt;a href=&#34;https://aisafetybook.com&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Introduction to AI Safety, Ethics, and Society&lt;/a&gt;
+ textbook as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-introduction-to-ai-safety-ethics-and-society-chapters-15-slides&#34;&gt;Resource: Introduction to AI Safety, Ethics, and Society (Chapters 1–5 Slides)&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://aisafetybook.com&#34;&gt;Introduction to AI Safety, Ethics, and Society&lt;/a&gt; by Dan Hendrycks, Taylor &amp;amp; Francis, 2024.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://aisafetybook.com&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Introduction to AI Safety, Ethics, and Society&lt;/a&gt;
+ by Dan Hendrycks, Taylor &amp;amp; Francis, 2024.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: The slides for the first five chapters of this textbook, developed by Dan Hendrycks, director of the Center for AI Safety, provide an introduction to AI safety, ethics, and societal impacts. The chapters covered are:&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Chapter 1: Overview of Catastrophic AI Risks&lt;/strong&gt; - Introduces potential catastrophic risks from advanced AI, such as malicious use, accidents, and rogue AI systems.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Chapter 2: AI Fundamentals&lt;/strong&gt; - Covers the basics of modern AI systems, focusing on deep learning, transformer architectures, and scaling laws that drive AI performance.&lt;/li&gt;
@@ -355,21 +670,31 @@
     </item>
     <item>
       <title>AI Safety Diary: August 8, 2025</title>
-      <link>https://serhatgiydiren.com/posts/ai-safety-diary-august-8-2025/</link>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-8-2025/</link>
       <pubDate>Fri, 08 Aug 2025 12:38:05 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/ai-safety-diary-august-8-2025/</guid>
-      <description>&lt;p&gt;Today, I explored the &lt;a href=&#34;https://forum.effectivealtruism.org/handbook&#34;&gt;Effective Altruism Handbook&lt;/a&gt; and completed its first chapter as part of my studies related to AI safety and governance. Below is the resource I reviewed.&lt;/p&gt;
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-8-2025/</guid>
+      <description>&lt;p&gt;Today, I explored the &lt;a href=&#34;https://forum.effectivealtruism.org/handbook&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Effective Altruism Handbook&lt;/a&gt;
+ and completed its first chapter as part of my studies related to AI safety and governance. Below is the resource I reviewed.&lt;/p&gt;
 &lt;h2 id=&#34;resource-the-effectiveness-mindset&#34;&gt;Resource: The Effectiveness Mindset&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://forum.effectivealtruism.org/s/B79ro5zkhndbBKRRX&#34;&gt;The Effectiveness Mindset&lt;/a&gt;, Effective Altruism Forum, Chapter 1 of the Effective Altruism Handbook.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://forum.effectivealtruism.org/s/B79ro5zkhndbBKRRX&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;The Effectiveness Mindset&lt;/a&gt;
+, Effective Altruism Forum, Chapter 1 of the Effective Altruism Handbook.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This chapter introduces the core idea of effective altruism: maximizing the impact of one&amp;rsquo;s time and resources to help others. It emphasizes the importance of focusing on interventions that benefit the most people, rather than those with lesser impact. The chapter highlights the challenge of identifying effective interventions, which requires a &amp;ldquo;scout mindset&amp;rdquo;—an approach focused on seeking truth and questioning existing ideas rather than defending preconceived notions.&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>3-way Partitioning &amp; Quick Select &amp; Quick Sort &amp; Find Kth Largest Element</title>
-      <link>https://serhatgiydiren.com/posts/3-way-partition-quick-select-quick-sort/</link>
+      <link>https://serhatgiydiren.com/3-way-partitioning-quick-select-quick-sort-find-kth-largest-element/</link>
       <pubDate>Sat, 01 Jan 2022 18:45:49 +0000</pubDate>
-      <guid>https://serhatgiydiren.com/posts/3-way-partition-quick-select-quick-sort/</guid>
+      <guid>https://serhatgiydiren.com/3-way-partitioning-quick-select-quick-sort-find-kth-largest-element/</guid>
       <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;struct bound
 {
  int lt, gt;

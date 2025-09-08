@@ -3,3 +3,52 @@ languageCode = "en-us"
 title = "Serhat Giydiren"
 theme = "PaperMod"
 publishDir = "docs"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"] # Arama özelliği için JSON output'u ekliyoruz
+
+[permalinks]
+  posts = "/:slug/"
+
+[params]
+  # Önerilen yeni parametreler
+  ShowCodeCopyButtons = true
+  ShowReadingTime = true
+  defaultTheme = "auto" # 'dark' veya 'light' olarak da ayarlanabilir
+
+  [params.homeInfoParams]
+    Title = "Let's Talk About AI Safety, Computer Science"
+    Content = "Connect with me on:"
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://linkedin.com/in/serhatgiydiren"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/serhatgiydiren"
+
+  [[params.socialIcons]]
+    name = "substack"
+    url = "https://substack.com/@serhatgiydiren"
+
+  [[params.socialIcons]]
+    name = "x"
+    url = "https://x.com/serhatgiydiren"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:serhatgiydiren@gmail.com"
+
+[[menu.main]]
+  identifier = "archives"
+  name = "Archives"
+  url = "archives"
+  weight = 10
+
+# Arama menüsünü aktif etmek için
+[[menu.main]]
+  identifier = "search"
+  name = "Search"
+  url = "search"
+  weight = 20
