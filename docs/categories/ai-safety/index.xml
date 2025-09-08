@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Serhat Giydiren Blog</title>
-    <link>https://serhatgiydiren.github.io/posts/</link>
-    <description>Recent content in Posts on Serhat Giydiren Blog</description>
+    <title>AI Safety on Serhat Giydiren Blog</title>
+    <link>https://serhatgiydiren.github.io/categories/ai-safety/</link>
+    <description>Recent content in AI Safety on Serhat Giydiren Blog</description>
     <generator>Hugo</generator>
     <language>tr-tr</language>
     <lastBuildDate>Tue, 02 Sep 2025 18:07:18 +0000</lastBuildDate>
-    <atom:link href="https://serhatgiydiren.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://serhatgiydiren.github.io/categories/ai-safety/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI Safety Diary: September 2, 2025</title>
       <link>https://serhatgiydiren.github.io/posts/ai-safety-diary-september-2-2025/</link>
@@ -189,13 +189,6 @@
       <pubDate>Fri, 08 Aug 2025 12:38:05 +0000</pubDate>
       <guid>https://serhatgiydiren.github.io/posts/ai-safety-diary-august-8-2025/</guid>
       <description>&lt;p&gt;Today, I explored the &lt;a href=&#34;https://forum.effectivealtruism.org/handbook&#34;&gt;Effective Altruism Handbook&lt;/a&gt; and completed its first chapter as part of my studies related to AI safety and governance. Below is the resource I reviewed.&lt;/p&gt;&#xA;&lt;h2 id=&#34;resource-the-effectiveness-mindset&#34;&gt;Resource: The Effectiveness Mindset&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://forum.effectivealtruism.org/s/B79ro5zkhndbBKRRX&#34;&gt;The Effectiveness Mindset&lt;/a&gt;, Effective Altruism Forum, Chapter 1 of the Effective Altruism Handbook.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This chapter introduces the core idea of effective altruism: maximizing the impact of one&amp;rsquo;s time and resources to help others. It emphasizes the importance of focusing on interventions that benefit the most people, rather than those with lesser impact. The chapter highlights the challenge of identifying effective interventions, which requires a &amp;ldquo;scout mindset&amp;rdquo;—an approach focused on seeking truth and questioning existing ideas rather than defending preconceived notions.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>3-way Partitioning &amp; Quick Select &amp; Quick Sort &amp; Find Kth Largest Element</title>
-      <link>https://serhatgiydiren.github.io/posts/3-way-partition-quick-select-quick-sort/</link>
-      <pubDate>Sat, 01 Jan 2022 18:45:49 +0000</pubDate>
-      <guid>https://serhatgiydiren.github.io/posts/3-way-partition-quick-select-quick-sort/</guid>
-      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;struct bound&#xA;{&#xA; int lt, gt;&#xA;};&#xA;&#xA;bound partition_3way(vector &amp;lt; int &amp;gt; &amp;amp;arr, int lo, int hi)&#xA;{&#xA; int pivot=arr[lo],i=lo;&#xA; while(i&amp;lt;=hi)&#xA; {&#xA;  if (arr[i]&amp;lt;pivot) swap(arr[i++],arr[lo++]);&#xA;  else if (arr[i]&amp;gt;pivot) swap(arr[i],arr[hi--]);&#xA;  else i++;&#xA; }&#xA; return {lo,hi};&#xA;}&#xA;&#xA;int quick_select(vector &amp;lt; int &amp;gt; &amp;amp;nums, const int &amp;amp;k)&#xA;{&#xA; random_shuffle(nums.begin(),nums.end());&#xA; int lo=0,hi=int(nums.size())-1;&#xA; while(lo&amp;lt;=hi)&#xA; {&#xA;  bound b=partition_3way(nums,lo,hi);&#xA;  if (k&amp;gt;b.gt) lo=b.gt+1;&#xA;  else if (k&amp;lt;b.lt) hi=b.lt-1;&#xA;  else return nums[b.lt];&#xA; }&#xA; return -1;&#xA;}&#xA;&#xA;void quick_sort(vector &amp;lt; int &amp;gt; &amp;amp;nums, const int &amp;amp;lo, const int &amp;amp;hi)&#xA;{&#xA; if (lo&amp;gt;=hi) return;&#xA; bound b=partition_3way(nums,lo,hi);&#xA; quick_sort(nums,lo,b.lt-1);&#xA; quick_sort(nums,b.gt+1,hi);&#xA;}&#xA;&#xA;int findKthLargest(vector &amp;lt; int &amp;gt; &amp;amp;nums, const int &amp;amp;k)&#xA;{&#xA; return quick_select(nums,int(nums.size())-k);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
   </channel>
 </rss>

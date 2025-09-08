@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>AI Safety Diary: August 12, 2025 :: Serhat Giydiren Blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Today, I completed Unit 1: How AI Systems Work of the BlueDot AI Governance course. Below is a summary of each resource I explored.
+Resource: How Does AI Learn? A Beginner’s Guide with Examples Source: How Does AI Learn? A Beginner’s Guide with Examples, AI Safety Fundamentals. Summary: This guide provides an accessible introduction to how AI systems learn, focusing on machine learning. It explains key concepts like supervised learning (where models learn from labeled data, e.g., identifying spam emails), unsupervised learning (finding patterns in unlabeled data, e.g., clustering customer preferences), and reinforcement learning (learning through rewards, e.g., training a game-playing AI). The article uses simple examples to illustrate how models are trained and highlights challenges like overfitting and the need for diverse datasets to avoid bias. Resource: Large Language Models Explained Briefly Source: Large Language Models Explained Briefly, YouTube video. Summary: This short video offers a concise overview of large language models (LLMs). It explains that LLMs, like GPT-3, are trained on vast text datasets to predict the next word in a sequence, enabling them to generate coherent text. The video covers their architecture, primarily transformers, and their applications, such as chatbots and text generation. It also touches on limitations, including high computational costs and potential biases in training data. Resource: Intro to Large Language Models Source: Intro to Large Language Models, YouTube video by Andrej Karpathy. Summary: This one-hour talk provides a detailed introduction to large language models (LLMs). It explains how LLMs are built on transformer architectures and trained on massive text corpora to perform tasks like text generation, translation, and question-answering. The video discusses the importance of scaling compute and data for performance improvements, the emergence of capabilities like reasoning, and challenges such as alignment with human values and mitigating harmful outputs. Resource: Visualizing the Deep Learning Revolution Source: Visualizing the Deep Learning Revolution by Richard Ngo, Medium. Summary: This article illustrates the rapid progress in AI over the past decade, driven by deep learning. It covers advancements in four domains: vision (e.g., image and video generation with GANs, transformers, and diffusion models), games (e.g., AlphaGo, AlphaStar, and AI in open-ended environments like Minecraft), language-based tasks (e.g., GPT-2, GPT-3, and ChatGPT’s text generation and reasoning capabilities), and science (e.g., AlphaFold 2 solving protein folding and AI generating chemical compounds). The article emphasizes that scaling compute and data, rather than new algorithms, has been the primary driver of progress. It also notes that AI’s rapid advancement has surprised experts and raises concerns about existential risks from unaligned AGI. " />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://serhatgiydiren.github.io/posts/ai-safety-diary-august-12-2025/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="https://serhatgiydiren.github.io/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+
+  
+  <link rel="stylesheet" href="https://serhatgiydiren.github.io/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+
+  
+  <link rel="stylesheet" href="https://serhatgiydiren.github.io/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+
+  
+  <link rel="stylesheet" href="https://serhatgiydiren.github.io/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+
+  
+  <link rel="stylesheet" href="https://serhatgiydiren.github.io/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://serhatgiydiren.github.io/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+
+  
+  <link rel="stylesheet" href="https://serhatgiydiren.github.io/css/main.min.36833afd348409fc6c3d09d0897c5833d9d5bf1ff31f5e60ea3ee42ce2b1268c.css">
+
+  
+  <link rel="stylesheet" href="https://serhatgiydiren.github.io/css/menu.min.3c17467ebeb3d38663dce68f71f519901124fa5cbb4519b2fb0667a21e9aca39.css">
+
+  
+  <link rel="stylesheet" href="https://serhatgiydiren.github.io/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="https://serhatgiydiren.github.io/css/post.min.e6dddd258e64c83e05cec0cd49c05216742d42fc8ecbfbe6b67083412b609bd3.css">
+
+  
+  <link rel="stylesheet" href="https://serhatgiydiren.github.io/css/syntax.min.a0773cce9310cb6d8ed23e50f005448facf29a53001b57e038828daa466b25c0.css">
+
+  
+  <link rel="stylesheet" href="https://serhatgiydiren.github.io/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+
+  
+  <link rel="stylesheet" href="https://serhatgiydiren.github.io/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="https://serhatgiydiren.github.io/favicon.png">
+<link rel="apple-touch-icon" href="https://serhatgiydiren.github.io/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="AI Safety Diary: August 12, 2025">
+<meta property="og:description" content="Today, I completed Unit 1: How AI Systems Work of the BlueDot AI Governance course. Below is a summary of each resource I explored.
+Resource: How Does AI Learn? A Beginner’s Guide with Examples Source: How Does AI Learn? A Beginner’s Guide with Examples, AI Safety Fundamentals. Summary: This guide provides an accessible introduction to how AI systems learn, focusing on machine learning. It explains key concepts like supervised learning (where models learn from labeled data, e.g., identifying spam emails), unsupervised learning (finding patterns in unlabeled data, e.g., clustering customer preferences), and reinforcement learning (learning through rewards, e.g., training a game-playing AI). The article uses simple examples to illustrate how models are trained and highlights challenges like overfitting and the need for diverse datasets to avoid bias. Resource: Large Language Models Explained Briefly Source: Large Language Models Explained Briefly, YouTube video. Summary: This short video offers a concise overview of large language models (LLMs). It explains that LLMs, like GPT-3, are trained on vast text datasets to predict the next word in a sequence, enabling them to generate coherent text. The video covers their architecture, primarily transformers, and their applications, such as chatbots and text generation. It also touches on limitations, including high computational costs and potential biases in training data. Resource: Intro to Large Language Models Source: Intro to Large Language Models, YouTube video by Andrej Karpathy. Summary: This one-hour talk provides a detailed introduction to large language models (LLMs). It explains how LLMs are built on transformer architectures and trained on massive text corpora to perform tasks like text generation, translation, and question-answering. The video discusses the importance of scaling compute and data for performance improvements, the emergence of capabilities like reasoning, and challenges such as alignment with human values and mitigating harmful outputs. Resource: Visualizing the Deep Learning Revolution Source: Visualizing the Deep Learning Revolution by Richard Ngo, Medium. Summary: This article illustrates the rapid progress in AI over the past decade, driven by deep learning. It covers advancements in four domains: vision (e.g., image and video generation with GANs, transformers, and diffusion models), games (e.g., AlphaGo, AlphaStar, and AI in open-ended environments like Minecraft), language-based tasks (e.g., GPT-2, GPT-3, and ChatGPT’s text generation and reasoning capabilities), and science (e.g., AlphaFold 2 solving protein folding and AI generating chemical compounds). The article emphasizes that scaling compute and data, rather than new algorithms, has been the primary driver of progress. It also notes that AI’s rapid advancement has surprised experts and raises concerns about existential risks from unaligned AGI. " />
+<meta property="og:url" content="https://serhatgiydiren.github.io/posts/ai-safety-diary-august-12-2025/" />
+<meta property="og:site_name" content="Serhat Giydiren Blog" />
+
+  <meta property="og:image" content="https://serhatgiydiren.github.io/og-image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+  <meta property="article:section" content="AI Governance" />
+
+  <meta property="article:section" content="AI Safety" />
+
+
+  <meta property="article:published_time" content="2025-08-12 12:24:42 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="https://serhatgiydiren.github.io/">
+  <div class="logo">
+    Terminal
+  </div>
+</a>
+
+    </div>
+    
+    
+  </div>
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://serhatgiydiren.github.io/posts/ai-safety-diary-august-12-2025/">AI Safety Diary: August 12, 2025</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2025-08-12</time><span class="post-author">Serhat Giydiren</span></div>
+
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <p>Today, I completed Unit 1: How AI Systems Work of the <a href="https://bluedot.org/courses/governance/1">BlueDot AI Governance course</a>. Below is a summary of each resource I explored.</p>
+<h2 id="resource-how-does-ai-learn-a-beginners-guide-with-examples">Resource: How Does AI Learn? A Beginner’s Guide with Examples<a href="#resource-how-does-ai-learn-a-beginners-guide-with-examples" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li><strong>Source</strong>: <a href="https://aisafetyfundamentals.com/blog/how-does-ai-learn">How Does AI Learn? A Beginner’s Guide with Examples</a>, AI Safety Fundamentals.</li>
+<li><strong>Summary</strong>: This guide provides an accessible introduction to how AI systems learn, focusing on machine learning. It explains key concepts like supervised learning (where models learn from labeled data, e.g., identifying spam emails), unsupervised learning (finding patterns in unlabeled data, e.g., clustering customer preferences), and reinforcement learning (learning through rewards, e.g., training a game-playing AI). The article uses simple examples to illustrate how models are trained and highlights challenges like overfitting and the need for diverse datasets to avoid bias.</li>
+</ul>
+<h2 id="resource-large-language-models-explained-briefly">Resource: Large Language Models Explained Briefly<a href="#resource-large-language-models-explained-briefly" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li><strong>Source</strong>: <a href="https://youtu.be/LPZh9BOjkQs">Large Language Models Explained Briefly</a>, YouTube video.</li>
+<li><strong>Summary</strong>: This short video offers a concise overview of large language models (LLMs). It explains that LLMs, like GPT-3, are trained on vast text datasets to predict the next word in a sequence, enabling them to generate coherent text. The video covers their architecture, primarily transformers, and their applications, such as chatbots and text generation. It also touches on limitations, including high computational costs and potential biases in training data.</li>
+</ul>
+<h2 id="resource-intro-to-large-language-models">Resource: Intro to Large Language Models<a href="#resource-intro-to-large-language-models" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li><strong>Source</strong>: <a href="https://youtu.be/zjkBMFhNj_g">Intro to Large Language Models</a>, YouTube video by Andrej Karpathy.</li>
+<li><strong>Summary</strong>: This one-hour talk provides a detailed introduction to large language models (LLMs). It explains how LLMs are built on transformer architectures and trained on massive text corpora to perform tasks like text generation, translation, and question-answering. The video discusses the importance of scaling compute and data for performance improvements, the emergence of capabilities like reasoning, and challenges such as alignment with human values and mitigating harmful outputs.</li>
+</ul>
+<h2 id="resource-visualizing-the-deep-learning-revolution">Resource: Visualizing the Deep Learning Revolution<a href="#resource-visualizing-the-deep-learning-revolution" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li><strong>Source</strong>: <a href="https://medium.com/@richardcngo/visualizing-the-deep-learning-revolution-722098eb9c5">Visualizing the Deep Learning Revolution</a> by Richard Ngo, Medium.</li>
+<li><strong>Summary</strong>: This article illustrates the rapid progress in AI over the past decade, driven by deep learning. It covers advancements in four domains: vision (e.g., image and video generation with GANs, transformers, and diffusion models), games (e.g., AlphaGo, AlphaStar, and AI in open-ended environments like Minecraft), language-based tasks (e.g., GPT-2, GPT-3, and ChatGPT’s text generation and reasoning capabilities), and science (e.g., AlphaFold 2 solving protein folding and AI generating chemical compounds). The article emphasizes that scaling compute and data, rather than new algorithms, has been the primary driver of progress. It also notes that AI’s rapid advancement has surprised experts and raises concerns about existential risks from unaligned AGI.</li>
+</ul>
+
+      </div></div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2025 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

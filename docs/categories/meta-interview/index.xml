@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Meta Interview on Serhat Giydiren Blog</title>
+    <link>https://serhatgiydiren.github.io/categories/meta-interview/</link>
+    <description>Recent content in Meta Interview on Serhat Giydiren Blog</description>
+    <generator>Hugo</generator>
+    <language>tr-tr</language>
+    <lastBuildDate>Sat, 01 Jan 2022 18:45:49 +0000</lastBuildDate>
+    <atom:link href="https://serhatgiydiren.github.io/categories/meta-interview/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3-way Partitioning &amp; Quick Select &amp; Quick Sort &amp; Find Kth Largest Element</title>
+      <link>https://serhatgiydiren.github.io/posts/3-way-partition-quick-select-quick-sort/</link>
+      <pubDate>Sat, 01 Jan 2022 18:45:49 +0000</pubDate>
+      <guid>https://serhatgiydiren.github.io/posts/3-way-partition-quick-select-quick-sort/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;struct bound&#xA;{&#xA; int lt, gt;&#xA;};&#xA;&#xA;bound partition_3way(vector &amp;lt; int &amp;gt; &amp;amp;arr, int lo, int hi)&#xA;{&#xA; int pivot=arr[lo],i=lo;&#xA; while(i&amp;lt;=hi)&#xA; {&#xA;  if (arr[i]&amp;lt;pivot) swap(arr[i++],arr[lo++]);&#xA;  else if (arr[i]&amp;gt;pivot) swap(arr[i],arr[hi--]);&#xA;  else i++;&#xA; }&#xA; return {lo,hi};&#xA;}&#xA;&#xA;int quick_select(vector &amp;lt; int &amp;gt; &amp;amp;nums, const int &amp;amp;k)&#xA;{&#xA; random_shuffle(nums.begin(),nums.end());&#xA; int lo=0,hi=int(nums.size())-1;&#xA; while(lo&amp;lt;=hi)&#xA; {&#xA;  bound b=partition_3way(nums,lo,hi);&#xA;  if (k&amp;gt;b.gt) lo=b.gt+1;&#xA;  else if (k&amp;lt;b.lt) hi=b.lt-1;&#xA;  else return nums[b.lt];&#xA; }&#xA; return -1;&#xA;}&#xA;&#xA;void quick_sort(vector &amp;lt; int &amp;gt; &amp;amp;nums, const int &amp;amp;lo, const int &amp;amp;hi)&#xA;{&#xA; if (lo&amp;gt;=hi) return;&#xA; bound b=partition_3way(nums,lo,hi);&#xA; quick_sort(nums,lo,b.lt-1);&#xA; quick_sort(nums,b.gt+1,hi);&#xA;}&#xA;&#xA;int findKthLargest(vector &amp;lt; int &amp;gt; &amp;amp;nums, const int &amp;amp;k)&#xA;{&#xA; return quick_select(nums,int(nums.size())-k);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

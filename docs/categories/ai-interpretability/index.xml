@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI Interpretability on Serhat Giydiren Blog</title>
+    <link>https://serhatgiydiren.github.io/categories/ai-interpretability/</link>
+    <description>Recent content in AI Interpretability on Serhat Giydiren Blog</description>
+    <generator>Hugo</generator>
+    <language>tr-tr</language>
+    <lastBuildDate>Sat, 16 Aug 2025 12:56:27 +0000</lastBuildDate>
+    <atom:link href="https://serhatgiydiren.github.io/categories/ai-interpretability/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: August 16, 2025</title>
+      <link>https://serhatgiydiren.github.io/posts/ai-safety-diary-august-16-2025/</link>
+      <pubDate>Sat, 16 Aug 2025 12:56:27 +0000</pubDate>
+      <guid>https://serhatgiydiren.github.io/posts/ai-safety-diary-august-16-2025/</guid>
+      <description>&lt;p&gt;Today, I explored resources related to Anthropic&amp;rsquo;s research on persona vectors as part of my AI safety studies. Below are the resources I reviewed.&lt;/p&gt;&#xA;&lt;h2 id=&#34;resource-persona-vectors-monitoring-and-controlling-character-traits-in-language-models&#34;&gt;Resource: Persona Vectors: Monitoring and Controlling Character Traits in Language Models&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://www.anthropic.com/research/persona-vectors&#34;&gt;Persona Vectors: Monitoring and Controlling Character Traits in Language Models&lt;/a&gt;, Anthropic Research; related paper: &lt;a href=&#34;https://arxiv.org/pdf/2507.21509&#34;&gt;Persona Vectors: Monitoring and Controlling Character Traits in Language Models&lt;/a&gt; by Runjin Chen et al.; implementation: &lt;a href=&#34;https://github.com/safety-research/persona_vectors&#34;&gt;GitHub - safety-research/persona_vectors&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This Anthropic Research page introduces persona vectors, patterns of neural network activity in large language models (LLMs) that control character traits like evil, sycophancy, or hallucination. The associated paper details a method to extract these vectors by comparing model activations for opposing behaviors (e.g., evil vs. non-evil responses). Persona vectors enable monitoring of personality shifts during conversations or training, mitigating undesirable traits through steering techniques, and flagging problematic training data. The method is tested on open-source models like Qwen 2.5-7B-Instruct and Llama-3.1-8B-Instruct. The GitHub repository provides code for generating persona vectors, evaluating their effectiveness, and applying steering during training to prevent unwanted trait shifts, offering tools for maintaining alignment with human values.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

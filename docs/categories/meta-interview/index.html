@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   
-    <title>Categories :: Serhat Giydiren Blog</title>
+    <title>Meta Interview :: Serhat Giydiren Blog</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
 
   <meta name="robots" content="noodp" />
 
-<link rel="canonical" href="https://serhatgiydiren.github.io/categories/" />
+<link rel="canonical" href="https://serhatgiydiren.github.io/categories/meta-interview/" />
 
 
 
@@ -72,9 +72,9 @@
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Categories">
+<meta property="og:title" content="Meta Interview">
 <meta property="og:description" content="" />
-<meta property="og:url" content="https://serhatgiydiren.github.io/categories/" />
+<meta property="og:url" content="https://serhatgiydiren.github.io/categories/meta-interview/" />
 <meta property="og:site_name" content="Serhat Giydiren Blog" />
 
   <meta property="og:image" content="https://serhatgiydiren.github.io/og-image.png">
@@ -86,7 +86,7 @@
 
 
 
-  <link href="/categories/index.xml" rel="alternate" type="application/rss+xml" title="Serhat Giydiren Blog" />
+  <link href="/categories/meta-interview/index.xml" rel="alternate" type="application/rss+xml" title="Serhat Giydiren Blog" />
 
 
 
@@ -121,77 +121,86 @@
 
   <div class="content">
     
-  <div class="terms">
-    <h1>Categories</h1>
+  <h1>Posts for: #Meta Interview</h1>
+  
+  <div class="posts">
     
-    <ul>
-      
-      
+      <article class="post on-list">
+        <h1 class="post-title">
+          <a href="https://serhatgiydiren.github.io/posts/3-way-partition-quick-select-quick-sort/">3-way Partitioning &amp; Quick Select &amp; Quick Sort &amp; Find Kth Largest Element</a>
+        </h1>
+        <div class="post-meta"><time class="post-date">2022-01-01</time><span class="post-author">Serhat Giydiren</span></div>
+
         
+
         
+
+
+        <div class="post-content">
+          
+            <pre tabindex="0"><code>struct bound
+{
+ int lt, gt;
+};
+
+bound partition_3way(vector &lt; int &gt; &amp;arr, int lo, int hi)
+{
+ int pivot=arr[lo],i=lo;
+ while(i&lt;=hi)
+ {
+  if (arr[i]&lt;pivot) swap(arr[i++],arr[lo++]);
+  else if (arr[i]&gt;pivot) swap(arr[i],arr[hi--]);
+  else i++;
+ }
+ return {lo,hi};
+}
+
+int quick_select(vector &lt; int &gt; &amp;nums, const int &amp;k)
+{
+ random_shuffle(nums.begin(),nums.end());
+ int lo=0,hi=int(nums.size())-1;
+ while(lo&lt;=hi)
+ {
+  bound b=partition_3way(nums,lo,hi);
+  if (k&gt;b.gt) lo=b.gt+1;
+  else if (k&lt;b.lt) hi=b.lt-1;
+  else return nums[b.lt];
+ }
+ return -1;
+}
+
+void quick_sort(vector &lt; int &gt; &amp;nums, const int &amp;lo, const int &amp;hi)
+{
+ if (lo&gt;=hi) return;
+ bound b=partition_3way(nums,lo,hi);
+ quick_sort(nums,lo,b.lt-1);
+ quick_sort(nums,b.gt+1,hi);
+}
+
+int findKthLargest(vector &lt; int &gt; &amp;nums, const int &amp;k)
+{
+ return quick_select(nums,int(nums.size())-k);
+}
+</code></pre>
+          
+        </div>
+
         
-          <li>
-            <a class="terms-title" href="https://serhatgiydiren.github.io/categories/ai-alignment/">AI Alignment [6]</a>
-          </li>
+          <div>
+            <a class="read-more button inline" href="/posts/3-way-partition-quick-select-quick-sort/">[]</a>
+          </div>
         
-      
-        
-        
-        
-          <li>
-            <a class="terms-title" href="https://serhatgiydiren.github.io/categories/ai-governance/">AI Governance [6]</a>
-          </li>
-        
-      
-        
-        
-        
-          <li>
-            <a class="terms-title" href="https://serhatgiydiren.github.io/categories/ai-interpretability/">AI Interpretability [1]</a>
-          </li>
-        
-      
-        
-        
-        
-          <li>
-            <a class="terms-title" href="https://serhatgiydiren.github.io/categories/ai-safety/">AI Safety [26]</a>
-          </li>
-        
-      
-        
-        
-        
-          <li>
-            <a class="terms-title" href="https://serhatgiydiren.github.io/categories/amazon-interview/">Amazon Interview [1]</a>
-          </li>
-        
-      
-        
-        
-        
-          <li>
-            <a class="terms-title" href="https://serhatgiydiren.github.io/categories/coding--algorithm-interview/">Coding &amp; Algorithm Interview [1]</a>
-          </li>
-        
-      
-        
-        
-        
-          <li>
-            <a class="terms-title" href="https://serhatgiydiren.github.io/categories/google-interview/">Google Interview [1]</a>
-          </li>
-        
-      
-        
-        
-        
-          <li>
-            <a class="terms-title" href="https://serhatgiydiren.github.io/categories/meta-interview/">Meta Interview [1]</a>
-          </li>
-        
-      
-    </ul>
+      </article>
+    
+
+    <div class="pagination">
+  <div class="pagination__buttons">
+    
+    
+    
+  </div>
+</div>
+
   </div>
 
   </div>
