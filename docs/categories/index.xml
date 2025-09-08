@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Categories on Serhat Giydiren Blog</title>
-    <link>https://serhatgiydiren.github.io/categories/</link>
-    <description>Recent content in Categories on Serhat Giydiren Blog</description>
-    <generator>Hugo</generator>
-    <language>tr-tr</language>
+    <title>Categories on Serhat Giydiren</title>
+    <link>https://serhatgiydiren.com/categories/</link>
+    <description>Recent content in Categories on Serhat Giydiren</description>
+    <generator>Hugo -- 0.149.1</generator>
+    <language>en-us</language>
     <lastBuildDate>Tue, 02 Sep 2025 18:07:18 +0000</lastBuildDate>
-    <atom:link href="https://serhatgiydiren.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://serhatgiydiren.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI Safety</title>
-      <link>https://serhatgiydiren.github.io/categories/ai-safety/</link>
+      <link>https://serhatgiydiren.com/categories/ai-safety/</link>
       <pubDate>Tue, 02 Sep 2025 18:07:18 +0000</pubDate>
-      <guid>https://serhatgiydiren.github.io/categories/ai-safety/</guid>
+      <guid>https://serhatgiydiren.com/categories/ai-safety/</guid>
       <description></description>
     </item>
     <item>
       <title>AI Interpretability</title>
-      <link>https://serhatgiydiren.github.io/categories/ai-interpretability/</link>
+      <link>https://serhatgiydiren.com/categories/ai-interpretability/</link>
       <pubDate>Sat, 16 Aug 2025 12:56:27 +0000</pubDate>
-      <guid>https://serhatgiydiren.github.io/categories/ai-interpretability/</guid>
+      <guid>https://serhatgiydiren.com/categories/ai-interpretability/</guid>
       <description></description>
     </item>
     <item>
       <title>AI Alignment</title>
-      <link>https://serhatgiydiren.github.io/categories/ai-alignment/</link>
+      <link>https://serhatgiydiren.com/categories/ai-alignment/</link>
       <pubDate>Fri, 15 Aug 2025 12:40:49 +0000</pubDate>
-      <guid>https://serhatgiydiren.github.io/categories/ai-alignment/</guid>
+      <guid>https://serhatgiydiren.com/categories/ai-alignment/</guid>
       <description></description>
     </item>
     <item>
       <title>AI Governance</title>
-      <link>https://serhatgiydiren.github.io/categories/ai-governance/</link>
+      <link>https://serhatgiydiren.com/categories/ai-governance/</link>
       <pubDate>Fri, 15 Aug 2025 12:40:49 +0000</pubDate>
-      <guid>https://serhatgiydiren.github.io/categories/ai-governance/</guid>
+      <guid>https://serhatgiydiren.com/categories/ai-governance/</guid>
       <description></description>
     </item>
     <item>
       <title>Amazon Interview</title>
-      <link>https://serhatgiydiren.github.io/categories/amazon-interview/</link>
+      <link>https://serhatgiydiren.com/categories/amazon-interview/</link>
       <pubDate>Sat, 01 Jan 2022 18:45:49 +0000</pubDate>
-      <guid>https://serhatgiydiren.github.io/categories/amazon-interview/</guid>
+      <guid>https://serhatgiydiren.com/categories/amazon-interview/</guid>
       <description></description>
     </item>
     <item>
       <title>Coding &amp; Algorithm Interview</title>
-      <link>https://serhatgiydiren.github.io/categories/coding--algorithm-interview/</link>
+      <link>https://serhatgiydiren.com/categories/coding--algorithm-interview/</link>
       <pubDate>Sat, 01 Jan 2022 18:45:49 +0000</pubDate>
-      <guid>https://serhatgiydiren.github.io/categories/coding--algorithm-interview/</guid>
+      <guid>https://serhatgiydiren.com/categories/coding--algorithm-interview/</guid>
       <description></description>
     </item>
     <item>
       <title>Google Interview</title>
-      <link>https://serhatgiydiren.github.io/categories/google-interview/</link>
+      <link>https://serhatgiydiren.com/categories/google-interview/</link>
       <pubDate>Sat, 01 Jan 2022 18:45:49 +0000</pubDate>
-      <guid>https://serhatgiydiren.github.io/categories/google-interview/</guid>
+      <guid>https://serhatgiydiren.com/categories/google-interview/</guid>
       <description></description>
     </item>
     <item>
       <title>Meta Interview</title>
-      <link>https://serhatgiydiren.github.io/categories/meta-interview/</link>
+      <link>https://serhatgiydiren.com/categories/meta-interview/</link>
       <pubDate>Sat, 01 Jan 2022 18:45:49 +0000</pubDate>
-      <guid>https://serhatgiydiren.github.io/categories/meta-interview/</guid>
+      <guid>https://serhatgiydiren.com/categories/meta-interview/</guid>
       <description></description>
     </item>
   </channel>
