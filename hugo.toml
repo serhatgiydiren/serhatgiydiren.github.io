@@ -1,0 +1,5 @@
+baseURL = "https://serhatgiydiren.github.io/"
+languageCode = "tr-tr"
+title = "Serhat Giydiren Blog"
+theme = "terminal"
+publishDir = "docs"
