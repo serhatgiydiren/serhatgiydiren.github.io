@@ -1,16 +1,8 @@
 ---
-id: 6
 title: '3-way Partitioning & Quick Select & Quick Sort & Find Kth Largest Element'
 date: '2022-01-01T18:45:49+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=6'
-permalink: /3-way-partition-quick-select-quick-sort/
-categories:
-    - 'Amazon Interview'
-    - 'Coding & Algorithm Interview'
-    - 'Google Interview'
-    - 'Meta Interview'
+tags: ["Computer Science", "Algorithms"]
+categories: ["Technical Article"]
 ---
 
 ```
