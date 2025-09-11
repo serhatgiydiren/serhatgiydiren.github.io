@@ -213,6 +213,19 @@ Resource: The Effectiveness Mindset Source: The Effectiveness Mindset , Effectiv
   <footer class="entry-footer"><span title='2022-01-01 18:45:49 +0000 +0000'>January 1, 2022</span>&nbsp;·&nbsp;1 min</footer>
   <a class="entry-link" aria-label="post link to 3-way Partitioning & Quick Select & Quick Sort & Find Kth Largest Element" href="https://serhatgiydiren.com/3-way-partitioning-quick-select-quick-sort-find-kth-largest-element/"></a>
 </article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">System Design Interview - Distributed Message Queue
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Besides reading this post, I strongly recommend reading chapter 4 (Distributed Message Queue) of the book System Design Interview – An Insider’s Guide: Volume 2 (Xu, Alex - Lam, Sahn) You can review alternative resources as well.
+Synchronous Communication When producer makes a a call to a consumer, waits for a response. Easier and faster to implement. Harder to deal with consumer service failures. Need to think; When and how to properly retry failed requests? How not to overwhelm consumer service with too many requests? How to deal with a slow consumer service host? Asynchronous Communication Queue : Producer sends data to that component and exactly one consumer gets this data to a short time after. It is distributed, because data is stored across several machines. Do not confuse queue with topic. In case of a topic, message goes to all subscribers. In case of a queue, message is received by only one consumer. Functional Requirements sendMessage(messageBody) receiveMessage() Non-Functional Requirements Scalable (handle load increasses, more queues, messages) Highly Available (tolerates hardware / network failures) Highly Performant (single digit latency, both send and receive operations are fast) Durable (once submitted, data is not lost, so persistent) High-level Architecture ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-03-04 09:25:27 +0000 +0000'>March 4, 2021</span>&nbsp;·&nbsp;14 min&nbsp;·&nbsp;Serhat Giydiren</footer>
+  <a class="entry-link" aria-label="post link to System Design Interview - Distributed Message Queue" href="https://serhatgiydiren.com/system-design-interview-distributed-message-queue/"></a>
+</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://serhatgiydiren.com/page/3/">

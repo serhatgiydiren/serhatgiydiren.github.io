@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>System Design Interview on Serhat Giydiren</title>
+    <link>https://serhatgiydiren.com/categories/system-design-interview/</link>
+    <description>Recent content in System Design Interview on Serhat Giydiren</description>
+    <generator>Hugo -- 0.149.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 04 Mar 2021 09:25:27 +0000</lastBuildDate>
+    <atom:link href="https://serhatgiydiren.com/categories/system-design-interview/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>System Design Interview - Distributed Message Queue</title>
+      <link>https://serhatgiydiren.com/system-design-interview-distributed-message-queue/</link>
+      <pubDate>Thu, 04 Mar 2021 09:25:27 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/system-design-interview-distributed-message-queue/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Besides reading this post, I strongly recommend reading chapter 4 (Distributed Message Queue) of the book &lt;a href=&#34;https://serhatgiydiren.com/1736049119/&#34;
+   
+   &gt;System Design Interview – An Insider’s Guide: Volume 2 (Xu, Alex - Lam, Sahn)&lt;/a&gt;
+ You can review &lt;a href=&#34;https://serhatgiydiren.com/best-resources-for-tech-interviews/&#34;
+   
+   &gt;alternative resources&lt;/a&gt;
+ as well.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;synchronous-communication&#34;&gt;Synchronous Communication&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;When producer makes a a call to a consumer, waits for a response.&lt;/li&gt;
+&lt;li&gt;Easier and faster to implement.&lt;/li&gt;
+&lt;li&gt;Harder to deal with consumer service failures. Need to think;
+&lt;ul&gt;
+&lt;li&gt;When and how to properly retry failed requests?&lt;/li&gt;
+&lt;li&gt;How not to overwhelm consumer service with too many requests?&lt;/li&gt;
+&lt;li&gt;How to deal with a slow consumer service host?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;asynchronous-communication&#34;&gt;Asynchronous Communication&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Queue : Producer sends data to that component and exactly one consumer gets this data to a short time after.&lt;/li&gt;
+&lt;li&gt;It is distributed, because data is stored across several machines.&lt;/li&gt;
+&lt;li&gt;Do not confuse queue with topic. In case of a topic, message goes to all subscribers. In case of a queue, message is received by only one consumer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;functional-requirements&#34;&gt;Functional Requirements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;sendMessage(messageBody)&lt;/li&gt;
+&lt;li&gt;receiveMessage()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;non-functional-requirements&#34;&gt;Non-Functional Requirements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Scalable (handle load increasses, more queues, messages)&lt;/li&gt;
+&lt;li&gt;Highly Available (tolerates hardware / network failures)&lt;/li&gt;
+&lt;li&gt;Highly Performant (single digit latency, both send and receive operations are fast)&lt;/li&gt;
+&lt;li&gt;Durable (once submitted, data is not lost, so persistent)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;high-level-architecture&#34;&gt;High-level Architecture&lt;/h3&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://serhatgiydiren.com/images/system-design-interview-distributed-message-queue/image-11-1024x582.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
