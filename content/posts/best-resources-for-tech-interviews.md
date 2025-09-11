@@ -1,6 +1,6 @@
 ---
 id: 11
-title: 'Best Resources for Tech Interviews (Coding &#038; System Design)'
+title: 'Best Resources for Tech Interviews'
 date: '2022-10-09T19:19:06+00:00'
 author: 'Serhat Giydiren'
 layout: post
