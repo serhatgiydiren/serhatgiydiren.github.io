@@ -44,55 +44,6 @@
       <description></description>
     </item>
     <item>
-      <title>Architecture</title>
-      <link>https://serhatgiydiren.com/tags/architecture/</link>
-      <pubDate>Thu, 11 Sep 2025 12:00:00 +0300</pubDate>
-      <guid>https://serhatgiydiren.com/tags/architecture/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Distributed Systems</title>
-      <link>https://serhatgiydiren.com/tags/distributed-systems/</link>
-      <pubDate>Thu, 11 Sep 2025 12:00:00 +0300</pubDate>
-      <guid>https://serhatgiydiren.com/tags/distributed-systems/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Interview Prep</title>
-      <link>https://serhatgiydiren.com/tags/interview-prep/</link>
-      <pubDate>Thu, 11 Sep 2025 12:00:00 +0300</pubDate>
-      <guid>https://serhatgiydiren.com/tags/interview-prep/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Message Queue</title>
-      <link>https://serhatgiydiren.com/tags/message-queue/</link>
-      <pubDate>Thu, 11 Sep 2025 12:00:00 +0300</pubDate>
-      <guid>https://serhatgiydiren.com/tags/message-queue/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Scalability</title>
-      <link>https://serhatgiydiren.com/tags/scalability/</link>
-      <pubDate>Thu, 11 Sep 2025 12:00:00 +0300</pubDate>
-      <guid>https://serhatgiydiren.com/tags/scalability/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>System Design</title>
-      <link>https://serhatgiydiren.com/tags/system-design/</link>
-      <pubDate>Thu, 11 Sep 2025 12:00:00 +0300</pubDate>
-      <guid>https://serhatgiydiren.com/tags/system-design/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Caching</title>
-      <link>https://serhatgiydiren.com/tags/caching/</link>
-      <pubDate>Thu, 11 Sep 2025 11:00:00 +0300</pubDate>
-      <guid>https://serhatgiydiren.com/tags/caching/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Effective Altruism</title>
       <link>https://serhatgiydiren.com/tags/effective-altruism/</link>
       <pubDate>Wed, 10 Sep 2025 18:07:18 +0300</pubDate>
@@ -748,6 +699,55 @@
       <link>https://serhatgiydiren.com/tags/scout-mindset/</link>
       <pubDate>Fri, 08 Aug 2025 12:38:05 +0000</pubDate>
       <guid>https://serhatgiydiren.com/tags/scout-mindset/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Architecture</title>
+      <link>https://serhatgiydiren.com/tags/architecture/</link>
+      <pubDate>Thu, 04 Mar 2021 09:25:27 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/tags/architecture/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Distributed Systems</title>
+      <link>https://serhatgiydiren.com/tags/distributed-systems/</link>
+      <pubDate>Thu, 04 Mar 2021 09:25:27 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/tags/distributed-systems/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Interview Prep</title>
+      <link>https://serhatgiydiren.com/tags/interview-prep/</link>
+      <pubDate>Thu, 04 Mar 2021 09:25:27 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/tags/interview-prep/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Message Queue</title>
+      <link>https://serhatgiydiren.com/tags/message-queue/</link>
+      <pubDate>Thu, 04 Mar 2021 09:25:27 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/tags/message-queue/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scalability</title>
+      <link>https://serhatgiydiren.com/tags/scalability/</link>
+      <pubDate>Thu, 04 Mar 2021 09:25:27 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/tags/scalability/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>System Design</title>
+      <link>https://serhatgiydiren.com/tags/system-design/</link>
+      <pubDate>Thu, 04 Mar 2021 09:25:27 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/tags/system-design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Caching</title>
+      <link>https://serhatgiydiren.com/tags/caching/</link>
+      <pubDate>Wed, 03 Feb 2021 09:21:45 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/tags/caching/</guid>
       <description></description>
     </item>
   </channel>

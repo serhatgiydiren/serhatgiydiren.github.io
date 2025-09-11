@@ -1,6 +1,6 @@
 ---
 title: "System Design Interview - Distributed Cache"
-date: 2025-09-11T11:00:00+03:00
+date: '2021-02-03T09:21:45+00:00'
 tags:
   - "system design"
   - "distributed systems"

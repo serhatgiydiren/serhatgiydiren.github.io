@@ -1,6 +1,6 @@
 ---
 title: "System Design Interview - Distributed Message Queue"
-date: 2025-09-11T12:00:00+03:00
+date: '2021-03-04T09:25:27+00:00'
 tags:
   - "system design"
   - "distributed systems"
