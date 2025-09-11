@@ -6,8 +6,30 @@
     <description>Recent content in Posts on Serhat Giydiren</description>
     <generator>Hugo -- 0.149.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Sep 2025 18:07:18 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Sep 2025 18:07:18 +0300</lastBuildDate>
     <atom:link href="https://serhatgiydiren.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: September 3, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-3-2025/</link>
+      <pubDate>Wed, 03 Sep 2025 18:07:18 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-3-2025/</guid>
+      <description>&lt;p&gt;Today, I explored the audio version of a chapter from the &lt;a href=&#34;https://ai-safety-atlas.com/&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;AI Safety Atlas&lt;/a&gt;
+ as part of my AI safety studies. Below is the resource I reviewed.&lt;/p&gt;
+&lt;h2 id=&#34;resource-ai-safety-atlas-chapter-5-evaluations-audio&#34;&gt;Resource: AI Safety Atlas (Chapter 5: Evaluations Audio)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;https://ai-safety-atlas.com/chapters/05&#34;
+   
+   
+   target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;
+   &gt;Chapter 5: Evaluations&lt;/a&gt;
+, AI Safety Atlas by Markov Grey and Charbel-Raphaël Segerie et al., French Center for AI Safety (CeSIA), 2025.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: The audio version of this chapter focuses on evaluation methods for assessing the safety and alignment of advanced AI systems. It discusses frameworks for testing model behavior, including benchmarks for robustness, alignment with human values, and resistance to adversarial inputs. The chapter emphasizes the importance of rigorous, standardized evaluations to identify potential risks, such as unintended behaviors or misalignment, and to ensure AI systems operate safely as their capabilities scale toward artificial general intelligence (AGI).&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>AI Safety Diary: September 2, 2025</title>
       <link>https://serhatgiydiren.com/ai-safety-diary-september-2-2025/</link>
