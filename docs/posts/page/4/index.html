@@ -206,43 +206,6 @@ Resource: The Effectiveness Mindset Source: The Effectiveness Mindset , Effectiv
   <footer class="entry-footer"><span title='2025-08-08 12:38:05 +0000 +0000'>August 8, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Serhat Giydiren</footer>
   <a class="entry-link" aria-label="post link to AI Safety Diary: August 8, 2025" href="https://serhatgiydiren.com/ai-safety-diary-august-8-2025/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Best Resources for Tech Interviews
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Best Books for System Design Interviews System Design Interview – An insider’s guide (Alex Xu) System Design Interview – An Insider’s Guide: Volume 2 (Alex Xu - Sahn Lam) Hacking the System Design Interview: Real Big Tech Interview Questions and In-depth Solutions (Stanley Chiang) Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems (Martin Kleppmann) Software Engineering at Google: Lessons Learned from Programming Over Time (Titus Winters - Tom Manshreck - Hyrum Wright) System Design Interview: Mastering Basic Introduction to System Analysis and Design (Groks King) Fundamentals of Software Architecture: An Engineering Approach (Mark Richards - Neal Ford) Best Books for Coding Interviews Algorithms (4th Edition) (Robert Sedgewick - Kevin Wayne) Read the book review here . Introduction to Algorithms, fourth edition (Thomas H. Cormen - Charles E. Leiserson - Ronald L. Rivest - Clifford Stein) Cracking the Coding Interview: 189 Programming Questions and Solutions (Gayle Laakmann McDowell) The Algorithm Design Manual (Texts in Computer Science) (Steven S. Skiena) Programming Interviews Exposed: Coding Your Way Through the Interview (John Mongan - Noah Suojanen Kindler - Eric GiguÃ¨re) Programming Pearls (Jon Bentley) Competitive Programming 3 (Steven Halim) Guide to Competitive Programming: Learning and Improving Algorithms Through Contests (Undergraduate Topics in Computer Science) (Antti Laaksonen) The Art of Computer Programming, Volumes 1-4A Boxed Set (Donald Knuth - John Fuller) The Bible of Algorithms and Data Structures: A Complex Subject Simply Explained (Runtime Complexity, Big O Notation, Programming) (Florian Dedov) A Programmer’s Guide to Computer Science Vol. 2: A virtual degree for the self-taught developer (William M. Springer II - Nicholas R Allgood - Brit Springer) A Programmer’s Guide to Computer Science: A virtual degree for the self-taught developer (William M. Springer II - Nicholas R Allgood - Brit Springer) Computer Science Distilled: Learn the Art of Solving Computational Problems (Wladston Ferreira Filho - Raimondo Pictet) Best Online Courses for Coding Interviews Algorithms, Part I (Robert Sedgewick, Kevin Wayne) There is a book from the authors (You may find it above) Algorithms, Part II (Robert Sedgewick, Kevin Wayne) There is a book from the authors (You may find it above) Divide and Conquer, Sorting and Searching, and Randomized Algorithms (Tim Roughgarden) Graph Search, Shortest Paths, and Data Structures (Tim Roughgarden) Greedy Algorithms, Minimum Spanning Trees, and Dynamic Programming (Tim Roughgarden) Shortest Paths Revisited, NP-Complete Problems and What To Do About Them (Tim Roughgarden) Algorithms Specialization (Tim Roughgarden) Data Structures and Algorithms Specialization (Neil Rhodes, Daniel M. Kane, Michael Levin, Pavel Pevzner, Alexander S. Kulikov) If you need further guidance or mentorship, drop me a line ...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-10-09 19:19:06 +0000 +0000'>October 9, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Serhat Giydiren</footer>
-  <a class="entry-link" aria-label="post link to Best Resources for Tech Interviews" href="https://serhatgiydiren.com/best-resources-for-tech-interviews/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">3-way Partitioning &amp; Quick Select &amp; Quick Sort &amp; Find Kth Largest Element
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>struct bound { int lt, gt; }; bound partition_3way(vector &lt; int &gt; &amp;arr, int lo, int hi) { int pivot=arr[lo],i=lo; while(i&lt;=hi) { if (arr[i]&lt;pivot) swap(arr[i&#43;&#43;],arr[lo&#43;&#43;]); else if (arr[i]&gt;pivot) swap(arr[i],arr[hi--]); else i&#43;&#43;; } return {lo,hi}; } int quick_select(vector &lt; int &gt; &amp;nums, const int &amp;k) { random_shuffle(nums.begin(),nums.end()); int lo=0,hi=int(nums.size())-1; while(lo&lt;=hi) { bound b=partition_3way(nums,lo,hi); if (k&gt;b.gt) lo=b.gt&#43;1; else if (k&lt;b.lt) hi=b.lt-1; else return nums[b.lt]; } return -1; } void quick_sort(vector &lt; int &gt; &amp;nums, const int &amp;lo, const int &amp;hi) { if (lo&gt;=hi) return; bound b=partition_3way(nums,lo,hi); quick_sort(nums,lo,b.lt-1); quick_sort(nums,b.gt&#43;1,hi); } int findKthLargest(vector &lt; int &gt; &amp;nums, const int &amp;k) { return quick_select(nums,int(nums.size())-k); } </p>
-  </div>
-  <footer class="entry-footer"><span title='2022-01-01 18:45:49 +0000 +0000'>January 1, 2022</span>&nbsp;·&nbsp;1 min</footer>
-  <a class="entry-link" aria-label="post link to 3-way Partitioning & Quick Select & Quick Sort & Find Kth Largest Element" href="https://serhatgiydiren.com/3-way-partitioning-quick-select-quick-sort-find-kth-largest-element/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">System Design Interview - Distributed Message Queue
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> Besides reading this post, I strongly recommend reading chapter 4 (Distributed Message Queue) of the book System Design Interview – An Insider’s Guide: Volume 2 (Xu, Alex - Lam, Sahn) You can review alternative resources as well.
-Synchronous Communication When producer makes a a call to a consumer, waits for a response. Easier and faster to implement. Harder to deal with consumer service failures. Need to think; When and how to properly retry failed requests? How not to overwhelm consumer service with too many requests? How to deal with a slow consumer service host? Asynchronous Communication Queue : Producer sends data to that component and exactly one consumer gets this data to a short time after. It is distributed, because data is stored across several machines. Do not confuse queue with topic. In case of a topic, message goes to all subscribers. In case of a queue, message is received by only one consumer. Functional Requirements sendMessage(messageBody) receiveMessage() Non-Functional Requirements Scalable (handle load increasses, more queues, messages) Highly Available (tolerates hardware / network failures) Highly Performant (single digit latency, both send and receive operations are fast) Durable (once submitted, data is not lost, so persistent) High-level Architecture ...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-03-04 09:25:27 +0000 +0000'>March 4, 2021</span>&nbsp;·&nbsp;14 min&nbsp;·&nbsp;Serhat Giydiren</footer>
-  <a class="entry-link" aria-label="post link to System Design Interview - Distributed Message Queue" href="https://serhatgiydiren.com/system-design-interview-distributed-message-queue/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://serhatgiydiren.com/posts/page/3/">
