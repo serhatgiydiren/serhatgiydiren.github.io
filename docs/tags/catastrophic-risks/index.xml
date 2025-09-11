@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Catastrophic Risks on Serhat Giydiren</title>
+    <link>https://serhatgiydiren.com/tags/catastrophic-risks/</link>
+    <description>Recent content in Catastrophic Risks on Serhat Giydiren</description>
+    <generator>Hugo -- 0.149.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 Aug 2025 12:45:43 +0000</lastBuildDate>
+    <atom:link href="https://serhatgiydiren.com/tags/catastrophic-risks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: August 9, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-9-2025/</link>
+      <pubDate>Sat, 09 Aug 2025 12:45:43 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-9-2025/</guid>
+      <description>A diary entry summarizing chapters 1-5 of the &amp;lsquo;Introduction to AI Safety, Ethics, and Society&amp;rsquo; textbook, covering catastrophic AI risks, AI fundamentals, single-agent safety, safety engineering, and complex systems.</description>
+    </item>
+  </channel>
+</rss>

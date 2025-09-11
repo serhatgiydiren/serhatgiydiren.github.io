@@ -1,13 +1,17 @@
 ---
-id: 955
-title: 'AI Safety Diary: August 19, 2025'
+title: "AI Safety Diary: August 19, 2025"
 date: '2025-08-19T16:03:50+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=955'
-permalink: /ai-safety-diary-august-19-2025/
 categories:
-    - 'AI Safety'
+  - "AI Safety"
+  - "AI Governance"
+  - "AI Alignment"
+tags:
+  - "ai safety diary"
+  - "anthropic"
+  - "societal impact"
+  - "ai control"
+  - "ai risks"
+summary: "A diary entry on the societal impacts of AI, including ethical concerns like bias and job displacement, and strategies for controlling powerful AI systems to ensure alignment and mitigate risks."
 ---
 
 Today, I explored two videos from the [Anthropic YouTube channel](https://www.youtube.com/@anthropic-ai) as part of my AI safety studies. Below are the resources I reviewed.

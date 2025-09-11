@@ -1,14 +1,17 @@
 ---
-id: 943
-title: 'AI Safety Diary: August 13, 2025'
+title: "AI Safety Diary: August 13, 2025"
 date: '2025-08-13T12:53:05+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=943'
-permalink: /ai-safety-diary-august-13-2025/
 categories:
-    - 'AI Alignment'
-    - 'AI Safety'
+  - "AI Alignment"
+  - "AI Safety"
+tags:
+  - "ai safety diary"
+  - "bluedot"
+  - "ai alignment"
+  - "neural networks"
+  - "transformers"
+  - "gradient descent"
+summary: "A diary entry on Unit 1 of the BlueDot AI Alignment course, covering foundational concepts like neural networks, gradient descent, transformers, and the future impacts of AI."
 ---
 
 Today, I began the [BlueDot AI Alignment course](https://bluedot.org/courses/alignment) and completed its first unit as part of my AI safety studies. Below is the resource I reviewed.

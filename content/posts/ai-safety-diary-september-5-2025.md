@@ -1,6 +1,16 @@
 ---
-title: 'AI Safety Diary: September 5, 2025'
+title: "AI Safety Diary: September 5, 2025"
 date: '2025-09-05T18:07:18+03:00'
+categories:
+  - "AI Safety"
+  - "AI Interpretability"
+tags:
+  - "ai safety diary"
+  - "anthropic"
+  - "scaling interpretability"
+  - "faithfulness"
+  - "chain-of-thought"
+summary: "A diary entry on the challenges of scaling interpretability for complex AI models and methods for measuring the faithfulness of LLM explanations."
 ---
 
 Today, I explored resources from the [Anthropic YouTube channel](https://www.youtube.com/@anthropic-ai) and a research paper as part of my AI safety studies. Below are the resources I reviewed.

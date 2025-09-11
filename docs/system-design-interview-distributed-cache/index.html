@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>System Design Interview - Distributed Cache | Serhat Giydiren</title>
+<meta name="keywords" content="system design, distributed systems, caching, scalability, architecture, interview prep">
+<meta name="description" content="A comprehensive, in-depth guide to designing a distributed caching system. We explore core concepts from data partitioning with consistent hashing to advanced topics like consistency models, fault tolerance, and handling real-world challenges like thundering herds.">
+<meta name="author" content="">
+<link rel="canonical" href="https://serhatgiydiren.com/system-design-interview-distributed-cache/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://serhatgiydiren.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://serhatgiydiren.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://serhatgiydiren.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://serhatgiydiren.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://serhatgiydiren.com/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://serhatgiydiren.com/system-design-interview-distributed-cache/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://serhatgiydiren.com/system-design-interview-distributed-cache/">
+  <meta property="og:site_name" content="Serhat Giydiren">
+  <meta property="og:title" content="System Design Interview - Distributed Cache">
+  <meta property="og:description" content="A comprehensive, in-depth guide to designing a distributed caching system. We explore core concepts from data partitioning with consistent hashing to advanced topics like consistency models, fault tolerance, and handling real-world challenges like thundering herds.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-09-11T11:00:00+03:00">
+    <meta property="article:modified_time" content="2025-09-11T11:00:00+03:00">
+    <meta property="article:tag" content="System Design">
+    <meta property="article:tag" content="Distributed Systems">
+    <meta property="article:tag" content="Caching">
+    <meta property="article:tag" content="Scalability">
+    <meta property="article:tag" content="Architecture">
+    <meta property="article:tag" content="Interview Prep">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="System Design Interview - Distributed Cache">
+<meta name="twitter:description" content="A comprehensive, in-depth guide to designing a distributed caching system. We explore core concepts from data partitioning with consistent hashing to advanced topics like consistency models, fault tolerance, and handling real-world challenges like thundering herds.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://serhatgiydiren.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "System Design Interview - Distributed Cache",
+      "item": "https://serhatgiydiren.com/system-design-interview-distributed-cache/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "System Design Interview - Distributed Cache",
+  "name": "System Design Interview - Distributed Cache",
+  "description": "A comprehensive, in-depth guide to designing a distributed caching system. We explore core concepts from data partitioning with consistent hashing to advanced topics like consistency models, fault tolerance, and handling real-world challenges like thundering herds.",
+  "keywords": [
+    "system design", "distributed systems", "caching", "scalability", "architecture", "interview prep"
+  ],
+  "articleBody": "1. Introduction: The Need for Speed and Scale In any large-scale application, performance is paramount. As user load increases, backend services, particularly databases, often become the primary bottleneck. Repeatedly fetching the same data from a disk-based database is inefficient, leading to high latency for users and immense strain on database resources.\nCaching is the foundational strategy to mitigate this. By storing frequently accessed data in a faster, in-memory data store, we can serve user requests in a fraction of the time.\nHowever, a single cache server has its limits:\nLimited Memory: It can only store a finite amount of data. Single Point of Failure (SPOF): If the cache server goes down, the entire application’s performance degrades as all requests flood the database. Limited Throughput: A single server can only handle a certain number of requests per second. To overcome these limitations, we evolve to a Distributed Cache: a collection of interconnected cache servers (nodes) that work together as a single, cohesive unit. This guide provides a deep dive into the components and trade-offs involved in designing such a system, tailored for a system design interview context.\n2. Laying the Foundation: Requirements and Goals A good design starts with clear requirements.\nFunctional Requirements:\nSet(key, value, ttl): Store a key-value pair with an optional Time-To-Live (TTL). Get(key): Retrieve the value associated with a key. Delete(key): Invalidate/remove a key-value pair. Non-Functional Requirements:\nLow Latency: Read and write operations must be extremely fast (sub-millisecond). High Scalability: The system must scale horizontally to handle increasing load and data size by adding more nodes. High Availability: The system should remain operational even if some cache nodes fail. Tunable Consistency: The system should support different levels of consistency between the cache and the source of truth (the database). Fault Tolerance: The system must be resilient to node failures without significant data loss. 3. Core Challenge: Data Partitioning (Sharding) With multiple nodes, the first critical question is: How do we decide which node stores which key? This is data partitioning.\nThe Naive Approach: Modulo Hashing A simple method is to use a hash function and the modulo operator: node_index = hash(key) % N, where N is the number of nodes.\nFatal Flaw: This scheme is extremely brittle. If you add or remove a node, N changes, causing almost every key to be remapped to a new node. This mass invalidation results in a “cache stampede” or “thundering herd,” where the database is suddenly overwhelmed with requests, defeating the purpose of the cache. The Superior Approach: Consistent Hashing Consistent Hashing is the industry-standard solution to this problem.\nThe Hash Ring: Imagine a conceptual ring or circle representing the entire range of a hash function’s output (e.g., 0 to 2^32 - 1). Place Nodes: Hash each node’s ID (e.g., IP address) and place it on this ring. Place Keys: To determine where a key belongs, hash the key and find its position on the ring. Assign Responsibility: From the key’s position, walk clockwise around the ring until you encounter a node. That node is responsible for storing that key. The Magic of Consistent Hashing:\nNode Removal: If a node is removed, only the keys it was responsible for are remapped to the next node clockwise. The vast majority of keys are unaffected. Node Addition: When a new node is added, it takes responsibility for a portion of keys from the next node clockwise. Again, the impact is localized. Improvement: Virtual Nodes A potential issue with the basic approach is non-uniform data distribution if nodes are not spread evenly on the ring. To solve this, we introduce virtual nodes. Each physical node is mapped to multiple virtual nodes on the ring. This ensures that if a physical node is added or removed, the load is distributed much more evenly across the remaining nodes.\n4. Ensuring Reliability: Replication \u0026 Fault Tolerance Consistent hashing helps route around failed nodes, but the data on the failed node is lost (at least temporarily). This leads to cache misses and increased database load.\nSolution: Replication. We store copies (replicas) of each piece of data on multiple nodes.\nA common strategy is to have a replication factor (e.g., 3). A key is stored on its primary responsible node (as determined by consistent hashing) and also on the next N-1 nodes clockwise on the ring. When a primary node fails, requests for its data can be served by its replicas, ensuring high availability. Replication can be: Synchronous: Write to primary and all replicas must succeed before acknowledging the client. This provides strong consistency but at the cost of higher write latency. Asynchronous: Write to primary and acknowledge the client immediately. The primary then replicates the data to its replicas in the background. This offers low latency but has a small window for data loss if the primary fails before replication completes. For most caching use cases, asynchronous replication is the preferred trade-off. 5. The Million-Dollar Question: Consistency Models How do we keep the cache synchronized with the database? This is a central trade-off between performance, consistency, and complexity.\nCache-Aside (Lazy Loading) This is the most common caching strategy.\nOn Read: The application first queries the cache. Cache Hit: The data is returned directly from the cache. Cache Miss: The application queries the database, retrieves the data, populates the cache with it, and then returns the data. On Write: The application writes directly to the database and then issues a command to invalidate (delete) the corresponding key in the cache. Pros: Resilient (cache failures don’t prevent writes), and only data that is actually requested gets cached. Cons: Higher latency on a cache miss. There’s also a potential for a race condition leading to stale data (if data is updated in the DB after a miss but before the cache is populated). Write-Through On Write: The application writes to the cache. The cache synchronously writes the data to the database. The operation is only complete after both are successful. Pros: High data consistency between cache and DB. Cons: Higher write latency as it includes a database write. The database can still be a bottleneck for write-heavy loads. Write-Back (Write-Behind) On Write: The application writes only to the cache, which is extremely fast. The cache then asynchronously writes the data to the database in batches after a certain delay. Pros: Extremely low write latency and high write throughput. Cons: High risk of data loss if a cache node fails before it has persisted its data to the database. Suitable only for non-critical data. 6. Handling Finite Space: Eviction Policies When the cache is full, we need a policy to decide which items to discard.\nLRU (Least Recently Used): Discards the item that hasn’t been accessed for the longest time. The most common and often a great default choice. LFU (Least Frequently Used): Discards the item that has been accessed the fewest times. FIFO (First-In, First-Out): Discards the oldest item. Random Replacement: Randomly selects an item to discard. The choice of policy depends heavily on the data access patterns of the application.\n7. Advanced Challenges \u0026 Solutions Thundering Herd Problem When a very popular item expires from the cache, multiple requests might miss simultaneously, all hitting the database to fetch the same item and then trying to write it back to the cache.\nSolution 1 (Locking): Only the first process to miss acquires a lock to repopulate the cache. Others wait. Solution 2 (Stale-while-revalidate): Serve the old, stale data to most clients for a brief period while a single background process fetches the new data. This prioritizes availability and low latency. Monitoring A production-grade system needs robust monitoring. Key metrics to track:\nCache Hit/Miss Ratio: The single most important metric for cache effectiveness. Latency: p95, p99 latencies for Get/Set operations. Eviction/Expiration Rate: How many items are being removed. Node Health: CPU, Memory, and Network I/O for each cache node. 8. Conclusion: It’s All About Trade-offs Designing a distributed cache is a classic system design problem because it forces a discussion of fundamental trade-offs:\nPerformance vs. Consistency: Write-through is consistent but slow; write-back is fast but risky. Cache-aside is a common balance. Simplicity vs. Completeness: A simple modulo sharding is easy to implement but fails under scale; consistent hashing is more complex but robust. Cost vs. Availability: Higher replication factors increase availability and read performance but also increase memory costs. In an interview, demonstrating your understanding of these core concepts—Partitioning, Replication, Consistency, and Eviction—and your ability to articulate the trade-offs for a given scenario is the key to success.\n",
+  "wordCount" : "1416",
+  "inLanguage": "en",
+  "datePublished": "2025-09-11T11:00:00+03:00",
+  "dateModified": "2025-09-11T11:00:00+03:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://serhatgiydiren.com/system-design-interview-distributed-cache/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Serhat Giydiren",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://serhatgiydiren.com/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://serhatgiydiren.com/" accesskey="h" title="Serhat Giydiren (Alt + H)">Serhat Giydiren</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://serhatgiydiren.com/archives" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://serhatgiydiren.com/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://serhatgiydiren.com/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://serhatgiydiren.com/categories" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      System Design Interview - Distributed Cache
+    </h1>
+    <div class="post-meta"><span title='2025-09-11 11:00:00 +0300 +03'>September 11, 2025</span>&nbsp;·&nbsp;7 min
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="1-introduction-the-need-for-speed-and-scale">1. Introduction: The Need for Speed and Scale<a hidden class="anchor" aria-hidden="true" href="#1-introduction-the-need-for-speed-and-scale">#</a></h2>
+<p>In any large-scale application, performance is paramount. As user load increases, backend services, particularly databases, often become the primary bottleneck. Repeatedly fetching the same data from a disk-based database is inefficient, leading to high latency for users and immense strain on database resources.</p>
+<p><strong>Caching</strong> is the foundational strategy to mitigate this. By storing frequently accessed data in a faster, in-memory data store, we can serve user requests in a fraction of the time.</p>
+<p>However, a single cache server has its limits:</p>
+<ul>
+<li><strong>Limited Memory:</strong> It can only store a finite amount of data.</li>
+<li><strong>Single Point of Failure (SPOF):</strong> If the cache server goes down, the entire application&rsquo;s performance degrades as all requests flood the database.</li>
+<li><strong>Limited Throughput:</strong> A single server can only handle a certain number of requests per second.</li>
+</ul>
+<p>To overcome these limitations, we evolve to a <strong>Distributed Cache</strong>: a collection of interconnected cache servers (nodes) that work together as a single, cohesive unit. This guide provides a deep dive into the components and trade-offs involved in designing such a system, tailored for a system design interview context.</p>
+<h2 id="2-laying-the-foundation-requirements-and-goals">2. Laying the Foundation: Requirements and Goals<a hidden class="anchor" aria-hidden="true" href="#2-laying-the-foundation-requirements-and-goals">#</a></h2>
+<p>A good design starts with clear requirements.</p>
+<p><strong>Functional Requirements:</strong></p>
+<ul>
+<li><code>Set(key, value, ttl)</code>: Store a key-value pair with an optional Time-To-Live (TTL).</li>
+<li><code>Get(key)</code>: Retrieve the value associated with a key.</li>
+<li><code>Delete(key)</code>: Invalidate/remove a key-value pair.</li>
+</ul>
+<p><strong>Non-Functional Requirements:</strong></p>
+<ul>
+<li><strong>Low Latency:</strong> Read and write operations must be extremely fast (sub-millisecond).</li>
+<li><strong>High Scalability:</strong> The system must scale horizontally to handle increasing load and data size by adding more nodes.</li>
+<li><strong>High Availability:</strong> The system should remain operational even if some cache nodes fail.</li>
+<li><strong>Tunable Consistency:</strong> The system should support different levels of consistency between the cache and the source of truth (the database).</li>
+<li><strong>Fault Tolerance:</strong> The system must be resilient to node failures without significant data loss.</li>
+</ul>
+<h2 id="3-core-challenge-data-partitioning-sharding">3. Core Challenge: Data Partitioning (Sharding)<a hidden class="anchor" aria-hidden="true" href="#3-core-challenge-data-partitioning-sharding">#</a></h2>
+<p>With multiple nodes, the first critical question is: <strong>How do we decide which node stores which key?</strong> This is data partitioning.</p>
+<h4 id="the-naive-approach-modulo-hashing">The Naive Approach: Modulo Hashing<a hidden class="anchor" aria-hidden="true" href="#the-naive-approach-modulo-hashing">#</a></h4>
+<p>A simple method is to use a hash function and the modulo operator: <code>node_index = hash(key) % N</code>, where <code>N</code> is the number of nodes.</p>
+<ul>
+<li><strong>Fatal Flaw:</strong> This scheme is extremely brittle. If you add or remove a node, <code>N</code> changes, causing almost every key to be remapped to a new node. This mass invalidation results in a &ldquo;cache stampede&rdquo; or &ldquo;thundering herd,&rdquo; where the database is suddenly overwhelmed with requests, defeating the purpose of the cache.</li>
+</ul>
+<h4 id="the-superior-approach-consistent-hashing">The Superior Approach: Consistent Hashing<a hidden class="anchor" aria-hidden="true" href="#the-superior-approach-consistent-hashing">#</a></h4>
+<p>Consistent Hashing is the industry-standard solution to this problem.</p>
+<ol>
+<li><strong>The Hash Ring:</strong> Imagine a conceptual ring or circle representing the entire range of a hash function&rsquo;s output (e.g., 0 to 2^32 - 1).</li>
+<li><strong>Place Nodes:</strong> Hash each node&rsquo;s ID (e.g., IP address) and place it on this ring.</li>
+<li><strong>Place Keys:</strong> To determine where a key belongs, hash the key and find its position on the ring.</li>
+<li><strong>Assign Responsibility:</strong> From the key&rsquo;s position, walk clockwise around the ring until you encounter a node. That node is responsible for storing that key.</li>
+</ol>
+<p><strong>The Magic of Consistent Hashing:</strong></p>
+<ul>
+<li><strong>Node Removal:</strong> If a node is removed, only the keys it was responsible for are remapped to the next node clockwise. The vast majority of keys are unaffected.</li>
+<li><strong>Node Addition:</strong> When a new node is added, it takes responsibility for a portion of keys from the next node clockwise. Again, the impact is localized.</li>
+</ul>
+<p><strong>Improvement: Virtual Nodes</strong>
+A potential issue with the basic approach is non-uniform data distribution if nodes are not spread evenly on the ring. To solve this, we introduce <strong>virtual nodes</strong>. Each physical node is mapped to multiple virtual nodes on the ring. This ensures that if a physical node is added or removed, the load is distributed much more evenly across the remaining nodes.</p>
+<h2 id="4-ensuring-reliability-replication--fault-tolerance">4. Ensuring Reliability: Replication &amp; Fault Tolerance<a hidden class="anchor" aria-hidden="true" href="#4-ensuring-reliability-replication--fault-tolerance">#</a></h2>
+<p>Consistent hashing helps route around failed nodes, but the data on the failed node is lost (at least temporarily). This leads to cache misses and increased database load.</p>
+<p><strong>Solution: Replication.</strong> We store copies (replicas) of each piece of data on multiple nodes.</p>
+<ul>
+<li>A common strategy is to have a <strong>replication factor</strong> (e.g., 3). A key is stored on its primary responsible node (as determined by consistent hashing) and also on the next <code>N-1</code> nodes clockwise on the ring.</li>
+<li>When a primary node fails, requests for its data can be served by its replicas, ensuring high availability.</li>
+<li><strong>Replication can be:</strong>
+<ul>
+<li><strong>Synchronous:</strong> Write to primary and all replicas must succeed before acknowledging the client. This provides strong consistency but at the cost of higher write latency.</li>
+<li><strong>Asynchronous:</strong> Write to primary and acknowledge the client immediately. The primary then replicates the data to its replicas in the background. This offers low latency but has a small window for data loss if the primary fails before replication completes. For most caching use cases, asynchronous replication is the preferred trade-off.</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-the-million-dollar-question-consistency-models">5. The Million-Dollar Question: Consistency Models<a hidden class="anchor" aria-hidden="true" href="#5-the-million-dollar-question-consistency-models">#</a></h2>
+<p>How do we keep the cache synchronized with the database? This is a central trade-off between performance, consistency, and complexity.</p>
+<h4 id="cache-aside-lazy-loading">Cache-Aside (Lazy Loading)<a hidden class="anchor" aria-hidden="true" href="#cache-aside-lazy-loading">#</a></h4>
+<p>This is the most common caching strategy.</p>
+<ol>
+<li><strong>On Read:</strong> The application first queries the cache.
+<ul>
+<li><strong>Cache Hit:</strong> The data is returned directly from the cache.</li>
+<li><strong>Cache Miss:</strong> The application queries the database, retrieves the data, <strong>populates the cache with it</strong>, and then returns the data.</li>
+</ul>
+</li>
+<li><strong>On Write:</strong> The application writes directly to the database and then issues a command to <strong>invalidate (delete)</strong> the corresponding key in the cache.</li>
+</ol>
+<ul>
+<li><strong>Pros:</strong> Resilient (cache failures don&rsquo;t prevent writes), and only data that is actually requested gets cached.</li>
+<li><strong>Cons:</strong> Higher latency on a cache miss. There&rsquo;s also a potential for a race condition leading to stale data (if data is updated in the DB after a miss but before the cache is populated).</li>
+</ul>
+<h4 id="write-through">Write-Through<a hidden class="anchor" aria-hidden="true" href="#write-through">#</a></h4>
+<ol>
+<li><strong>On Write:</strong> The application writes to the cache. The cache synchronously writes the data to the database. The operation is only complete after both are successful.</li>
+</ol>
+<ul>
+<li><strong>Pros:</strong> High data consistency between cache and DB.</li>
+<li><strong>Cons:</strong> Higher write latency as it includes a database write. The database can still be a bottleneck for write-heavy loads.</li>
+</ul>
+<h4 id="write-back-write-behind">Write-Back (Write-Behind)<a hidden class="anchor" aria-hidden="true" href="#write-back-write-behind">#</a></h4>
+<ol>
+<li><strong>On Write:</strong> The application writes only to the cache, which is extremely fast. The cache then asynchronously writes the data to the database in batches after a certain delay.</li>
+</ol>
+<ul>
+<li><strong>Pros:</strong> Extremely low write latency and high write throughput.</li>
+<li><strong>Cons:</strong> High risk of <strong>data loss</strong> if a cache node fails before it has persisted its data to the database. Suitable only for non-critical data.</li>
+</ul>
+<h2 id="6-handling-finite-space-eviction-policies">6. Handling Finite Space: Eviction Policies<a hidden class="anchor" aria-hidden="true" href="#6-handling-finite-space-eviction-policies">#</a></h2>
+<p>When the cache is full, we need a policy to decide which items to discard.</p>
+<ul>
+<li><strong>LRU (Least Recently Used):</strong> Discards the item that hasn&rsquo;t been accessed for the longest time. The most common and often a great default choice.</li>
+<li><strong>LFU (Least Frequently Used):</strong> Discards the item that has been accessed the fewest times.</li>
+<li><strong>FIFO (First-In, First-Out):</strong> Discards the oldest item.</li>
+<li><strong>Random Replacement:</strong> Randomly selects an item to discard.</li>
+</ul>
+<p>The choice of policy depends heavily on the data access patterns of the application.</p>
+<h2 id="7-advanced-challenges--solutions">7. Advanced Challenges &amp; Solutions<a hidden class="anchor" aria-hidden="true" href="#7-advanced-challenges--solutions">#</a></h2>
+<h4 id="thundering-herd-problem">Thundering Herd Problem<a hidden class="anchor" aria-hidden="true" href="#thundering-herd-problem">#</a></h4>
+<p>When a very popular item expires from the cache, multiple requests might miss simultaneously, all hitting the database to fetch the same item and then trying to write it back to the cache.</p>
+<ul>
+<li><strong>Solution 1 (Locking):</strong> Only the first process to miss acquires a lock to repopulate the cache. Others wait.</li>
+<li><strong>Solution 2 (Stale-while-revalidate):</strong> Serve the old, stale data to most clients for a brief period while a single background process fetches the new data. This prioritizes availability and low latency.</li>
+</ul>
+<h4 id="monitoring">Monitoring<a hidden class="anchor" aria-hidden="true" href="#monitoring">#</a></h4>
+<p>A production-grade system needs robust monitoring. Key metrics to track:</p>
+<ul>
+<li><strong>Cache Hit/Miss Ratio:</strong> The single most important metric for cache effectiveness.</li>
+<li><strong>Latency:</strong> p95, p99 latencies for Get/Set operations.</li>
+<li><strong>Eviction/Expiration Rate:</strong> How many items are being removed.</li>
+<li><strong>Node Health:</strong> CPU, Memory, and Network I/O for each cache node.</li>
+</ul>
+<h2 id="8-conclusion-its-all-about-trade-offs">8. Conclusion: It&rsquo;s All About Trade-offs<a hidden class="anchor" aria-hidden="true" href="#8-conclusion-its-all-about-trade-offs">#</a></h2>
+<p>Designing a distributed cache is a classic system design problem because it forces a discussion of fundamental trade-offs:</p>
+<ul>
+<li><strong>Performance vs. Consistency:</strong> Write-through is consistent but slow; write-back is fast but risky. Cache-aside is a common balance.</li>
+<li><strong>Simplicity vs. Completeness:</strong> A simple modulo sharding is easy to implement but fails under scale; consistent hashing is more complex but robust.</li>
+<li><strong>Cost vs. Availability:</strong> Higher replication factors increase availability and read performance but also increase memory costs.</li>
+</ul>
+<p>In an interview, demonstrating your understanding of these core concepts—<strong>Partitioning, Replication, Consistency, and Eviction</strong>—and your ability to articulate the trade-offs for a given scenario is the key to success.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://serhatgiydiren.com/tags/system-design/">System Design</a></li>
+      <li><a href="https://serhatgiydiren.com/tags/distributed-systems/">Distributed Systems</a></li>
+      <li><a href="https://serhatgiydiren.com/tags/caching/">Caching</a></li>
+      <li><a href="https://serhatgiydiren.com/tags/scalability/">Scalability</a></li>
+      <li><a href="https://serhatgiydiren.com/tags/architecture/">Architecture</a></li>
+      <li><a href="https://serhatgiydiren.com/tags/interview-prep/">Interview Prep</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://serhatgiydiren.com/">Serhat Giydiren</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

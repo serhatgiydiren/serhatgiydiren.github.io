@@ -1,6 +1,16 @@
 ---
-title: 'AI Safety Diary: September 10, 2025'
+title: "AI Safety Diary: September 10, 2025"
 date: '2025-09-10T18:07:18+03:00'
+categories:
+  - "AI Safety"
+  - "AI Alignment"
+tags:
+  - "ai safety diary"
+  - "effective altruism"
+  - "s-risks"
+  - "misalignment"
+  - "prompt sensitivity"
+summary: "A diary entry on AI risks, including misalignment, misuse, and s-risks, and an exploration of emergent misalignment due to prompt sensitivity in LLMs."
 ---
 
 Today, I explored a chapter from the [Effective Altruism Handbook](https://forum.effectivealtruism.org/handbook) and a research paper as part of my AI safety studies. Below are the resources I reviewed.

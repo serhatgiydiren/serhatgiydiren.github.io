@@ -1,13 +1,17 @@
 ---
-id: 952
-title: 'AI Safety Diary: August 17, 2025'
+title: "AI Safety Diary: August 17, 2025"
 date: '2025-08-17T19:53:17+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=952'
-permalink: /ai-safety-diary-august-17-2025/
 categories:
-    - 'AI Safety'
+  - "AI Safety"
+  - "AI Interpretability"
+tags:
+  - "ai safety diary"
+  - "anthropic"
+  - "interpretability"
+  - "affective ai"
+  - "ai consciousness"
+  - "model welfare"
+summary: "A diary entry on several Anthropic discussions, including AI interpretability, the affective use of AI for emotional support, and the philosophical questions surrounding AI consciousness and model welfare."
 ---
 
 Today, I explored three videos from the [Anthropic YouTube channel](https://www.youtube.com/@anthropic-ai) as part of my AI safety studies. Below are the resources I reviewed.

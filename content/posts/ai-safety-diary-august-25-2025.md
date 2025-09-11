@@ -1,13 +1,15 @@
 ---
-id: 970
-title: 'AI Safety Diary: August 25, 2025'
+title: "AI Safety Diary: August 25, 2025"
 date: '2025-08-25T17:55:33+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=970'
-permalink: /ai-safety-diary-august-25-2025/
 categories:
-    - 'AI Safety'
+  - "AI Safety"
+tags:
+  - "ai safety diary"
+  - "effective altruism"
+  - "existential risks"
+  - "biosecurity"
+  - "pandemics"
+summary: "A diary entry on Chapter 4 of the Effective Altruism Handbook, 'Our Final Century?', which examines existential risks, particularly human-made pandemics, and strategies for biosecurity."
 ---
 
 Today, I explored a chapter from the [Introduction to Effective Altruism Handbook](https://forum.effectivealtruism.org/handbook) as part of my AI safety and governance studies. Below is the resource I reviewed.

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Thought Anchors on Serhat Giydiren</title>
+    <link>https://serhatgiydiren.com/tags/thought-anchors/</link>
+    <description>Recent content in Thought Anchors on Serhat Giydiren</description>
+    <generator>Hugo -- 0.149.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Aug 2025 17:59:46 +0000</lastBuildDate>
+    <atom:link href="https://serhatgiydiren.com/tags/thought-anchors/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: August 28, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-28-2025/</link>
+      <pubDate>Thu, 28 Aug 2025 17:59:46 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-28-2025/</guid>
+      <description>A diary entry on &amp;lsquo;Thought Anchors&amp;rsquo;, a concept for identifying key reasoning steps in Chain-of-Thought (CoT) processes that significantly influence LLM behavior, enhancing interpretability for AI safety.</description>
+    </item>
+  </channel>
+</rss>

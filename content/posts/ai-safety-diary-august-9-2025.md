@@ -1,15 +1,18 @@
 ---
-id: 939
-title: 'AI Safety Diary: August 9, 2025'
+title: "AI Safety Diary: August 9, 2025"
 date: '2025-08-09T12:45:43+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=939'
-permalink: /ai-safety-diary-august-9-2025/
 categories:
-    - 'AI Alignment'
-    - 'AI Governance'
-    - 'AI Safety'
+  - "AI Safety"
+  - "AI Alignment"
+  - "AI Governance"
+tags:
+  - "ai safety diary"
+  - "catastrophic risks"
+  - "ai fundamentals"
+  - "single-agent safety"
+  - "safety engineering"
+  - "complex systems"
+summary: "A diary entry summarizing chapters 1-5 of the 'Introduction to AI Safety, Ethics, and Society' textbook, covering catastrophic AI risks, AI fundamentals, single-agent safety, safety engineering, and complex systems."
 ---
 
 Today, I explored the [Introduction to AI Safety, Ethics, and Society](https://aisafetybook.com) textbook as part of my AI safety studies. Below is the resource I reviewed.

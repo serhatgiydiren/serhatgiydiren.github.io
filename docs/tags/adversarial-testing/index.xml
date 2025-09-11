@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Adversarial Testing on Serhat Giydiren</title>
+    <link>https://serhatgiydiren.com/tags/adversarial-testing/</link>
+    <description>Recent content in Adversarial Testing on Serhat Giydiren</description>
+    <generator>Hugo -- 0.149.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 31 Aug 2025 18:06:49 +0000</lastBuildDate>
+    <atom:link href="https://serhatgiydiren.com/tags/adversarial-testing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: August 31, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-31-2025/</link>
+      <pubDate>Sun, 31 Aug 2025 18:06:49 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-31-2025/</guid>
+      <description>A diary entry on defending against AI jailbreaks, discussing Anthropic&amp;rsquo;s strategies for bypassing model safety constraints to elicit harmful or unintended responses.</description>
+    </item>
+  </channel>
+</rss>

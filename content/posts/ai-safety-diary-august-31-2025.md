@@ -1,13 +1,15 @@
 ---
-id: 982
-title: 'AI Safety Diary: August 31, 2025'
+title: "AI Safety Diary: August 31, 2025"
 date: '2025-08-31T18:06:49+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=982'
-permalink: /ai-safety-diary-august-31-2025/
 categories:
-    - 'AI Safety'
+  - "AI Safety"
+tags:
+  - "ai safety diary"
+  - "anthropic"
+  - "ai jailbreaks"
+  - "model safety"
+  - "adversarial testing"
+summary: "A diary entry on defending against AI jailbreaks, discussing Anthropic's strategies for bypassing model safety constraints to elicit harmful or unintended responses."
 ---
 
 Today, I explored a video from the [Anthropic YouTube channel](https://www.youtube.com/@anthropic-ai) as part of my AI safety studies. Below is the resource I reviewed.

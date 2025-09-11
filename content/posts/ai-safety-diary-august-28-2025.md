@@ -1,13 +1,16 @@
 ---
-id: 976
-title: 'AI Safety Diary: August 28, 2025'
+title: "AI Safety Diary: August 28, 2025"
 date: '2025-08-28T17:59:46+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=976'
-permalink: /ai-safety-diary-august-28-2025/
 categories:
-    - 'AI Safety'
+  - "AI Safety"
+  - "AI Interpretability"
+tags:
+  - "ai safety diary"
+  - "thought anchors"
+  - "chain-of-thought"
+  - "llm reasoning"
+  - "interpretability"
+summary: "A diary entry on 'Thought Anchors', a concept for identifying key reasoning steps in Chain-of-Thought (CoT) processes that significantly influence LLM behavior, enhancing interpretability for AI safety."
 ---
 
 Today, I explored a research paper as part of my AI safety studies. Below is the resource I reviewed.

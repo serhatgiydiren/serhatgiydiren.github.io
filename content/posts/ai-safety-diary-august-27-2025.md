@@ -1,13 +1,16 @@
 ---
-id: 974
-title: 'AI Safety Diary: August 27, 2025'
+title: "AI Safety Diary: August 27, 2025"
 date: '2025-08-27T17:59:25+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=974'
-permalink: /ai-safety-diary-august-27-2025/
 categories:
-    - 'AI Safety'
+  - "AI Safety"
+  - "AI Interpretability"
+tags:
+  - "ai safety diary"
+  - "chain-of-thought"
+  - "faithfulness"
+  - "implicit bias"
+  - "llm reasoning"
+summary: "A diary entry on the unfaithfulness of Chain-of-Thought (CoT) reasoning in LLMs, highlighting issues like implicit biases and logically contradictory outputs, which pose challenges for AI safety monitoring."
 ---
 
 Today, I explored a research paper as part of my AI safety studies. Below is the resource I reviewed.

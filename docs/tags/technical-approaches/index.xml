@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Technical Approaches on Serhat Giydiren</title>
+    <link>https://serhatgiydiren.com/tags/technical-approaches/</link>
+    <description>Recent content in Technical Approaches on Serhat Giydiren</description>
+    <generator>Hugo -- 0.149.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 23 Aug 2025 17:50:12 +0000</lastBuildDate>
+    <atom:link href="https://serhatgiydiren.com/tags/technical-approaches/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: August 23, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-23-2025/</link>
+      <pubDate>Sat, 23 Aug 2025 17:50:12 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-23-2025/</guid>
+      <description>A diary entry on the audio version of Chapter 3 of the AI Safety Atlas, focusing on strategies for mitigating AI risks, including technical approaches like alignment and interpretability, and governance strategies.</description>
+    </item>
+  </channel>
+</rss>

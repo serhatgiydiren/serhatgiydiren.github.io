@@ -6,15 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>AI Safety Diary: August 20, 2025 | Serhat Giydiren</title>
-<meta name="keywords" content="">
-<meta name="description" content="Today, I explored a research paper as part of my AI safety studies. Below is the resource I reviewed.
-Resource: Vending-Bench: A Benchmark for Long-Term Coherence of Autonomous Agents
-
-Source: Vending-Bench: A Benchmark for Long-Term Coherence of Autonomous Agents
- by Axel Backlund and Lukas Petersson, Andon Labs, arXiv:2502.15840, February 2025.
-Summary: This paper introduces Vending-Bench, a simulated environment designed to test the long-term coherence of large language model (LLM)-based agents in managing a vending machine business. Agents must handle inventory, orders, pricing, and daily fees over extended periods (&gt;20M tokens per run), revealing high variance in performance. Models like Claude 3.5 Sonnet and o3-mini often succeed but can fail due to misinterpreting schedules, forgetting orders, or entering &ldquo;meltdown&rdquo; loops. The benchmark highlights LLMs’ challenges in sustained decision-making and tests their ability to manage capital, relevant to AI safety in scenarios involving powerful autonomous agents.
-">
-<meta name="author" content="Serhat Giydiren">
+<meta name="keywords" content="ai safety diary, vending-bench, autonomous agents, llm benchmarks, long-term coherence">
+<meta name="description" content="A diary entry on Vending-Bench, a benchmark for evaluating the long-term coherence and decision-making capabilities of autonomous LLM-based agents in a simulated business environment.">
+<meta name="author" content="">
 <link rel="canonical" href="https://serhatgiydiren.com/ai-safety-diary-august-20-2025/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://serhatgiydiren.com/favicon.ico">
@@ -64,22 +58,20 @@ Summary: This paper introduces Vending-Bench, a simulated environment designed t
 </noscript><meta property="og:url" content="https://serhatgiydiren.com/ai-safety-diary-august-20-2025/">
   <meta property="og:site_name" content="Serhat Giydiren">
   <meta property="og:title" content="AI Safety Diary: August 20, 2025">
-  <meta property="og:description" content="Today, I explored a research paper as part of my AI safety studies. Below is the resource I reviewed.
-Resource: Vending-Bench: A Benchmark for Long-Term Coherence of Autonomous Agents Source: Vending-Bench: A Benchmark for Long-Term Coherence of Autonomous Agents by Axel Backlund and Lukas Petersson, Andon Labs, arXiv:2502.15840, February 2025. Summary: This paper introduces Vending-Bench, a simulated environment designed to test the long-term coherence of large language model (LLM)-based agents in managing a vending machine business. Agents must handle inventory, orders, pricing, and daily fees over extended periods (&gt;20M tokens per run), revealing high variance in performance. Models like Claude 3.5 Sonnet and o3-mini often succeed but can fail due to misinterpreting schedules, forgetting orders, or entering “meltdown” loops. The benchmark highlights LLMs’ challenges in sustained decision-making and tests their ability to manage capital, relevant to AI safety in scenarios involving powerful autonomous agents. ">
+  <meta property="og:description" content="A diary entry on Vending-Bench, a benchmark for evaluating the long-term coherence and decision-making capabilities of autonomous LLM-based agents in a simulated business environment.">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-08-20T12:50:04+00:00">
     <meta property="article:modified_time" content="2025-08-20T12:50:04+00:00">
+    <meta property="article:tag" content="Ai Safety Diary">
+    <meta property="article:tag" content="Vending-Bench">
+    <meta property="article:tag" content="Autonomous Agents">
+    <meta property="article:tag" content="Llm Benchmarks">
+    <meta property="article:tag" content="Long-Term Coherence">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AI Safety Diary: August 20, 2025">
-<meta name="twitter:description" content="Today, I explored a research paper as part of my AI safety studies. Below is the resource I reviewed.
-Resource: Vending-Bench: A Benchmark for Long-Term Coherence of Autonomous Agents
-
-Source: Vending-Bench: A Benchmark for Long-Term Coherence of Autonomous Agents
- by Axel Backlund and Lukas Petersson, Andon Labs, arXiv:2502.15840, February 2025.
-Summary: This paper introduces Vending-Bench, a simulated environment designed to test the long-term coherence of large language model (LLM)-based agents in managing a vending machine business. Agents must handle inventory, orders, pricing, and daily fees over extended periods (&gt;20M tokens per run), revealing high variance in performance. Models like Claude 3.5 Sonnet and o3-mini often succeed but can fail due to misinterpreting schedules, forgetting orders, or entering &ldquo;meltdown&rdquo; loops. The benchmark highlights LLMs’ challenges in sustained decision-making and tests their ability to manage capital, relevant to AI safety in scenarios involving powerful autonomous agents.
-">
+<meta name="twitter:description" content="A diary entry on Vending-Bench, a benchmark for evaluating the long-term coherence and decision-making capabilities of autonomous LLM-based agents in a simulated business environment.">
 
 
 <script type="application/ld+json">
@@ -108,19 +100,15 @@ Summary: This paper introduces Vending-Bench, a simulated environment designed t
   "@type": "BlogPosting",
   "headline": "AI Safety Diary: August 20, 2025",
   "name": "AI Safety Diary: August 20, 2025",
-  "description": "Today, I explored a research paper as part of my AI safety studies. Below is the resource I reviewed.\nResource: Vending-Bench: A Benchmark for Long-Term Coherence of Autonomous Agents Source: Vending-Bench: A Benchmark for Long-Term Coherence of Autonomous Agents by Axel Backlund and Lukas Petersson, Andon Labs, arXiv:2502.15840, February 2025. Summary: This paper introduces Vending-Bench, a simulated environment designed to test the long-term coherence of large language model (LLM)-based agents in managing a vending machine business. Agents must handle inventory, orders, pricing, and daily fees over extended periods (\u0026gt;20M tokens per run), revealing high variance in performance. Models like Claude 3.5 Sonnet and o3-mini often succeed but can fail due to misinterpreting schedules, forgetting orders, or entering \u0026ldquo;meltdown\u0026rdquo; loops. The benchmark highlights LLMs’ challenges in sustained decision-making and tests their ability to manage capital, relevant to AI safety in scenarios involving powerful autonomous agents. ",
+  "description": "A diary entry on Vending-Bench, a benchmark for evaluating the long-term coherence and decision-making capabilities of autonomous LLM-based agents in a simulated business environment.",
   "keywords": [
-    
+    "ai safety diary", "vending-bench", "autonomous agents", "llm benchmarks", "long-term coherence"
   ],
   "articleBody": "Today, I explored a research paper as part of my AI safety studies. Below is the resource I reviewed.\nResource: Vending-Bench: A Benchmark for Long-Term Coherence of Autonomous Agents Source: Vending-Bench: A Benchmark for Long-Term Coherence of Autonomous Agents by Axel Backlund and Lukas Petersson, Andon Labs, arXiv:2502.15840, February 2025. Summary: This paper introduces Vending-Bench, a simulated environment designed to test the long-term coherence of large language model (LLM)-based agents in managing a vending machine business. Agents must handle inventory, orders, pricing, and daily fees over extended periods (\u003e20M tokens per run), revealing high variance in performance. Models like Claude 3.5 Sonnet and o3-mini often succeed but can fail due to misinterpreting schedules, forgetting orders, or entering “meltdown” loops. The benchmark highlights LLMs’ challenges in sustained decision-making and tests their ability to manage capital, relevant to AI safety in scenarios involving powerful autonomous agents. ",
   "wordCount" : "144",
   "inLanguage": "en",
   "datePublished": "2025-08-20T12:50:04Z",
   "dateModified": "2025-08-20T12:50:04Z",
-  "author":{
-    "@type": "Person",
-    "name": "Serhat Giydiren"
-  },
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://serhatgiydiren.com/ai-safety-diary-august-20-2025/"
@@ -187,6 +175,16 @@ Summary: This paper introduces Vending-Bench, a simulated environment designed t
                     <span>Search</span>
                 </a>
             </li>
+            <li>
+                <a href="https://serhatgiydiren.com/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://serhatgiydiren.com/categories" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -198,7 +196,7 @@ Summary: This paper introduces Vending-Bench, a simulated environment designed t
     <h1 class="post-title entry-hint-parent">
       AI Safety Diary: August 20, 2025
     </h1>
-    <div class="post-meta"><span title='2025-08-20 12:50:04 +0000 +0000'>August 20, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Serhat Giydiren
+    <div class="post-meta"><span title='2025-08-20 12:50:04 +0000 +0000'>August 20, 2025</span>&nbsp;·&nbsp;1 min
 
 </div>
   </header> 
@@ -219,6 +217,11 @@ Summary: This paper introduces Vending-Bench, a simulated environment designed t
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://serhatgiydiren.com/tags/ai-safety-diary/">Ai Safety Diary</a></li>
+      <li><a href="https://serhatgiydiren.com/tags/vending-bench/">Vending-Bench</a></li>
+      <li><a href="https://serhatgiydiren.com/tags/autonomous-agents/">Autonomous Agents</a></li>
+      <li><a href="https://serhatgiydiren.com/tags/llm-benchmarks/">Llm Benchmarks</a></li>
+      <li><a href="https://serhatgiydiren.com/tags/long-term-coherence/">Long-Term Coherence</a></li>
     </ul>
   </footer>
 </article>

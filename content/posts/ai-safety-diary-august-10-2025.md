@@ -1,15 +1,17 @@
 ---
-id: 941
-title: 'AI Safety Diary: August 10, 2025'
+title: "AI Safety Diary: August 10, 2025"
 date: '2025-08-10T12:47:45+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=941'
-permalink: /ai-safety-diary-august-10-2025/
 categories:
-    - 'AI Alignment'
-    - 'AI Governance'
-    - 'AI Safety'
+  - "AI Safety"
+  - "AI Governance"
+  - "AI Alignment"
+tags:
+  - "ai safety diary"
+  - "machine ethics"
+  - "collective action problems"
+  - "governance"
+  - "utility functions"
+summary: "A diary entry summarizing chapters 6-10 of the 'Introduction to AI Safety, Ethics, and Society' textbook, covering beneficial AI, machine ethics, collective action problems, governance, and utility functions."
 ---
 
 Today, I continued exploring the [Introduction to AI Safety, Ethics, and Society](https://aisafetybook.com) textbook as part of my AI safety studies. Below is the resource I reviewed.

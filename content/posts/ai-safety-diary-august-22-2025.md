@@ -1,13 +1,17 @@
 ---
-id: 963
-title: 'AI Safety Diary: August 22, 2025'
+title: "AI Safety Diary: August 22, 2025"
 date: '2025-08-22T17:47:59+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=963'
-permalink: /ai-safety-diary-august-22-2025/
 categories:
-    - 'AI Safety'
+  - "AI Safety"
+  - "AI Alignment"
+tags:
+  - "ai safety diary"
+  - "ai safety atlas"
+  - "ai risks"
+  - "misuse"
+  - "accidents"
+  - "systemic risks"
+summary: "A diary entry on the audio version of Chapter 2 of the AI Safety Atlas, focusing on various AI risks, including misuse, accidents, and systemic risks, and the challenges of alignment failures."
 ---
 
 Today, I explored the audio version of a chapter from the [AI Safety Atlas](https://ai-safety-atlas.com/) as part of my AI safety studies. Below is the resource I reviewed.

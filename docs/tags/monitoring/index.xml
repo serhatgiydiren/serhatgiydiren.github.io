@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Monitoring on Serhat Giydiren</title>
+    <link>https://serhatgiydiren.com/tags/monitoring/</link>
+    <description>Recent content in Monitoring on Serhat Giydiren</description>
+    <generator>Hugo -- 0.149.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 08 Sep 2025 18:07:18 +0300</lastBuildDate>
+    <atom:link href="https://serhatgiydiren.com/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: September 8, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-8-2025/</link>
+      <pubDate>Mon, 08 Sep 2025 18:07:18 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-8-2025/</guid>
+      <description>A diary entry on common use cases for AI models and the risks of models obfuscating their reasoning to evade safety monitors.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: September 6, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-6-2025/</link>
+      <pubDate>Sat, 06 Sep 2025 18:07:18 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-6-2025/</guid>
+      <description>A diary entry on how Chain-of-Thought (CoT) reasoning affects LLM&amp;rsquo;s ability to evade monitors, and the challenge of unfaithful reasoning in model explanations.</description>
+    </item>
+  </channel>
+</rss>

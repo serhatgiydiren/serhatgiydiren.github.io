@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sparse Autoencoders on Serhat Giydiren</title>
+    <link>https://serhatgiydiren.com/tags/sparse-autoencoders/</link>
+    <description>Recent content in Sparse Autoencoders on Serhat Giydiren</description>
+    <generator>Hugo -- 0.149.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 04 Sep 2025 18:07:18 +0300</lastBuildDate>
+    <atom:link href="https://serhatgiydiren.com/tags/sparse-autoencoders/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: September 4, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-4-2025/</link>
+      <pubDate>Thu, 04 Sep 2025 18:07:18 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-4-2025/</guid>
+      <description>A diary entry introducing AI interpretability and discussing a paper on the limitations of sparse autoencoders for finding canonical units of analysis in LLMs.</description>
+    </item>
+  </channel>
+</rss>

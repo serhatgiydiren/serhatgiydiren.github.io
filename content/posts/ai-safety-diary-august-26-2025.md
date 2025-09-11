@@ -1,13 +1,15 @@
 ---
-id: 972
-title: 'AI Safety Diary: August 26, 2025'
+title: "AI Safety Diary: August 26, 2025"
 date: '2025-08-26T17:58:57+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=972'
-permalink: /ai-safety-diary-august-26-2025/
 categories:
-    - 'AI Safety'
+  - "AI Safety"
+  - "AI Interpretability"
+tags:
+  - "ai safety diary"
+  - "chain-of-thought"
+  - "monitorability"
+  - "llm safety"
+summary: "A diary entry on Chain of Thought (CoT) monitorability as a fragile opportunity for AI safety, focusing on detecting misbehavior in LLMs and the challenges of maintaining transparency."
 ---
 
 Today, I explored a research paper as part of my AI safety studies. Below is the resource I reviewed.

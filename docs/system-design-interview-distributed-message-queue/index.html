@@ -1,61 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>System Design Interview - Distributed Message Queue | Serhat Giydiren</title>
-<meta name="keywords" content="">
-<meta name="description" content="
-Besides reading this post, I strongly recommend reading chapter 4 (Distributed Message Queue) of the book System Design Interview – An Insider’s Guide: Volume 2 (Xu, Alex - Lam, Sahn)
- You can review alternative resources
- as well.
-Synchronous Communication
-
-When producer makes a a call to a consumer, waits for a response.
-Easier and faster to implement.
-Harder to deal with consumer service failures. Need to think;
-
-When and how to properly retry failed requests?
-How not to overwhelm consumer service with too many requests?
-How to deal with a slow consumer service host?
-
-
-
-Asynchronous Communication
-
-Queue : Producer sends data to that component and exactly one consumer gets this data to a short time after.
-It is distributed, because data is stored across several machines.
-Do not confuse queue with topic. In case of a topic, message goes to all subscribers. In case of a queue, message is received by only one consumer.
-
-
-Functional Requirements
-
-sendMessage(messageBody)
-receiveMessage()
-
-Non-Functional Requirements
-
-Scalable (handle load increasses, more queues, messages)
-Highly Available (tolerates hardware / network failures)
-Highly Performant (single digit latency, both send and receive operations are fast)
-Durable (once submitted, data is not lost, so persistent)
-
-
-High-level Architecture
-">
-<meta name="author" content="Serhat Giydiren">
-<link rel="canonical" href="http://localhost:1313/system-design-interview-distributed-message-queue/">
+<meta name="keywords" content="system design, distributed systems, message queue, scalability, architecture, interview prep">
+<meta name="description" content="A deep dive into designing a distributed message queue system. This guide covers core concepts from producers and consumers to advanced topics like delivery semantics (at-least-once, exactly-once), data partitioning, fault tolerance, and achieving high throughput.">
+<meta name="author" content="">
+<link rel="canonical" href="https://serhatgiydiren.com/system-design-interview-distributed-message-queue/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://serhatgiydiren.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://serhatgiydiren.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://serhatgiydiren.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://serhatgiydiren.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://serhatgiydiren.com/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/system-design-interview-distributed-message-queue/">
+<link rel="alternate" hreflang="en" href="https://serhatgiydiren.com/system-design-interview-distributed-message-queue/">
 <noscript>
     <style>
         #theme-toggle,
@@ -92,7 +55,75 @@ High-level Architecture
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="https://serhatgiydiren.com/system-design-interview-distributed-message-queue/">
+  <meta property="og:site_name" content="Serhat Giydiren">
+  <meta property="og:title" content="System Design Interview - Distributed Message Queue">
+  <meta property="og:description" content="A deep dive into designing a distributed message queue system. This guide covers core concepts from producers and consumers to advanced topics like delivery semantics (at-least-once, exactly-once), data partitioning, fault tolerance, and achieving high throughput.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-09-11T12:00:00+03:00">
+    <meta property="article:modified_time" content="2025-09-11T12:00:00+03:00">
+    <meta property="article:tag" content="System Design">
+    <meta property="article:tag" content="Distributed Systems">
+    <meta property="article:tag" content="Message Queue">
+    <meta property="article:tag" content="Scalability">
+    <meta property="article:tag" content="Architecture">
+    <meta property="article:tag" content="Interview Prep">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="System Design Interview - Distributed Message Queue">
+<meta name="twitter:description" content="A deep dive into designing a distributed message queue system. This guide covers core concepts from producers and consumers to advanced topics like delivery semantics (at-least-once, exactly-once), data partitioning, fault tolerance, and achieving high throughput.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://serhatgiydiren.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "System Design Interview - Distributed Message Queue",
+      "item": "https://serhatgiydiren.com/system-design-interview-distributed-message-queue/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "System Design Interview - Distributed Message Queue",
+  "name": "System Design Interview - Distributed Message Queue",
+  "description": "A deep dive into designing a distributed message queue system. This guide covers core concepts from producers and consumers to advanced topics like delivery semantics (at-least-once, exactly-once), data partitioning, fault tolerance, and achieving high throughput.",
+  "keywords": [
+    "system design", "distributed systems", "message queue", "scalability", "architecture", "interview prep"
+  ],
+  "articleBody": "1. Introduction: The Power of Asynchronous Communication In modern distributed systems, services need to communicate with each other. Synchronous communication (e.g., via REST APIs) is simple but creates tight coupling; if the receiving service is slow or down, the sending service is blocked. This brittleness is a major liability at scale.\nMessage Queues are a foundational technology for building robust, scalable, and decoupled systems. They enable asynchronous communication: a service (the producer) sends a message to a queue without waiting for the recipient (the consumer) to process it. The consumer can then process the message at its own pace.\nA single-node message queue, however, has limitations:\nLimited Throughput: A single server can only handle a finite number of messages per second. Single Point of Failure (SPOF): If the server fails, the entire communication backbone of the application goes down. Limited Storage: It can only store a limited number of messages. To overcome these, we build a Distributed Message Queue: a cluster of servers (brokers) that work together to provide a single, highly scalable and resilient messaging service. This guide explores the design of such a system in an interview context.\n2. Core Requirements and Design Goals Functional Requirements:\nPublish(topic, message): A producer sends a message to a specific topic. Subscribe(topic): A consumer subscribes to a topic to receive messages. Acknowledge(message): A consumer informs the queue that a message has been successfully processed. Non-Functional Requirements:\nHigh Throughput: The system must handle a very large number of messages per second (millions, in some cases). High Scalability: Must scale horizontally by adding more brokers to handle increased load. High Availability \u0026 Fault Tolerance: The system must remain operational and not lose messages even if some brokers fail. Durability: Once a message is accepted by the queue, it should not be lost. Tunable Delivery Semantics: The system should support different guarantees for message delivery. 3. High-Level Architecture A distributed message queue consists of a few key components:\nProducers: Client applications that create and send messages. Consumers: Client applications that subscribe to topics and process messages. Brokers: The core servers that form the queue cluster. They are responsible for receiving messages from producers, storing them, and delivering them to consumers. Topics (or Queues): Named channels to which messages are published. A topic represents a specific stream of data. 4. Core Challenge 1: Partitioning for Scalability To achieve high throughput, a single topic must be spread across multiple brokers. This is done through partitioning (or sharding).\nA topic is divided into multiple partitions. Each partition is an independent, ordered sequence of messages. Each partition is managed by a single broker, which acts as the leader for that partition. When a producer sends a message to a topic, it must decide which partition to send it to. This can be done in several ways: Round-Robin: Distribute messages evenly across all partitions. This is good for load balancing but does not guarantee message ordering. Key-Based Partitioning: partition_index = hash(key) % num_partitions. All messages with the same key (e.g., user_id) will go to the same partition. This is crucial as it guarantees message ordering for a given key. By partitioning a topic, we can process messages in parallel across many brokers and consumers, allowing the system to scale horizontally.\n5. Core Challenge 2: Durability and Storage How do brokers store messages to ensure they are not lost?\nIn-Memory Storage: Extremely fast but not durable. If a broker crashes, all messages it holds are lost. Unsuitable for most use cases. Disk-Based Storage: Messages are written to disk, providing durability. The main challenge is performance. Modern systems like Apache Kafka use a log-structured storage model. Each partition is an append-only log file on disk.\nWrites are extremely fast sequential appends. Reads are also sequential (consumers read messages in order). This model leverages the operating system’s page cache for fast access while ensuring data is safely persisted on disk. 6. Core Challenge 3: Delivery Semantics This is often the most critical part of the design discussion. What guarantee does the system provide about message delivery?\nAt-Most-Once The producer sends a message. If there’s a network error or broker failure, the message might be lost. The producer does not retry. Pros: Highest throughput, lowest latency. Cons: Messages can be lost. Suitable for non-critical data like metrics collection. At-Least-Once The producer sends a message and waits for an acknowledgment (ACK) from the broker. If no ACK is received, the producer retries. The consumer fetches a message, processes it, and then sends an ACK to the broker. If the broker doesn’t receive an ACK (e.g., the consumer crashes), it will redeliver the message. Pros: Guarantees that every message will be delivered. Cons: Duplicate messages are possible. The consumer application must be idempotent (processing the same message multiple times has no additional effect). This is the most common and practical semantic. Exactly-Once The “holy grail” of messaging. Guarantees that each message is delivered and processed exactly one time. This is extremely complex to achieve and requires coordination between the producer, broker, and consumer, often using transactions. For example, the producer writes to the queue and the consumer processes the message and updates its own database all within a single, distributed transaction. Pros: Strongest guarantee. Cons: Significantly lower throughput and higher latency. High implementation complexity. 7. Ensuring High Availability: Replication What happens if a broker holding the leader partition for a topic fails? To prevent data loss and unavailability, we use replication.\nEach partition is replicated across multiple brokers (e.g., a replication factor of 3). One broker is the leader for the partition (handles all reads and writes), and the others are followers. Followers pull data from the leader to keep their copy of the partition log synchronized. If the leader broker fails, a coordination service (like ZooKeeper or an internal Raft-based quorum) promotes one of the synchronized followers to be the new leader. The definition of “synchronized” is key. Systems like Kafka use an In-Sync Replica (ISR) list. A follower is in the ISR if it is not too far behind the leader. A write is only considered committed when all brokers in the ISR have acknowledged it. 8. Conclusion: A Game of Trade-offs Designing a distributed message queue is a masterclass in system design trade-offs:\nThroughput vs. Guarantees: Exactly-once semantics provide strong guarantees but come at the cost of performance. At-most-once is fast but lossy. Durability vs. Latency: Writing every message to disk synchronously is durable but slow. Asynchronous writes or relying on the page cache is faster but carries a small risk of data loss on a crash. Ordering vs. Load Balancing: Key-based partitioning provides ordering but can lead to “hot spots” if one key is very active. Round-robin provides better load balancing but sacrifices ordering. In an interview, demonstrating your grasp of these core concepts—Partitioning, Durability, Delivery Semantics, and Replication—and your ability to reason about their trade-offs is the path to a successful design.\n",
+  "wordCount" : "1151",
+  "inLanguage": "en",
+  "datePublished": "2025-09-11T12:00:00+03:00",
+  "dateModified": "2025-09-11T12:00:00+03:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://serhatgiydiren.com/system-design-interview-distributed-message-queue/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Serhat Giydiren",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://serhatgiydiren.com/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -110,7 +141,7 @@ High-level Architecture
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Serhat Giydiren (Alt + H)">Serhat Giydiren</a>
+            <a href="https://serhatgiydiren.com/" accesskey="h" title="Serhat Giydiren (Alt + H)">Serhat Giydiren</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -136,13 +167,23 @@ High-level Architecture
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/archives" title="Archives">
+                <a href="https://serhatgiydiren.com/archives" title="Archives">
                     <span>Archives</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/search" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://serhatgiydiren.com/search" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://serhatgiydiren.com/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://serhatgiydiren.com/categories" title="Categories">
+                    <span>Categories</span>
                 </a>
             </li>
         </ul>
@@ -156,292 +197,127 @@ High-level Architecture
     <h1 class="post-title entry-hint-parent">
       System Design Interview - Distributed Message Queue
     </h1>
-    <div class="post-meta"><span title='2021-03-04 09:25:27 +0000 +0000'>March 4, 2021</span>&nbsp;·&nbsp;14 min&nbsp;·&nbsp;Serhat Giydiren
+    <div class="post-meta"><span title='2025-09-11 12:00:00 +0300 +03'>September 11, 2025</span>&nbsp;·&nbsp;6 min
 
 </div>
   </header> 
-  <div class="post-content"><blockquote>
-<p>Besides reading this post, I strongly recommend reading chapter 4 (Distributed Message Queue) of the book <a href="https://amzn.to/4mYwPvp"
-   
-   
-   target="_blank" rel="noopener noreferrer"
-   >System Design Interview – An Insider’s Guide: Volume 2 (Xu, Alex - Lam, Sahn)</a>
- You can review <a href="/best-resources-for-tech-interviews/"
-   
-   >alternative resources</a>
- as well.</p></blockquote>
-<h3 id="synchronous-communication">Synchronous Communication<a hidden class="anchor" aria-hidden="true" href="#synchronous-communication">#</a></h3>
+  <div class="post-content"><h2 id="1-introduction-the-power-of-asynchronous-communication">1. Introduction: The Power of Asynchronous Communication<a hidden class="anchor" aria-hidden="true" href="#1-introduction-the-power-of-asynchronous-communication">#</a></h2>
+<p>In modern distributed systems, services need to communicate with each other. Synchronous communication (e.g., via REST APIs) is simple but creates tight coupling; if the receiving service is slow or down, the sending service is blocked. This brittleness is a major liability at scale.</p>
+<p><strong>Message Queues</strong> are a foundational technology for building robust, scalable, and decoupled systems. They enable asynchronous communication: a service (the <strong>producer</strong>) sends a message to a queue without waiting for the recipient (the <strong>consumer</strong>) to process it. The consumer can then process the message at its own pace.</p>
+<p>A single-node message queue, however, has limitations:</p>
 <ul>
-<li>When producer makes a a call to a consumer, waits for a response.</li>
-<li>Easier and faster to implement.</li>
-<li>Harder to deal with consumer service failures. Need to think;
+<li><strong>Limited Throughput:</strong> A single server can only handle a finite number of messages per second.</li>
+<li><strong>Single Point of Failure (SPOF):</strong> If the server fails, the entire communication backbone of the application goes down.</li>
+<li><strong>Limited Storage:</strong> It can only store a limited number of messages.</li>
+</ul>
+<p>To overcome these, we build a <strong>Distributed Message Queue</strong>: a cluster of servers (brokers) that work together to provide a single, highly scalable and resilient messaging service. This guide explores the design of such a system in an interview context.</p>
+<h2 id="2-core-requirements-and-design-goals">2. Core Requirements and Design Goals<a hidden class="anchor" aria-hidden="true" href="#2-core-requirements-and-design-goals">#</a></h2>
+<p><strong>Functional Requirements:</strong></p>
 <ul>
-<li>When and how to properly retry failed requests?</li>
-<li>How not to overwhelm consumer service with too many requests?</li>
-<li>How to deal with a slow consumer service host?</li>
+<li><code>Publish(topic, message)</code>: A producer sends a message to a specific topic.</li>
+<li><code>Subscribe(topic)</code>: A consumer subscribes to a topic to receive messages.</li>
+<li><code>Acknowledge(message)</code>: A consumer informs the queue that a message has been successfully processed.</li>
+</ul>
+<p><strong>Non-Functional Requirements:</strong></p>
+<ul>
+<li><strong>High Throughput:</strong> The system must handle a very large number of messages per second (millions, in some cases).</li>
+<li><strong>High Scalability:</strong> Must scale horizontally by adding more brokers to handle increased load.</li>
+<li><strong>High Availability &amp; Fault Tolerance:</strong> The system must remain operational and not lose messages even if some brokers fail.</li>
+<li><strong>Durability:</strong> Once a message is accepted by the queue, it should not be lost.</li>
+<li><strong>Tunable Delivery Semantics:</strong> The system should support different guarantees for message delivery.</li>
+</ul>
+<h2 id="3-high-level-architecture">3. High-Level Architecture<a hidden class="anchor" aria-hidden="true" href="#3-high-level-architecture">#</a></h2>
+<p>A distributed message queue consists of a few key components:</p>
+<ul>
+<li><strong>Producers:</strong> Client applications that create and send messages.</li>
+<li><strong>Consumers:</strong> Client applications that subscribe to topics and process messages.</li>
+<li><strong>Brokers:</strong> The core servers that form the queue cluster. They are responsible for receiving messages from producers, storing them, and delivering them to consumers.</li>
+<li><strong>Topics (or Queues):</strong> Named channels to which messages are published. A topic represents a specific stream of data.</li>
+</ul>
+<h2 id="4-core-challenge-1-partitioning-for-scalability">4. Core Challenge 1: Partitioning for Scalability<a hidden class="anchor" aria-hidden="true" href="#4-core-challenge-1-partitioning-for-scalability">#</a></h2>
+<p>To achieve high throughput, a single topic must be spread across multiple brokers. This is done through <strong>partitioning</strong> (or sharding).</p>
+<ul>
+<li>A topic is divided into multiple <strong>partitions</strong>. Each partition is an independent, ordered sequence of messages.</li>
+<li>Each partition is managed by a single broker, which acts as the <strong>leader</strong> for that partition.</li>
+<li>When a producer sends a message to a topic, it must decide which partition to send it to. This can be done in several ways:
+<ul>
+<li><strong>Round-Robin:</strong> Distribute messages evenly across all partitions. This is good for load balancing but does not guarantee message ordering.</li>
+<li><strong>Key-Based Partitioning:</strong> <code>partition_index = hash(key) % num_partitions</code>. All messages with the same key (e.g., <code>user_id</code>) will go to the same partition. This is crucial as it <strong>guarantees message ordering for a given key</strong>.</li>
 </ul>
 </li>
 </ul>
-<h3 id="asynchronous-communication">Asynchronous Communication<a hidden class="anchor" aria-hidden="true" href="#asynchronous-communication">#</a></h3>
+<p>By partitioning a topic, we can process messages in parallel across many brokers and consumers, allowing the system to scale horizontally.</p>
+<h2 id="5-core-challenge-2-durability-and-storage">5. Core Challenge 2: Durability and Storage<a hidden class="anchor" aria-hidden="true" href="#5-core-challenge-2-durability-and-storage">#</a></h2>
+<p>How do brokers store messages to ensure they are not lost?</p>
 <ul>
-<li>Queue : Producer sends data to that component and exactly one consumer gets this data to a short time after.</li>
-<li>It is distributed, because data is stored across several machines.</li>
-<li>Do not confuse queue with topic. In case of a topic, message goes to all subscribers. In case of a queue, message is received by only one consumer.</li>
+<li><strong>In-Memory Storage:</strong> Extremely fast but not durable. If a broker crashes, all messages it holds are lost. Unsuitable for most use cases.</li>
+<li><strong>Disk-Based Storage:</strong> Messages are written to disk, providing durability. The main challenge is performance.</li>
 </ul>
-<hr>
-<h3 id="functional-requirements">Functional Requirements<a hidden class="anchor" aria-hidden="true" href="#functional-requirements">#</a></h3>
+<p>Modern systems like Apache Kafka use a <strong>log-structured storage</strong> model. Each partition is an append-only log file on disk.</p>
 <ul>
-<li>sendMessage(messageBody)</li>
-<li>receiveMessage()</li>
+<li><strong>Writes</strong> are extremely fast sequential appends.</li>
+<li><strong>Reads</strong> are also sequential (consumers read messages in order).</li>
+<li>This model leverages the operating system&rsquo;s page cache for fast access while ensuring data is safely persisted on disk.</li>
 </ul>
-<h3 id="non-functional-requirements">Non-Functional Requirements<a hidden class="anchor" aria-hidden="true" href="#non-functional-requirements">#</a></h3>
+<h2 id="6-core-challenge-3-delivery-semantics">6. Core Challenge 3: Delivery Semantics<a hidden class="anchor" aria-hidden="true" href="#6-core-challenge-3-delivery-semantics">#</a></h2>
+<p>This is often the most critical part of the design discussion. What guarantee does the system provide about message delivery?</p>
+<h4 id="at-most-once">At-Most-Once<a hidden class="anchor" aria-hidden="true" href="#at-most-once">#</a></h4>
 <ul>
-<li>Scalable (handle load increasses, more queues, messages)</li>
-<li>Highly Available (tolerates hardware / network failures)</li>
-<li>Highly Performant (single digit latency, both send and receive operations are fast)</li>
-<li>Durable (once submitted, data is not lost, so persistent)</li>
+<li>The producer sends a message. If there&rsquo;s a network error or broker failure, the message might be lost. The producer does not retry.</li>
+<li><strong>Pros:</strong> Highest throughput, lowest latency.</li>
+<li><strong>Cons:</strong> Messages can be lost. Suitable for non-critical data like metrics collection.</li>
 </ul>
-<hr>
-<h3 id="high-level-architecture">High-level Architecture<a hidden class="anchor" aria-hidden="true" href="#high-level-architecture">#</a></h3>
-<p><img loading="lazy" src="/images/system-design-interview-distributed-message-queue/image-11-1024x582.png"></p>
+<h4 id="at-least-once">At-Least-Once<a hidden class="anchor" aria-hidden="true" href="#at-least-once">#</a></h4>
 <ul>
-<li>VIP : Virtual IP : Refers to the symbolic hostname (myWebService.domain.com) that resolves to a load balancer system.</li>
-<li>Load Balancer : A device that routes client requests across a number of servers.</li>
-<li>FrontEnd Web Service : A component responsible for initial request processing, like validation, authentication.</li>
-<li>Queue Metadata : Queue’s name, creation date / time, owner and any other configuration settings will be stored in a DB.</li>
-<li>Metadata service : As a best practice, this metadata DB should be hidden behind some interface, a dedicated web service responsible for handling calls to that DB.</li>
-<li>BackEnd Web Service : Responsible for message persistence and processing.</li>
+<li>The producer sends a message and waits for an acknowledgment (ACK) from the broker. If no ACK is received, the producer retries.</li>
+<li>The consumer fetches a message, processes it, and then sends an ACK to the broker. If the broker doesn&rsquo;t receive an ACK (e.g., the consumer crashes), it will redeliver the message.</li>
+<li><strong>Pros:</strong> Guarantees that every message will be delivered.</li>
+<li><strong>Cons:</strong> <strong>Duplicate messages</strong> are possible. The consumer application must be <strong>idempotent</strong> (processing the same message multiple times has no additional effect). This is the most common and practical semantic.</li>
 </ul>
-<h3 id="vip-and-load-balancer">VIP and Load Balancer<a hidden class="anchor" aria-hidden="true" href="#vip-and-load-balancer">#</a></h3>
-<p><img loading="lazy" src="/images/system-design-interview-distributed-message-queue/image-10-1024x553.png"></p>
+<h4 id="exactly-once">Exactly-Once<a hidden class="anchor" aria-hidden="true" href="#exactly-once">#</a></h4>
 <ul>
-<li>When domain name is hit, request is transferred to one of the VIPs registered in DNS for our domain name.</li>
-<li>VIP is resolved to a load balancer device, which has a knowledge of FrontEnd hosts.</li>
-<li>Several Points:
+<li>The &ldquo;holy grail&rdquo; of messaging. Guarantees that each message is delivered and processed exactly one time.</li>
+<li>This is extremely complex to achieve and requires coordination between the producer, broker, and consumer, often using <strong>transactions</strong>.</li>
+<li>For example, the producer writes to the queue and the consumer processes the message and updates its own database all within a single, distributed transaction.</li>
+<li><strong>Pros:</strong> Strongest guarantee.</li>
+<li><strong>Cons:</strong> Significantly lower throughput and higher latency. High implementation complexity.</li>
+</ul>
+<h2 id="7-ensuring-high-availability-replication">7. Ensuring High Availability: Replication<a hidden class="anchor" aria-hidden="true" href="#7-ensuring-high-availability-replication">#</a></h2>
+<p>What happens if a broker holding the leader partition for a topic fails? To prevent data loss and unavailability, we use <strong>replication</strong>.</p>
 <ul>
-<li>First, load balancer seems like a single point of failure. What happens if load balancer device goes down?</li>
-<li>Second, load balancers have limits with regards to number of requests they can process and number of bytes they can transfer. What happens when our distributed message queue service becomes so popular that load balancer limits are reached?</li>
+<li>Each partition is replicated across multiple brokers (e.g., a replication factor of 3).</li>
+<li>One broker is the <strong>leader</strong> for the partition (handles all reads and writes), and the others are <strong>followers</strong>.</li>
+<li>Followers pull data from the leader to keep their copy of the partition log synchronized.</li>
+<li>If the leader broker fails, a coordination service (like ZooKeeper or an internal Raft-based quorum) promotes one of the synchronized followers to be the new leader.</li>
+<li>The definition of &ldquo;synchronized&rdquo; is key. Systems like Kafka use an <strong>In-Sync Replica (ISR)</strong> list. A follower is in the ISR if it is not too far behind the leader. A write is only considered committed when all brokers in the ISR have acknowledged it.</li>
 </ul>
-</li>
-<li>To address high availability concerns, load balancers utilize a concept of primary and secondary nodes. The primary node accepts connections and serves requests while the secondary node monitors the primary. If, the primary node is unable to accept connections, the secondary node takes over.</li>
-<li>As for scalability concerns, a concept of multiple VIPs (sometimes referred as VIP partitioning) can be utilized. In DNS we assign multiple A-records to the same DNS name for the service. As a result, requests are partitioned across several load balancers.</li>
-<li>And by spreading load balancers across several data centers, we improve both availability and performance.</li>
-</ul>
-<h3 id="frontend-service">FrontEnd Service<a hidden class="anchor" aria-hidden="true" href="#frontend-service">#</a></h3>
+<h2 id="8-conclusion-a-game-of-trade-offs">8. Conclusion: A Game of Trade-offs<a hidden class="anchor" aria-hidden="true" href="#8-conclusion-a-game-of-trade-offs">#</a></h2>
+<p>Designing a distributed message queue is a masterclass in system design trade-offs:</p>
 <ul>
-<li>FrontEnd is a lightweight web service, consisting of stateless machines located across several data centers.</li>
-<li>FrontEnd service is responsible for:
-<ul>
-<li>Request validation : Helps to ensure that all the required parameters are present in the request and values of these parameters honor constraints. For example, in our case we want to make sure queue name comes with every send message request. And message size does not exceed a specified threshold.</li>
-<li>Authentication and authorization : During authentication check we verify that message sender is a registered customer of our distributed queue service. And during authorization check we verify that sender is allowed to publish messages to the queue it claims.</li>
-<li>SSL termination : TLS is a protocol that aims to provide privacy and data integrity. TLS termination refers to the process of decrypting request and passing on an unencrypted request to the backend service. And we want to do TLS termination on FrontEnd hosts because TLS on the load balancer is expensive. Termination is usually handled by not a FrontEnd service itself, but a separate HTTP proxy that runs as a process on the same host.</li>
-<li>Server-side data encryption : Because we want to store messages securely on backend hosts, messages are encrypted as soon as FrontEnd receives them. Messages are stored in encrypted form and FrontEnd decrypts them only when they are sent back to a consumer.</li>
-<li>Caching : Cache stores copies of source data. In FrontEnd cache we will store metadata information about the most actively used queues. As well as user identity information to save on calls to authentication and authorization services.</li>
-<li>Rate limiting (Throttling) : Rate limiting or throttling is the process of limiting the number of requests you can submit to a given operation in a given amount of time. Throttling protects the web service from being overwhelmed with requests. Leaky bucket algorithm is one of the most famous.</li>
-<li>Request dispatching : FrontEnd service makes remote calls to at least two other web services: Metadata service and backend service. FrontEnd service creates HTTP clients for both services and makes sure that calls to these services are properly isolated. It means that when one service let’s say Metadata service experiences a slowdown, requests to backend service are not impacted. There are common patterns like bulkhead and circuit breaker that helps to implement resources isolation and make service more resilient in cases when remote calls start to fail.</li>
-<li>Request deduplication : It may occur when a response from a successful send message request failed to reach a client. Lesser an issue for ‘at least once’ delivery semantics, a bigger issue for ‘exactly once’ and ‘at most once’ delivery semantics, when we need to guarantee that message was never processed more than one time. Caching is usually used to store previously seen request ids to avoid deduplication.</li>
-<li>Usage data collection : When we gather real-time information that can be used for audit.</li>
+<li><strong>Throughput vs. Guarantees:</strong> Exactly-once semantics provide strong guarantees but come at the cost of performance. At-most-once is fast but lossy.</li>
+<li><strong>Durability vs. Latency:</strong> Writing every message to disk synchronously is durable but slow. Asynchronous writes or relying on the page cache is faster but carries a small risk of data loss on a crash.</li>
+<li><strong>Ordering vs. Load Balancing:</strong> Key-based partitioning provides ordering but can lead to &ldquo;hot spots&rdquo; if one key is very active. Round-robin provides better load balancing but sacrifices ordering.</li>
 </ul>
-</li>
-<li>And even though FrontEnd service has many responsibilities, the rule of thumb is to keep it as simple as possible.</li>
-</ul>
-<h3 id="metadata-service">Metadata Service<a hidden class="anchor" aria-hidden="true" href="#metadata-service">#</a></h3>
-<p><img loading="lazy" src="/images/system-design-interview-distributed-message-queue/image-9-1024x402.png"></p>
-<ul>
-<li>Metadata service stores information about queues.</li>
-<li>Every time queue is created, we store information about it in the database. Conceptually, Metadata service is a caching layer between the FrontEnd and a persistent storage.</li>
-<li>It handles many reads and a relatively small number of writes. As we read every time message arrives and write only when new queue is created.</li>
-<li>Even though strongly consistent storage is preferred to avoid potential concurrent updates, it is not strictly required.</li>
-<li>Different approaches of organizing cache clusters:
-<ul>
-<li>The first option is when cache is relatively small and we can store the whole data set on every cluster node. FrontEnd host calls a randomly chosen Metadata service host, because all the cache cluster nodes contain the same information.</li>
-<li>Second approach is to partition data into small chunks, called shards. Because data set is too big and cannot be placed into a memory of a single host. So, we store each such chunk of data on a separate node in a cluster. FrontEnd then knows which shard stores the data and calls the shard directly.</li>
-<li>And the third option is similar to the second one. We also partition data into shards, but FrontEnd does not know on what shard data is stored. So, FrontEnd calls a random Metadata service host and host itself knows where to forward the request to.</li>
-</ul>
-</li>
-<li>In option one, we can introduce a load balancer between FrontEnd and Metadata service. As all Metadata service hosts are equal and FrontEnd does not care which Metadata host handles the request.</li>
-<li>In option two and three, Metadata hosts represent a consistent hashing ring.</li>
-</ul>
-<h3 id="backend-service">BackEnd Service<a hidden class="anchor" aria-hidden="true" href="#backend-service">#</a></h3>
-<ul>
-<li>Where and how messages are stored?
-<ul>
-<li>Newly arrived messages may live in memory for a short period of time or until memory on the backend host is fully utilized.</li>
-</ul>
-</li>
-<li>How do we replicate data?
-<ul>
-<li>We will send copies of messages to some other hosts, so that data can survive host hardware or software failures.</li>
-</ul>
-</li>
-<li>How FrontEnd hosts select backend hosts for both storing messages and retrieving them.
-<ul>
-<li>We can leverage Metadata service.</li>
-</ul>
-</li>
-<li>Message comes to the FrontEnd, FrontEnd consults Metadata service what backend host to send data to. Message is sent to a selected backend host and data is replicated.</li>
-<li>When receive message call comes, FrontEnd talks to Metadata service to identify a backend host that stores the data.</li>
-<li>We will consider two options of how backend hosts relate to each other.</li>
-</ul>
-<h3 id="option-a--leader---follower-relationship">Option A : Leader - Follower Relationship<a hidden class="anchor" aria-hidden="true" href="#option-a--leader---follower-relationship">#</a></h3>
-<p><img loading="lazy" src="/images/system-design-interview-distributed-message-queue/image-8-1024x469.png"></p>
-<ul>
-<li>Each backend instance is considered a leader for a particular set of queues.</li>
-<li>And by leader we mean that all requests for a particular queue (like send message and receive message requests) go to this leader instance.</li>
-<li>Send message request comes to a FrontEnd instance.</li>
-<li>Message comes to a queue with ID equal to q1.</li>
-<li>FrontEnd service calls Metadata service to identify a leader backend instance for this queue.</li>
-<li>In this particular example, instance B is a leader for q1.</li>
-<li>Message is sent to the leader and the leader is fully responsible for data replication.</li>
-<li>When receive message request comes to a FrontEnd instance, it also makes a request to the Metadata service to identify the leader for the queue.</li>
-<li>Message is then retrieved from the leader instance and leader is responsible for cleaning up the original message and all the replicas.</li>
-<li>We need a component that will help us with leader election and management.</li>
-<li>Let’s call it In-cluster manager.</li>
-<li>And as already mentioned, in-cluster manager is responsible for maintaining a mapping between queues, leaders and followers.</li>
-<li>In-cluster manager is a very sophisticated component.</li>
-<li>It has to be reliable, scalable and performant.</li>
-</ul>
-<h3 id="option-b--small-cluster-of-independent-hosts">Option B : Small cluster of independent hosts<a hidden class="anchor" aria-hidden="true" href="#option-b--small-cluster-of-independent-hosts">#</a></h3>
-<p><img loading="lazy" src="/images/system-design-interview-distributed-message-queue/image-7-1024x457.png"></p>
-<ul>
-<li>We have a set of small clusters, each cluster consists of 3-4 machines distributed across several data centers.</li>
-<li>When send message request comes, similar to the previous design option, we also need to call Metadata service to identify which cluster is responsible for storing messages for the q1 queue.</li>
-<li>After that we just make a call to a randomly selected instance in the cluster.</li>
-<li>And instance is responsible for data replication across all nodes in the cluster.</li>
-<li>When receive message request comes and we identified which cluster stores messages for the q1 queue, we once again call a randomly selected host and retrieve the message.</li>
-<li>Selected host is responsible for the message cleanup.</li>
-<li>As you may see, we no longer need a component for leader election, but we still need something that will help us to manage queue to cluster assignments.</li>
-<li>Let’s call this component an Out-cluster manager.</li>
-<li>And this component will be responsible for maintaining a mapping between queues and clusters.</li>
-</ul>
-<h3 id="in-cluster-manager-vs-out-cluster-manager">In-cluster Manager vs Out-cluster Manager<a hidden class="anchor" aria-hidden="true" href="#in-cluster-manager-vs-out-cluster-manager">#</a></h3>
-<ul>
-<li>In-cluster manager manages queue assignment within the cluster, out-cluster manager manages queue assignment across clusters.</li>
-<li>In-cluster manager needs to know about each and every instance in the cluster. Out-cluster manager may not know about each particular instance, but it needs to know about each cluster.</li>
-<li>In-cluster manager listens to heartbeats from instances. Out-cluster manager monitors health of each independent cluster.</li>
-<li>In-cluster manager deals with host failures and needs to adjust to the fact that instances may die and new instances may be added to the cluster, out-cluster manager is responsible for tracking each cluster utilization and deal with overheated clusters. Meaning that new queues may no longer be assigned to clusters that reached their capacity limits.</li>
-<li>In-cluster manager splits queue into parts (partitions) and each partition gets a leader server. Out-cluster manager may split queue across several clusters. So that messages for the same queue are equally distributed between several clusters.</li>
-</ul>
-<h3 id="queue-creation-and-deletion">Queue creation and deletion<a hidden class="anchor" aria-hidden="true" href="#queue-creation-and-deletion">#</a></h3>
-<ul>
-<li>Queue can be auto-created, for example when the first message for the queue hits FrontEnd service, or we can define API for queue creation.</li>
-<li>API is a better option, as we will have more control over queue configuration parameters.</li>
-<li>Delete queue operation is a bit controversial, as it may cause a lot of harm and must be executed with caution.</li>
-<li>For this reason, you may find examples of well-known distributed queues that do not expose deleteQueue API via public REST endpoint.</li>
-<li>Instead, this operation may be exposed through a command line utility, so that only experienced admin users may call it.</li>
-</ul>
-<h3 id="message-deletion">Message deletion<a hidden class="anchor" aria-hidden="true" href="#message-deletion">#</a></h3>
-<ul>
-<li>There are several options at our disposal.
-<ul>
-<li>One option is not to delete a message right after it was consumed. In this case consumers have to be responsible for what they already consumed. And it is not as easy as it sounds. As we need to maintain some kind of an order for messages in the queue and keep track of the offset, which is the position of a message within a queue. Messages can then be deleted several days later, by a job. This idea is used by Apache Kafka.</li>
-<li>The second option, is to do something similar to what Amazon SQS is doing. Messages are also not deleted immediately, but marked as invisible, so that other consumers may not get already retrieved message. Consumer that retrieved the message, needs to then call delete message API to delete the message from a backend host. And if the message was not explicitly deleted by a consumer, message becomes visible and may be delivered and processed twice.</li>
-</ul>
-</li>
-</ul>
-<h3 id="message-replication">Message replication<a hidden class="anchor" aria-hidden="true" href="#message-replication">#</a></h3>
-<ul>
-<li>Messages need to be replicated to achieve high durability. Otherwise, if we only have one copy of data, it may be lost due to unexpected hardware failure.</li>
-<li>Messages can be replicated synchronously or asynchronously.
-<ul>
-<li>Synchronously means that when backend host receives new message, it waits until data is replicated to other hosts. And only if replication is fully completed, successful response is returned to a producer.</li>
-<li>Asynchronous replication means that response is returned back to a producer as soon as message is stored on a single backend host. Message is later replicated to other hosts.</li>
-</ul>
-</li>
-<li>Both options have pros and cons.
-<ul>
-<li>Synchronous replication provides higher durability, but with a cost of higher latency for send message operation.</li>
-<li>Asynchronous replication is more performant, but does not guarantee that message will survive backend host failure.</li>
-</ul>
-</li>
-</ul>
-<h3 id="message-delivery-semantics">Message delivery semantics<a hidden class="anchor" aria-hidden="true" href="#message-delivery-semantics">#</a></h3>
-<ul>
-<li>There are three main message delivery guarantees.
-<ul>
-<li>At most once, when messages may be lost but are never redelivered.</li>
-<li>At least once, when messages are never lost but may be redelivered.</li>
-<li>And exactly once, when each message is delivered once and only once.</li>
-</ul>
-</li>
-<li>Will anyone ever want other than exactly once delivery? The simple answer is that it is hard to achieve exactly once delivery in practice.</li>
-<li>In a distributed message queue system there are many potential points of failure. Producer may fail to deliver or deliver multiple times, data replication may fail, consumers may fail to retrieve or process the message.</li>
-<li>All this adds complexity and leads to the fact that most distributed queue solutions today support at-least-once delivery, as it provides a good balance between durability, availability and performance.</li>
-</ul>
-<h3 id="push-vs-pull">Push vs Pull<a hidden class="anchor" aria-hidden="true" href="#push-vs-pull">#</a></h3>
-<ul>
-<li>With a pull model, consumer constantly sends retrieve message requests and when new message is available in the queue, it is sent back to a consumer.</li>
-<li>With a push model, consumer is not constantly bombarding FrontEnd service with receive calls. Instead, consumer is notified as soon as new message arrives to the queue.</li>
-<li>And as always, there are pros and cons. From a distributed message queue perspective pull is easier to implement than a push. But from a consumer perspective, we need to do more work if we pull.</li>
-</ul>
-<h3 id="fifo">FIFO<a hidden class="anchor" aria-hidden="true" href="#fifo">#</a></h3>
-<ul>
-<li>FIFO stands for first-in, first-out, meaning that the oldest message in a queue is always processed first.</li>
-<li>But in distributed systems, it is hard to maintain a strict order. Message A may be produced prior to message B, but it is hard to guarantee that message A will be stored and consumed prior to message B.</li>
-<li>For these reasons many distributed queue solutions out there either does not guarantee a strict order. Or have limitations around throughput, as queue cannot be fast while it’s doing many additional validations and coordination to guarantee a strict order.</li>
-</ul>
-<h3 id="security">Security<a hidden class="anchor" aria-hidden="true" href="#security">#</a></h3>
-<ul>
-<li>We need to make sure that messages are securely transferred to and from a queue.</li>
-<li>Encryption using SSL over HTTPS helps to protect messages in transit.</li>
-<li>And we also may encrypt messages while storing them on backend hosts.</li>
-</ul>
-<h3 id="monitoring">Monitoring<a hidden class="anchor" aria-hidden="true" href="#monitoring">#</a></h3>
-<ul>
-<li>Monitoring is critical for every system.</li>
-<li>With regards to distributed message queue, we need to monitor components (or microservices) that we built: fronted, metadata and backend services.</li>
-<li>As well as provide visibility into customer’s experience.</li>
-<li>In other words, we need to monitor health of our distributed queue system and give customers ability to track state of their queues.</li>
-<li>Each service we built has to emit metrics and write log data.</li>
-<li>As operators of these services we need to create dashboards for each microservice and setup alerts.</li>
-<li>And customers of our queue have to be able to create dashboards and set up alerts as well.</li>
-<li>For this purpose, integration with monitoring system is required.</li>
-</ul>
-<h3 id="final-look">Final Look<a hidden class="anchor" aria-hidden="true" href="#final-look">#</a></h3>
-<ul>
-<li>Is our system scalable?
-<ul>
-<li>Yes. As every component is scalable.</li>
-<li>When load increases, we just add more load balancers, more FrontEnd hosts, more Metadata service cache shards, more backend clusters and hosts.</li>
-</ul>
-</li>
-<li>Is our system highly available?
-<ul>
-<li>Yes. As there is no a single point of failure, each component is deployed across several data centers. Individual hosts may die, network partitions may happen, but with this redundancy in place our system will continue to operate.</li>
-</ul>
-</li>
-<li>Is our system highly performant?
-<ul>
-<li>It’s actually very well depends on the implementation, hardware and network setup.</li>
-<li>Each individual microservice needs to be fast.</li>
-<li>And we need to run our software in high-performance data centers.</li>
-</ul>
-</li>
-<li>Is our system durable?
-<ul>
-<li>Sure. We replicate data while storing and ensure messages are not lost during the transfer from a producer and to a consumer.</li>
-</ul>
-</li>
-</ul>
-<p>This content was excerpted from <a href="https://youtu.be/iJLL-KPqBpM"
-   
-   
-   target="_blank" rel="noopener noreferrer"
-   >here</a>
-.</p>
+<p>In an interview, demonstrating your grasp of these core concepts—<strong>Partitioning, Durability, Delivery Semantics, and Replication</strong>—and your ability to reason about their trade-offs is the path to a successful design.</p>
 
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://serhatgiydiren.com/tags/system-design/">System Design</a></li>
+      <li><a href="https://serhatgiydiren.com/tags/distributed-systems/">Distributed Systems</a></li>
+      <li><a href="https://serhatgiydiren.com/tags/message-queue/">Message Queue</a></li>
+      <li><a href="https://serhatgiydiren.com/tags/scalability/">Scalability</a></li>
+      <li><a href="https://serhatgiydiren.com/tags/architecture/">Architecture</a></li>
+      <li><a href="https://serhatgiydiren.com/tags/interview-prep/">Interview Prep</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Serhat Giydiren</a></span> · 
+        <span>&copy; 2025 <a href="https://serhatgiydiren.com/">Serhat Giydiren</a></span> · 
 
     <span>
         Powered by

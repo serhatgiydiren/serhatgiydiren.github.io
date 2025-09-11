@@ -1,6 +1,17 @@
 ---
-title: 'AI Safety Diary: September 8, 2025'
+title: "AI Safety Diary: September 8, 2025"
 date: '2025-09-08T18:07:18+03:00'
+categories:
+  - "AI Safety"
+  - "AI Alignment"
+  - "AI Governance"
+tags:
+  - "ai safety diary"
+  - "anthropic"
+  - "llm usage"
+  - "monitoring"
+  - "obfuscation"
+summary: "A diary entry on common use cases for AI models and the risks of models obfuscating their reasoning to evade safety monitors."
 ---
 
 Today, I explored a video from the [Anthropic YouTube channel](https://www.youtube.com/@anthropic-ai) and a research paper as part of my AI safety studies. Below are the resources I reviewed.

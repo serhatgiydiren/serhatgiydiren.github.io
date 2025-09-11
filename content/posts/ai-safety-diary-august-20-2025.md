@@ -1,13 +1,15 @@
 ---
-id: 958
-title: 'AI Safety Diary: August 20, 2025'
+title: "AI Safety Diary: August 20, 2025"
 date: '2025-08-20T12:50:04+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=958'
-permalink: /ai-safety-diary-august-20-2025/
 categories:
-    - 'AI Safety'
+  - "AI Safety"
+tags:
+  - "ai safety diary"
+  - "vending-bench"
+  - "autonomous agents"
+  - "llm benchmarks"
+  - "long-term coherence"
+summary: "A diary entry on Vending-Bench, a benchmark for evaluating the long-term coherence and decision-making capabilities of autonomous LLM-based agents in a simulated business environment."
 ---
 
 Today, I explored a research paper as part of my AI safety studies. Below is the resource I reviewed.

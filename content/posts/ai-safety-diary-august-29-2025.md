@@ -1,13 +1,17 @@
 ---
-id: 978
-title: 'AI Safety Diary: August 29, 2025'
+title: "AI Safety Diary: August 29, 2025"
 date: '2025-08-29T18:00:08+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=978'
-permalink: /ai-safety-diary-august-29-2025/
 categories:
-    - 'AI Safety'
+  - "AI Safety"
+  - "AI Governance"
+tags:
+  - "ai safety diary"
+  - "ai governance"
+  - "extinction risk"
+  - "misalignment"
+  - "geopolitical risk"
+  - "off switch"
+summary: "A diary entry on AI governance strategies to avoid extinction risks, discussing catastrophic risks from misalignment, misuse, and geopolitical conflict, and the need for urgent research into governance mechanisms."
 ---
 
 Today, I explored a research paper as part of my AI safety studies. Below is the resource I reviewed.

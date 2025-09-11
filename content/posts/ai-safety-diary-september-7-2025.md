@@ -1,6 +1,17 @@
 ---
-title: 'AI Safety Diary: September 7, 2025'
+title: "AI Safety Diary: September 7, 2025"
 date: '2025-09-07T18:07:18+03:00'
+categories:
+  - "AI Safety"
+  - "AI Interpretability"
+  - "AI Alignment"
+tags:
+  - "ai safety diary"
+  - "anthropic"
+  - "prompt engineering"
+  - "self-explanation"
+  - "faithfulness"
+summary: "A diary entry on advanced prompt engineering techniques and the faithfulness of LLM self-explanations for commonsense tasks."
 ---
 
 Today, I explored a video from the [Anthropic YouTube channel](https://www.youtube.com/@anthropic-ai) and a research paper as part of my AI safety studies. Below are the resources I reviewed.

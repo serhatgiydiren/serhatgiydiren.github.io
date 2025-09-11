@@ -1,15 +1,15 @@
 ---
-id: 935
-title: 'AI Safety Diary: August 8, 2025'
-date: '2025-08-08T12:38:05+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=935'
-permalink: /ai-safety-diary-august-8-2025/
+title: "AI Safety Diary: August 8, 2025"
+date: 2025-08-08T12:38:05+00:00
 categories:
-    - 'AI Alignment'
-    - 'AI Governance'
-    - 'AI Safety'
+  - "AI Safety"
+  - "AI Governance"
+  - "AI Alignment"
+tags:
+  - "ai safety diary"
+  - "effective altruism"
+  - "scout mindset"
+summary: "A diary entry on exploring the 'Effectiveness Mindset' from the Effective Altruism Handbook, in the context of AI safety and governance."
 ---
 
 Today, I explored the [Effective Altruism Handbook](https://forum.effectivealtruism.org/handbook) and completed its first chapter as part of my studies related to AI safety and governance. Below is the resource I reviewed.

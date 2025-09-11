@@ -1,6 +1,16 @@
 ---
-title: 'AI Safety Diary: September 6, 2025'
+title: "AI Safety Diary: September 6, 2025"
 date: '2025-09-06T18:07:18+03:00'
+categories:
+  - "AI Safety"
+  - "AI Interpretability"
+  - "AI Alignment"
+tags:
+  - "ai safety diary"
+  - "chain-of-thought"
+  - "monitoring"
+  - "unfaithful reasoning"
+summary: "A diary entry on how Chain-of-Thought (CoT) reasoning affects LLM's ability to evade monitors, and the challenge of unfaithful reasoning in model explanations."
 ---
 
 Today, I explored two research papers as part of my AI safety studies. Below are the resources I reviewed.

@@ -1,6 +1,16 @@
 ---
-title: 'AI Safety Diary: September 3, 2025'
+title: "AI Safety Diary: September 3, 2025"
 date: '2025-09-03T18:07:18+03:00'
+categories:
+  - "AI Safety"
+  - "AI Alignment"
+tags:
+  - "ai safety diary"
+  - "ai safety atlas"
+  - "evaluations"
+  - "benchmarks"
+  - "robustness"
+summary: "A diary entry on Chapter 5 of the AI Safety Atlas, focusing on evaluation methods for assessing the safety and alignment of advanced AI systems, including benchmarks and robustness testing."
 ---
 
 Today, I explored the audio version of a chapter from the [AI Safety Atlas](https://ai-safety-atlas.com/) as part of my AI safety studies. Below is the resource I reviewed.

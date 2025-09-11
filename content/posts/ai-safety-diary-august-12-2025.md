@@ -1,14 +1,17 @@
 ---
-id: 931
-title: 'AI Safety Diary: August 12, 2025'
+title: "AI Safety Diary: August 12, 2025"
 date: '2025-08-12T12:24:42+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=931'
-permalink: /ai-safety-diary-august-12-2025/
 categories:
-    - 'AI Governance'
-    - 'AI Safety'
+  - "AI Governance"
+  - "AI Safety"
+tags:
+  - "ai safety diary"
+  - "bluedot"
+  - "machine learning"
+  - "large language models"
+  - "deep learning"
+  - "andrej karpathy"
+summary: "A diary entry summarizing several introductory resources on how AI learns, including machine learning concepts, Large Language Models (LLMs), and the progress of the deep learning revolution."
 ---
 
 Today, I completed Unit 1: How AI Systems Work of the [BlueDot AI Governance course](https://bluedot.org/courses/governance/1). Below is a summary of each resource I explored.

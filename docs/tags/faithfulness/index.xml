@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Faithfulness on Serhat Giydiren</title>
+    <link>https://serhatgiydiren.com/tags/faithfulness/</link>
+    <description>Recent content in Faithfulness on Serhat Giydiren</description>
+    <generator>Hugo -- 0.149.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Sep 2025 18:07:18 +0300</lastBuildDate>
+    <atom:link href="https://serhatgiydiren.com/tags/faithfulness/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: September 7, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-7-2025/</link>
+      <pubDate>Sun, 07 Sep 2025 18:07:18 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-7-2025/</guid>
+      <description>A diary entry on advanced prompt engineering techniques and the faithfulness of LLM self-explanations for commonsense tasks.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: September 5, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-5-2025/</link>
+      <pubDate>Fri, 05 Sep 2025 18:07:18 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-5-2025/</guid>
+      <description>A diary entry on the challenges of scaling interpretability for complex AI models and methods for measuring the faithfulness of LLM explanations.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: August 27, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-27-2025/</link>
+      <pubDate>Wed, 27 Aug 2025 17:59:25 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-27-2025/</guid>
+      <description>A diary entry on the unfaithfulness of Chain-of-Thought (CoT) reasoning in LLMs, highlighting issues like implicit biases and logically contradictory outputs, which pose challenges for AI safety monitoring.</description>
+    </item>
+  </channel>
+</rss>

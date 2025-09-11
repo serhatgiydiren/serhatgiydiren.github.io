@@ -1,15 +1,17 @@
 ---
-id: 937
-title: 'AI Safety Diary: August 15, 2025'
+title: "AI Safety Diary: August 15, 2025"
 date: '2025-08-15T12:40:49+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=937'
-permalink: /ai-safety-diary-august-15-2025/
 categories:
-    - 'AI Alignment'
-    - 'AI Governance'
-    - 'AI Safety'
+  - "AI Safety"
+  - "AI Governance"
+  - "AI Alignment"
+tags:
+  - "ai safety diary"
+  - "effective altruism"
+  - "global poverty"
+  - "intervention impact"
+  - "givewell"
+summary: "A diary entry on Chapter 2 of the Effective Altruism Handbook, focusing on the significant differences in the impact of interventions aimed at alleviating global poverty."
 ---
 
 Today, I continued exploring the [Effective Altruism Handbook](https://forum.effectivealtruism.org/handbook) and completed its second chapter as part of my studies related to AI safety and governance. Below is the resource I reviewed.

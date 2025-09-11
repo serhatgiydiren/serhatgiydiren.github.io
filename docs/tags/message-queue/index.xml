@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Message Queue on Serhat Giydiren</title>
+    <link>https://serhatgiydiren.com/tags/message-queue/</link>
+    <description>Recent content in Message Queue on Serhat Giydiren</description>
+    <generator>Hugo -- 0.149.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 Sep 2025 12:00:00 +0300</lastBuildDate>
+    <atom:link href="https://serhatgiydiren.com/tags/message-queue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>System Design Interview - Distributed Message Queue</title>
+      <link>https://serhatgiydiren.com/system-design-interview-distributed-message-queue/</link>
+      <pubDate>Thu, 11 Sep 2025 12:00:00 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/system-design-interview-distributed-message-queue/</guid>
+      <description>A deep dive into designing a distributed message queue system. This guide covers core concepts from producers and consumers to advanced topics like delivery semantics (at-least-once, exactly-once), data partitioning, fault tolerance, and achieving high throughput.</description>
+    </item>
+  </channel>
+</rss>

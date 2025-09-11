@@ -1,6 +1,17 @@
 ---
-title: 'AI Safety Diary: September 9, 2025'
+title: "AI Safety Diary: September 9, 2025"
 date: '2025-09-09T18:07:18+03:00'
+categories:
+  - "AI Safety"
+  - "AI Alignment"
+  - "AI Interpretability"
+tags:
+  - "ai safety diary"
+  - "effective altruism"
+  - "longtermism"
+  - "reward hacking"
+  - "chain-of-thought"
+summary: "A diary entry on longtermism and its moral implications for the future, and a paper on teaching models to verbalize reward hacking in Chain-of-Thought reasoning."
 ---
 
 Today, I explored a chapter from the [Effective Altruism Handbook](https://forum.effectivealtruism.org/handbook) and a research paper as part of my AI safety studies. Below are the resources I reviewed.

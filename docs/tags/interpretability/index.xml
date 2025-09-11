@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Interpretability on Serhat Giydiren</title>
+    <link>https://serhatgiydiren.com/tags/interpretability/</link>
+    <description>Recent content in Interpretability on Serhat Giydiren</description>
+    <generator>Hugo -- 0.149.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 04 Sep 2025 18:07:18 +0300</lastBuildDate>
+    <atom:link href="https://serhatgiydiren.com/tags/interpretability/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: September 4, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-4-2025/</link>
+      <pubDate>Thu, 04 Sep 2025 18:07:18 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-4-2025/</guid>
+      <description>A diary entry introducing AI interpretability and discussing a paper on the limitations of sparse autoencoders for finding canonical units of analysis in LLMs.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: August 30, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-30-2025/</link>
+      <pubDate>Sat, 30 Aug 2025 18:06:35 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-30-2025/</guid>
+      <description>A diary entry on tracing the reasoning processes of Large Language Models (LLMs) to enhance interpretability, and a discussion on the inherent difficulties and challenges in achieving AI alignment.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: August 28, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-28-2025/</link>
+      <pubDate>Thu, 28 Aug 2025 17:59:46 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-28-2025/</guid>
+      <description>A diary entry on &amp;lsquo;Thought Anchors&amp;rsquo;, a concept for identifying key reasoning steps in Chain-of-Thought (CoT) processes that significantly influence LLM behavior, enhancing interpretability for AI safety.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: August 17, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-17-2025/</link>
+      <pubDate>Sun, 17 Aug 2025 19:53:17 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-17-2025/</guid>
+      <description>A diary entry on several Anthropic discussions, including AI interpretability, the affective use of AI for emotional support, and the philosophical questions surrounding AI consciousness and model welfare.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: August 16, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-16-2025/</link>
+      <pubDate>Sat, 16 Aug 2025 12:56:27 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-16-2025/</guid>
+      <description>A diary entry on Anthropic&amp;rsquo;s research into Persona Vectors, a method for monitoring and controlling character traits in Large Language Models (LLMs) to improve safety and alignment.</description>
+    </item>
+  </channel>
+</rss>

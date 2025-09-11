@@ -1,6 +1,17 @@
 ---
-title: 'AI Safety Diary: September 11, 2025'
+title: "AI Safety Diary: September 11, 2025"
 date: '2025-09-11T18:07:18+03:00'
+categories:
+  - "AI Safety"
+  - "AI Alignment"
+  - "AI Interpretability"
+tags:
+  - "ai safety diary"
+  - "anthropic"
+  - "large language models"
+  - "utility engineering"
+  - "goal-directedness"
+summary: "A diary entry covering AI personalities, utility engineering for emergent value systems, and methods for evaluating the goal-directedness of Large Language Models (LLMs)."
 ---
 
 Today, I explored a video from the [Anthropic YouTube channel](https://www.youtube.com/@anthropic-ai) and two research papers as part of my AI safety studies. Below are the resources I reviewed.

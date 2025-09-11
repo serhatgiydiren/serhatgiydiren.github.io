@@ -1,13 +1,17 @@
 ---
-id: 968
-title: 'AI Safety Diary: August 24, 2025'
+title: "AI Safety Diary: August 24, 2025"
 date: '2025-08-24T17:51:12+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=968'
-permalink: /ai-safety-diary-august-24-2025/
 categories:
-    - 'AI Safety'
+  - "AI Safety"
+  - "AI Governance"
+tags:
+  - "ai safety diary"
+  - "ai safety atlas"
+  - "governance"
+  - "safety standards"
+  - "international cooperation"
+  - "regulatory policies"
+summary: "A diary entry on the audio version of Chapter 4 of the AI Safety Atlas, focusing on governance strategies for safe AI development, including safety standards, international treaties, and regulatory policies."
 ---
 
 Today, I explored the audio version of a chapter from the [AI Safety Atlas](https://ai-safety-atlas.com/) as part of my AI safety studies. Below is the resource I reviewed.

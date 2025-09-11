@@ -1,14 +1,16 @@
 ---
-id: 945
-title: 'AI Safety Diary: August 14, 2025'
+title: "AI Safety Diary: August 14, 2025"
 date: '2025-08-14T12:55:39+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=945'
-permalink: /ai-safety-diary-august-14-2025/
 categories:
-    - 'AI Alignment'
-    - 'AI Safety'
+  - "AI Safety"
+  - "AI Alignment"
+tags:
+  - "ai safety diary"
+  - "ai safety atlas"
+  - "ai capabilities"
+  - "agi"
+  - "intelligence measurement"
+summary: "A diary entry on Chapter 1 of the AI Safety Atlas, focusing on AI capabilities, the progression toward AGI, and frameworks for measuring AI intelligence."
 ---
 
 Today, I explored the [AI Safety Atlas](https://ai-safety-atlas.com/) as part of my AI safety studies. Below is the resource I reviewed.

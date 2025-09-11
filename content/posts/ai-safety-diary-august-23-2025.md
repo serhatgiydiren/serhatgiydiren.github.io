@@ -1,13 +1,18 @@
 ---
-id: 966
-title: 'AI Safety Diary: August 23, 2025'
+title: "AI Safety Diary: August 23, 2025"
 date: '2025-08-23T17:50:12+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=966'
-permalink: /ai-safety-diary-august-23-2025/
 categories:
-    - 'AI Safety'
+  - "AI Safety"
+  - "AI Alignment"
+  - "AI Interpretability"
+  - "AI Governance"
+tags:
+  - "ai safety diary"
+  - "ai safety atlas"
+  - "ai strategies"
+  - "technical approaches"
+  - "governance"
+summary: "A diary entry on the audio version of Chapter 3 of the AI Safety Atlas, focusing on strategies for mitigating AI risks, including technical approaches like alignment and interpretability, and governance strategies."
 ---
 
 Today, I explored the audio version of a chapter from the [AI Safety Atlas](https://ai-safety-atlas.com/) as part of my AI safety studies. Below is the resource I reviewed.

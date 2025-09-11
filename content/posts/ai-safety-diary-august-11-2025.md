@@ -1,14 +1,18 @@
 ---
-id: 927
-title: 'AI Safety Diary: August 11, 2025'
+title: "AI Safety Diary: August 11, 2025"
 date: '2025-08-11T20:36:43+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=927'
-permalink: /ai-safety-diary-august-11-2025/
 categories:
-    - 'AI Governance'
-    - 'AI Safety'
+  - "AI Governance"
+  - "AI Safety"
+tags:
+  - "ai safety diary"
+  - "bluedot"
+  - "ai triad"
+  - "national security"
+  - "algorithms"
+  - "data"
+  - "compute"
+summary: "A diary entry on the 'AI Triad' (algorithms, data, compute) and its implications for national security, based on the BlueDot AI Governance course."
 ---
 
 Today, I began Unit 1: How AI Systems Work of the [BlueDot AI Governance course](https://bluedot.org/courses/governance/1). Below is the resource I explored.

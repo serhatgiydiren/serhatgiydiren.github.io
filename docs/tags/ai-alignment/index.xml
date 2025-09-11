@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ai Alignment on Serhat Giydiren</title>
+    <link>https://serhatgiydiren.com/tags/ai-alignment/</link>
+    <description>Recent content in Ai Alignment on Serhat Giydiren</description>
+    <generator>Hugo -- 0.149.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Aug 2025 18:06:35 +0000</lastBuildDate>
+    <atom:link href="https://serhatgiydiren.com/tags/ai-alignment/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: August 30, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-30-2025/</link>
+      <pubDate>Sat, 30 Aug 2025 18:06:35 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-30-2025/</guid>
+      <description>A diary entry on tracing the reasoning processes of Large Language Models (LLMs) to enhance interpretability, and a discussion on the inherent difficulties and challenges in achieving AI alignment.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: August 13, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-13-2025/</link>
+      <pubDate>Wed, 13 Aug 2025 12:53:05 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-13-2025/</guid>
+      <description>A diary entry on Unit 1 of the BlueDot AI Alignment course, covering foundational concepts like neural networks, gradient descent, transformers, and the future impacts of AI.</description>
+    </item>
+  </channel>
+</rss>

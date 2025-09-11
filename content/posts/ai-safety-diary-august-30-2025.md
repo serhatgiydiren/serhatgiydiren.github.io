@@ -1,13 +1,17 @@
 ---
-id: 980
-title: 'AI Safety Diary: August 30, 2025'
+title: "AI Safety Diary: August 30, 2025"
 date: '2025-08-30T18:06:35+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=980'
-permalink: /ai-safety-diary-august-30-2025/
 categories:
-    - 'AI Safety'
+  - "AI Safety"
+  - "AI Interpretability"
+  - "AI Alignment"
+tags:
+  - "ai safety diary"
+  - "anthropic"
+  - "interpretability"
+  - "ai alignment"
+  - "llm reasoning"
+summary: "A diary entry on tracing the reasoning processes of Large Language Models (LLMs) to enhance interpretability, and a discussion on the inherent difficulties and challenges in achieving AI alignment."
 ---
 
 Today, I explored two videos from the [Anthropic YouTube channel](https://www.youtube.com/@anthropic-ai) as part of my AI safety studies. Below are the resources I reviewed.

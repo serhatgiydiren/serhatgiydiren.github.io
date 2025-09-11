@@ -2,7 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://serhatgiydiren.com/categories/ai-alignment/</loc>
+    <lastmod>2025-09-11T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/categories/ai-interpretability/</loc>
+    <lastmod>2025-09-11T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/categories/ai-safety/</loc>
+    <lastmod>2025-09-11T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/ai-safety-diary/</loc>
+    <lastmod>2025-09-11T18:07:18+03:00</lastmod>
+  </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-september-11-2025/</loc>
+    <lastmod>2025-09-11T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/anthropic/</loc>
+    <lastmod>2025-09-11T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/categories/</loc>
+    <lastmod>2025-09-11T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/goal-directedness/</loc>
+    <lastmod>2025-09-11T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/large-language-models/</loc>
     <lastmod>2025-09-11T18:07:18+03:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/posts/</loc>
@@ -11,100 +35,346 @@
     <loc>https://serhatgiydiren.com/</loc>
     <lastmod>2025-09-11T18:07:18+03:00</lastmod>
   </url><url>
+    <loc>https://serhatgiydiren.com/tags/</loc>
+    <lastmod>2025-09-11T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/utility-engineering/</loc>
+    <lastmod>2025-09-11T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/architecture/</loc>
+    <lastmod>2025-09-11T12:00:00+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/distributed-systems/</loc>
+    <lastmod>2025-09-11T12:00:00+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/interview-prep/</loc>
+    <lastmod>2025-09-11T12:00:00+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/message-queue/</loc>
+    <lastmod>2025-09-11T12:00:00+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/scalability/</loc>
+    <lastmod>2025-09-11T12:00:00+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/system-design/</loc>
+    <lastmod>2025-09-11T12:00:00+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/categories/system-design-interview/</loc>
+    <lastmod>2025-09-11T12:00:00+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/system-design-interview-distributed-message-queue/</loc>
+    <lastmod>2025-09-11T12:00:00+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/categories/technical-article/</loc>
+    <lastmod>2025-09-11T12:00:00+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/caching/</loc>
+    <lastmod>2025-09-11T11:00:00+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/system-design-interview-distributed-cache/</loc>
+    <lastmod>2025-09-11T11:00:00+03:00</lastmod>
+  </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-september-10-2025/</loc>
+    <lastmod>2025-09-10T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/effective-altruism/</loc>
+    <lastmod>2025-09-10T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/misalignment/</loc>
+    <lastmod>2025-09-10T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/prompt-sensitivity/</loc>
+    <lastmod>2025-09-10T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/s-risks/</loc>
     <lastmod>2025-09-10T18:07:18+03:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-september-9-2025/</loc>
     <lastmod>2025-09-09T18:07:18+03:00</lastmod>
   </url><url>
+    <loc>https://serhatgiydiren.com/tags/chain-of-thought/</loc>
+    <lastmod>2025-09-09T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/longtermism/</loc>
+    <lastmod>2025-09-09T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/reward-hacking/</loc>
+    <lastmod>2025-09-09T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/categories/ai-governance/</loc>
+    <lastmod>2025-09-08T18:07:18+03:00</lastmod>
+  </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-september-8-2025/</loc>
+    <lastmod>2025-09-08T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/llm-usage/</loc>
+    <lastmod>2025-09-08T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/monitoring/</loc>
+    <lastmod>2025-09-08T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/obfuscation/</loc>
     <lastmod>2025-09-08T18:07:18+03:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-september-7-2025/</loc>
     <lastmod>2025-09-07T18:07:18+03:00</lastmod>
   </url><url>
+    <loc>https://serhatgiydiren.com/tags/faithfulness/</loc>
+    <lastmod>2025-09-07T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/prompt-engineering/</loc>
+    <lastmod>2025-09-07T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/self-explanation/</loc>
+    <lastmod>2025-09-07T18:07:18+03:00</lastmod>
+  </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-september-6-2025/</loc>
+    <lastmod>2025-09-06T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/unfaithful-reasoning/</loc>
     <lastmod>2025-09-06T18:07:18+03:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-september-5-2025/</loc>
     <lastmod>2025-09-05T18:07:18+03:00</lastmod>
   </url><url>
+    <loc>https://serhatgiydiren.com/tags/scaling-interpretability/</loc>
+    <lastmod>2025-09-05T18:07:18+03:00</lastmod>
+  </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-september-4-2025/</loc>
     <lastmod>2025-09-04T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/interpretability/</loc>
+    <lastmod>2025-09-04T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/sparse-autoencoders/</loc>
+    <lastmod>2025-09-04T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/ai-safety-atlas/</loc>
+    <lastmod>2025-09-03T18:07:18+03:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-september-3-2025/</loc>
     <lastmod>2025-09-03T18:07:18+03:00</lastmod>
   </url><url>
-    <loc>https://serhatgiydiren.com/categories/ai-safety/</loc>
+    <loc>https://serhatgiydiren.com/tags/benchmarks/</loc>
+    <lastmod>2025-09-03T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/evaluations/</loc>
+    <lastmod>2025-09-03T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/robustness/</loc>
+    <lastmod>2025-09-03T18:07:18+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/ai-cybercrime/</loc>
     <lastmod>2025-09-02T18:07:18+00:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-september-2-2025/</loc>
     <lastmod>2025-09-02T18:07:18+00:00</lastmod>
   </url><url>
-    <loc>https://serhatgiydiren.com/categories/</loc>
+    <loc>https://serhatgiydiren.com/tags/misuse-prevention/</loc>
+    <lastmod>2025-09-02T18:07:18+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/threat-intelligence/</loc>
     <lastmod>2025-09-02T18:07:18+00:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-september-1-2025/</loc>
     <lastmod>2025-09-01T18:07:03+00:00</lastmod>
   </url><url>
+    <loc>https://serhatgiydiren.com/tags/alignment-faking/</loc>
+    <lastmod>2025-09-01T18:07:03+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/deceptive-ai/</loc>
+    <lastmod>2025-09-01T18:07:03+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/llm-alignment/</loc>
+    <lastmod>2025-09-01T18:07:03+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/adversarial-testing/</loc>
+    <lastmod>2025-08-31T18:06:49+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/ai-jailbreaks/</loc>
+    <lastmod>2025-08-31T18:06:49+00:00</lastmod>
+  </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-31-2025/</loc>
     <lastmod>2025-08-31T18:06:49+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/model-safety/</loc>
+    <lastmod>2025-08-31T18:06:49+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/ai-alignment/</loc>
+    <lastmod>2025-08-30T18:06:35+00:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-30-2025/</loc>
     <lastmod>2025-08-30T18:06:35+00:00</lastmod>
   </url><url>
+    <loc>https://serhatgiydiren.com/tags/llm-reasoning/</loc>
+    <lastmod>2025-08-30T18:06:35+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/ai-governance/</loc>
+    <lastmod>2025-08-29T18:00:08+00:00</lastmod>
+  </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-29-2025/</loc>
+    <lastmod>2025-08-29T18:00:08+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/extinction-risk/</loc>
+    <lastmod>2025-08-29T18:00:08+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/geopolitical-risk/</loc>
+    <lastmod>2025-08-29T18:00:08+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/off-switch/</loc>
     <lastmod>2025-08-29T18:00:08+00:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-28-2025/</loc>
     <lastmod>2025-08-28T17:59:46+00:00</lastmod>
   </url><url>
+    <loc>https://serhatgiydiren.com/tags/thought-anchors/</loc>
+    <lastmod>2025-08-28T17:59:46+00:00</lastmod>
+  </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-27-2025/</loc>
+    <lastmod>2025-08-27T17:59:25+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/implicit-bias/</loc>
     <lastmod>2025-08-27T17:59:25+00:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-26-2025/</loc>
     <lastmod>2025-08-26T17:58:57+00:00</lastmod>
   </url><url>
+    <loc>https://serhatgiydiren.com/tags/llm-safety/</loc>
+    <lastmod>2025-08-26T17:58:57+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/monitorability/</loc>
+    <lastmod>2025-08-26T17:58:57+00:00</lastmod>
+  </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-25-2025/</loc>
+    <lastmod>2025-08-25T17:55:33+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/biosecurity/</loc>
+    <lastmod>2025-08-25T17:55:33+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/existential-risks/</loc>
+    <lastmod>2025-08-25T17:55:33+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/pandemics/</loc>
     <lastmod>2025-08-25T17:55:33+00:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-24-2025/</loc>
     <lastmod>2025-08-24T17:51:12+00:00</lastmod>
   </url><url>
+    <loc>https://serhatgiydiren.com/tags/governance/</loc>
+    <lastmod>2025-08-24T17:51:12+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/international-cooperation/</loc>
+    <lastmod>2025-08-24T17:51:12+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/regulatory-policies/</loc>
+    <lastmod>2025-08-24T17:51:12+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/safety-standards/</loc>
+    <lastmod>2025-08-24T17:51:12+00:00</lastmod>
+  </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-23-2025/</loc>
     <lastmod>2025-08-23T17:50:12+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/ai-strategies/</loc>
+    <lastmod>2025-08-23T17:50:12+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/technical-approaches/</loc>
+    <lastmod>2025-08-23T17:50:12+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/accidents/</loc>
+    <lastmod>2025-08-22T17:47:59+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/ai-risks/</loc>
+    <lastmod>2025-08-22T17:47:59+00:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-22-2025/</loc>
     <lastmod>2025-08-22T17:47:59+00:00</lastmod>
   </url><url>
+    <loc>https://serhatgiydiren.com/tags/misuse/</loc>
+    <lastmod>2025-08-22T17:47:59+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/systemic-risks/</loc>
+    <lastmod>2025-08-22T17:47:59+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/agi/</loc>
+    <lastmod>2025-08-21T17:46:28+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/ai-capabilities/</loc>
+    <lastmod>2025-08-21T17:46:28+00:00</lastmod>
+  </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-21-2025/</loc>
+    <lastmod>2025-08-21T17:46:28+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/intelligence-measurement/</loc>
     <lastmod>2025-08-21T17:46:28+00:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-20-2025/</loc>
     <lastmod>2025-08-20T12:50:04+00:00</lastmod>
   </url><url>
+    <loc>https://serhatgiydiren.com/tags/autonomous-agents/</loc>
+    <lastmod>2025-08-20T12:50:04+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/llm-benchmarks/</loc>
+    <lastmod>2025-08-20T12:50:04+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/long-term-coherence/</loc>
+    <lastmod>2025-08-20T12:50:04+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/vending-bench/</loc>
+    <lastmod>2025-08-20T12:50:04+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/ai-control/</loc>
+    <lastmod>2025-08-19T16:03:50+00:00</lastmod>
+  </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-19-2025/</loc>
+    <lastmod>2025-08-19T16:03:50+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/societal-impact/</loc>
     <lastmod>2025-08-19T16:03:50+00:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-18-2025/</loc>
     <lastmod>2025-08-18T19:42:10+00:00</lastmod>
   </url><url>
+    <loc>https://serhatgiydiren.com/tags/animal-welfare/</loc>
+    <lastmod>2025-08-18T19:42:10+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/radical-empathy/</loc>
+    <lastmod>2025-08-18T19:42:10+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/affective-ai/</loc>
+    <lastmod>2025-08-17T19:53:17+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/ai-consciousness/</loc>
+    <lastmod>2025-08-17T19:53:17+00:00</lastmod>
+  </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-17-2025/</loc>
     <lastmod>2025-08-17T19:53:17+00:00</lastmod>
   </url><url>
-    <loc>https://serhatgiydiren.com/categories/ai-interpretability/</loc>
-    <lastmod>2025-08-16T12:56:27+00:00</lastmod>
+    <loc>https://serhatgiydiren.com/tags/model-welfare/</loc>
+    <lastmod>2025-08-17T19:53:17+00:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-16-2025/</loc>
     <lastmod>2025-08-16T12:56:27+00:00</lastmod>
   </url><url>
-    <loc>https://serhatgiydiren.com/categories/ai-alignment/</loc>
-    <lastmod>2025-08-15T12:40:49+00:00</lastmod>
+    <loc>https://serhatgiydiren.com/tags/llm-monitoring/</loc>
+    <lastmod>2025-08-16T12:56:27+00:00</lastmod>
   </url><url>
-    <loc>https://serhatgiydiren.com/categories/ai-governance/</loc>
-    <lastmod>2025-08-15T12:40:49+00:00</lastmod>
+    <loc>https://serhatgiydiren.com/tags/model-steering/</loc>
+    <lastmod>2025-08-16T12:56:27+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/persona-vectors/</loc>
+    <lastmod>2025-08-16T12:56:27+00:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-15-2025/</loc>
+    <lastmod>2025-08-15T12:40:49+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/givewell/</loc>
+    <lastmod>2025-08-15T12:40:49+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/global-poverty/</loc>
+    <lastmod>2025-08-15T12:40:49+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/intervention-impact/</loc>
     <lastmod>2025-08-15T12:40:49+00:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-14-2025/</loc>
@@ -113,25 +383,86 @@
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-13-2025/</loc>
     <lastmod>2025-08-13T12:53:05+00:00</lastmod>
   </url><url>
+    <loc>https://serhatgiydiren.com/tags/bluedot/</loc>
+    <lastmod>2025-08-13T12:53:05+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/gradient-descent/</loc>
+    <lastmod>2025-08-13T12:53:05+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/neural-networks/</loc>
+    <lastmod>2025-08-13T12:53:05+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/transformers/</loc>
+    <lastmod>2025-08-13T12:53:05+00:00</lastmod>
+  </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-12-2025/</loc>
+    <lastmod>2025-08-12T12:24:42+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/andrej-karpathy/</loc>
+    <lastmod>2025-08-12T12:24:42+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/deep-learning/</loc>
+    <lastmod>2025-08-12T12:24:42+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/machine-learning/</loc>
     <lastmod>2025-08-12T12:24:42+00:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-11-2025/</loc>
     <lastmod>2025-08-11T20:36:43+00:00</lastmod>
   </url><url>
+    <loc>https://serhatgiydiren.com/tags/ai-triad/</loc>
+    <lastmod>2025-08-11T20:36:43+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/algorithms/</loc>
+    <lastmod>2025-08-11T20:36:43+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/compute/</loc>
+    <lastmod>2025-08-11T20:36:43+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/data/</loc>
+    <lastmod>2025-08-11T20:36:43+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/national-security/</loc>
+    <lastmod>2025-08-11T20:36:43+00:00</lastmod>
+  </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-10-2025/</loc>
     <lastmod>2025-08-10T12:47:45+00:00</lastmod>
   </url><url>
+    <loc>https://serhatgiydiren.com/tags/collective-action-problems/</loc>
+    <lastmod>2025-08-10T12:47:45+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/machine-ethics/</loc>
+    <lastmod>2025-08-10T12:47:45+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/utility-functions/</loc>
+    <lastmod>2025-08-10T12:47:45+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/ai-fundamentals/</loc>
+    <lastmod>2025-08-09T12:45:43+00:00</lastmod>
+  </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-9-2025/</loc>
+    <lastmod>2025-08-09T12:45:43+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/catastrophic-risks/</loc>
+    <lastmod>2025-08-09T12:45:43+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/complex-systems/</loc>
+    <lastmod>2025-08-09T12:45:43+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/safety-engineering/</loc>
+    <lastmod>2025-08-09T12:45:43+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/single-agent-safety/</loc>
     <lastmod>2025-08-09T12:45:43+00:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-august-8-2025/</loc>
     <lastmod>2025-08-08T12:38:05+00:00</lastmod>
   </url><url>
+    <loc>https://serhatgiydiren.com/tags/scout-mindset/</loc>
+    <lastmod>2025-08-08T12:38:05+00:00</lastmod>
+  </url><url>
     <loc>https://serhatgiydiren.com/archives/</loc>
   </url><url>
     <loc>https://serhatgiydiren.com/search/</loc>
-  </url><url>
-    <loc>https://serhatgiydiren.com/tags/</loc>
   </url>
 </urlset>

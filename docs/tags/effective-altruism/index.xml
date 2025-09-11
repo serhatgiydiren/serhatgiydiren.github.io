@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Effective Altruism on Serhat Giydiren</title>
+    <link>https://serhatgiydiren.com/tags/effective-altruism/</link>
+    <description>Recent content in Effective Altruism on Serhat Giydiren</description>
+    <generator>Hugo -- 0.149.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Sep 2025 18:07:18 +0300</lastBuildDate>
+    <atom:link href="https://serhatgiydiren.com/tags/effective-altruism/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: September 10, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-10-2025/</link>
+      <pubDate>Wed, 10 Sep 2025 18:07:18 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-10-2025/</guid>
+      <description>A diary entry on AI risks, including misalignment, misuse, and s-risks, and an exploration of emergent misalignment due to prompt sensitivity in LLMs.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: September 9, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-9-2025/</link>
+      <pubDate>Tue, 09 Sep 2025 18:07:18 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-9-2025/</guid>
+      <description>A diary entry on longtermism and its moral implications for the future, and a paper on teaching models to verbalize reward hacking in Chain-of-Thought reasoning.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: August 25, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-25-2025/</link>
+      <pubDate>Mon, 25 Aug 2025 17:55:33 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-25-2025/</guid>
+      <description>A diary entry on Chapter 4 of the Effective Altruism Handbook, &amp;lsquo;Our Final Century?&amp;rsquo;, which examines existential risks, particularly human-made pandemics, and strategies for biosecurity.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: August 18, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-18-2025/</link>
+      <pubDate>Mon, 18 Aug 2025 19:42:10 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-18-2025/</guid>
+      <description>A diary entry on Chapter 3 of the Effective Altruism Handbook, &amp;lsquo;Radical Empathy&amp;rsquo;, which explores impartial care and extending empathy to non-human animals.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: August 15, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-15-2025/</link>
+      <pubDate>Fri, 15 Aug 2025 12:40:49 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-15-2025/</guid>
+      <description>A diary entry on Chapter 2 of the Effective Altruism Handbook, focusing on the significant differences in the impact of interventions aimed at alleviating global poverty.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: August 8, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-8-2025/</link>
+      <pubDate>Fri, 08 Aug 2025 12:38:05 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-8-2025/</guid>
+      <description>A diary entry on exploring the &amp;lsquo;Effectiveness Mindset&amp;rsquo; from the Effective Altruism Handbook, in the context of AI safety and governance.</description>
+    </item>
+  </channel>
+</rss>

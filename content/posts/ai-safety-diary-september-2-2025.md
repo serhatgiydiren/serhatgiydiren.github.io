@@ -1,13 +1,16 @@
 ---
-id: 986
-title: 'AI Safety Diary: September 2, 2025'
+title: "AI Safety Diary: September 2, 2025"
 date: '2025-09-02T18:07:18+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=986'
-permalink: /ai-safety-diary-september-2-2025/
 categories:
-    - 'AI Safety'
+  - "AI Safety"
+  - "AI Governance"
+tags:
+  - "ai safety diary"
+  - "anthropic"
+  - "threat intelligence"
+  - "ai cybercrime"
+  - "misuse prevention"
+summary: "A diary entry on Anthropic's strategies for combating AI-enabled cybercrime, including threat intelligence, robust safety protocols, and collaboration to prevent misuse of AI systems."
 ---
 
 Today, I explored a video from the [Anthropic YouTube channel](https://www.youtube.com/@anthropic-ai) as part of my AI safety studies. Below is the resource I reviewed.

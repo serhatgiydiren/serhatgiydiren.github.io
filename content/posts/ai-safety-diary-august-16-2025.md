@@ -1,14 +1,17 @@
 ---
-id: 947
-title: 'AI Safety Diary: August 16, 2025'
+title: "AI Safety Diary: August 16, 2025"
 date: '2025-08-16T12:56:27+00:00'
-author: 'Serhat Giydiren'
-layout: post
-guid: 'https://serhatgiydiren.com/?p=947'
-permalink: /ai-safety-diary-august-16-2025/
 categories:
-    - 'AI Interpretability'
-    - 'AI Safety'
+  - "AI Safety"
+  - "AI Interpretability"
+tags:
+  - "ai safety diary"
+  - "anthropic"
+  - "persona vectors"
+  - "interpretability"
+  - "llm monitoring"
+  - "model steering"
+summary: "A diary entry on Anthropic's research into Persona Vectors, a method for monitoring and controlling character traits in Large Language Models (LLMs) to improve safety and alignment."
 ---
 
 Today, I explored resources related to Anthropic's research on persona vectors as part of my AI safety studies. Below are the resources I reviewed.

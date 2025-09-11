@@ -1,6 +1,15 @@
 ---
-title: 'AI Safety Diary: September 4, 2025'
+title: "AI Safety Diary: September 4, 2025"
 date: '2025-09-04T18:07:18+03:00'
+categories:
+  - "AI Safety"
+  - "AI Interpretability"
+tags:
+  - "ai safety diary"
+  - "anthropic"
+  - "interpretability"
+  - "sparse autoencoders"
+summary: "A diary entry introducing AI interpretability and discussing a paper on the limitations of sparse autoencoders for finding canonical units of analysis in LLMs."
 ---
 
 Today, I explored resources from the [Anthropic YouTube channel](https://www.youtube.com/@anthropic-ai) and a research paper as part of my AI safety studies. Below are the resources I reviewed.

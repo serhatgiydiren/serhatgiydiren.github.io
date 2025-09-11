@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Threat Intelligence on Serhat Giydiren</title>
+    <link>https://serhatgiydiren.com/tags/threat-intelligence/</link>
+    <description>Recent content in Threat Intelligence on Serhat Giydiren</description>
+    <generator>Hugo -- 0.149.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Sep 2025 18:07:18 +0000</lastBuildDate>
+    <atom:link href="https://serhatgiydiren.com/tags/threat-intelligence/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: September 2, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-2-2025/</link>
+      <pubDate>Tue, 02 Sep 2025 18:07:18 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-2-2025/</guid>
+      <description>A diary entry on Anthropic&amp;rsquo;s strategies for combating AI-enabled cybercrime, including threat intelligence, robust safety protocols, and collaboration to prevent misuse of AI systems.</description>
+    </item>
+  </channel>
+</rss>

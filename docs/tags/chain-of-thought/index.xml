@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Chain-of-Thought on Serhat Giydiren</title>
+    <link>https://serhatgiydiren.com/tags/chain-of-thought/</link>
+    <description>Recent content in Chain-of-Thought on Serhat Giydiren</description>
+    <generator>Hugo -- 0.149.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 Sep 2025 18:07:18 +0300</lastBuildDate>
+    <atom:link href="https://serhatgiydiren.com/tags/chain-of-thought/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: September 9, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-9-2025/</link>
+      <pubDate>Tue, 09 Sep 2025 18:07:18 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-9-2025/</guid>
+      <description>A diary entry on longtermism and its moral implications for the future, and a paper on teaching models to verbalize reward hacking in Chain-of-Thought reasoning.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: September 6, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-6-2025/</link>
+      <pubDate>Sat, 06 Sep 2025 18:07:18 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-6-2025/</guid>
+      <description>A diary entry on how Chain-of-Thought (CoT) reasoning affects LLM&amp;rsquo;s ability to evade monitors, and the challenge of unfaithful reasoning in model explanations.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: September 5, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-5-2025/</link>
+      <pubDate>Fri, 05 Sep 2025 18:07:18 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-5-2025/</guid>
+      <description>A diary entry on the challenges of scaling interpretability for complex AI models and methods for measuring the faithfulness of LLM explanations.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: August 28, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-28-2025/</link>
+      <pubDate>Thu, 28 Aug 2025 17:59:46 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-28-2025/</guid>
+      <description>A diary entry on &amp;lsquo;Thought Anchors&amp;rsquo;, a concept for identifying key reasoning steps in Chain-of-Thought (CoT) processes that significantly influence LLM behavior, enhancing interpretability for AI safety.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: August 27, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-27-2025/</link>
+      <pubDate>Wed, 27 Aug 2025 17:59:25 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-27-2025/</guid>
+      <description>A diary entry on the unfaithfulness of Chain-of-Thought (CoT) reasoning in LLMs, highlighting issues like implicit biases and logically contradictory outputs, which pose challenges for AI safety monitoring.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: August 26, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-august-26-2025/</link>
+      <pubDate>Tue, 26 Aug 2025 17:58:57 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-august-26-2025/</guid>
+      <description>A diary entry on Chain of Thought (CoT) monitorability as a fragile opportunity for AI safety, focusing on detecting misbehavior in LLMs and the challenges of maintaining transparency.</description>
+    </item>
+  </channel>
+</rss>
