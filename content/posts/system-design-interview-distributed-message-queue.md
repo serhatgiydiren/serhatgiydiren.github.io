@@ -14,6 +14,10 @@ categories:
 summary: "A deep dive into designing a distributed message queue system. This guide covers core concepts from producers and consumers to advanced topics like delivery semantics (at-least-once, exactly-once), data partitioning, fault tolerance, and achieving high throughput."
 ---
 
+For a curated list of system design interview resources, check out our [Helpful Resources for System Design Interviews](/helpful-resources-for-system-design-interviews) page.
+
+For a comprehensive list of resources for tech interviews, check out our [Best Resources for Tech Interviews](/best-resources-for-tech-interviews) page.
+
 ## 1. Introduction: The Power of Asynchronous Communication
 
 In modern distributed systems, services need to communicate with each other. Synchronous communication (e.g., via REST APIs) is simple but creates tight coupling; if the receiving service is slow or down, the sending service is blocked. This brittleness is a major liability at scale.

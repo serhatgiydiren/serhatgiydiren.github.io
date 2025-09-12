@@ -14,6 +14,10 @@ categories:
 summary: "A comprehensive, in-depth guide to designing a distributed caching system. We explore core concepts from data partitioning with consistent hashing to advanced topics like consistency models, fault tolerance, and handling real-world challenges like thundering herds."
 ---
 
+For a curated list of system design interview resources, check out our [Helpful Resources for System Design Interviews](/helpful-resources-for-system-design-interviews) page.
+
+For a comprehensive list of resources for tech interviews, check out our [Best Resources for Tech Interviews](/best-resources-for-tech-interviews) page.
+
 ## 1. Introduction: The Need for Speed and Scale
 
 In any large-scale application, performance is paramount. As user load increases, backend services, particularly databases, often become the primary bottleneck. Repeatedly fetching the same data from a disk-based database is inefficient, leading to high latency for users and immense strain on database resources.

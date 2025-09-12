@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Technical Interview on Serhat Giydiren</title>
+    <link>https://serhatgiydiren.com/tags/technical-interview/</link>
+    <description>Recent content in Technical Interview on Serhat Giydiren</description>
+    <generator>Hugo -- 0.149.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Oct 2022 19:19:06 +0000</lastBuildDate>
+    <atom:link href="https://serhatgiydiren.com/tags/technical-interview/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Best Resources for Tech Interviews</title>
+      <link>https://serhatgiydiren.com/best-resources-for-tech-interviews/</link>
+      <pubDate>Sun, 09 Oct 2022 19:19:06 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/best-resources-for-tech-interviews/</guid>
+      <description>A comprehensive list of the best books and online courses to prepare for coding and system design interviews.</description>
+    </item>
+  </channel>
+</rss>

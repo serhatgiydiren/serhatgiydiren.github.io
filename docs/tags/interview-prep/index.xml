@@ -6,8 +6,15 @@
     <description>Recent content in Interview Prep on Serhat Giydiren</description>
     <generator>Hugo -- 0.149.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Mar 2021 09:25:27 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Oct 2022 19:19:06 +0000</lastBuildDate>
     <atom:link href="https://serhatgiydiren.com/tags/interview-prep/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Best Resources for Tech Interviews</title>
+      <link>https://serhatgiydiren.com/best-resources-for-tech-interviews/</link>
+      <pubDate>Sun, 09 Oct 2022 19:19:06 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/best-resources-for-tech-interviews/</guid>
+      <description>A comprehensive list of the best books and online courses to prepare for coding and system design interviews.</description>
+    </item>
     <item>
       <title>System Design Interview - Distributed Message Queue</title>
       <link>https://serhatgiydiren.com/system-design-interview-distributed-message-queue/</link>
