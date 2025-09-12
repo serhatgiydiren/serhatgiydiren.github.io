@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>System Design Interview - Notification Service | Serhat Giydiren</title>
+<meta name="keywords" content="system design, notification service, interview prep, architecture, scalability">
+<meta name="description" content="A deep-dive, expert-level guide to designing a scalable Notification Service. This massively expanded post explores detailed architectural patterns, technology trade-offs (Kafka vs. RabbitMQ), advanced reliability mechanisms, in-depth scaling strategies, API design with OpenAPI specs, and much more to create a truly comprehensive resource.">
+<meta name="author" content="">
+<link rel="canonical" href="https://serhatgiydiren.com/system-design-interview-notification-service/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://serhatgiydiren.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://serhatgiydiren.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://serhatgiydiren.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://serhatgiydiren.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://serhatgiydiren.com/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://serhatgiydiren.com/system-design-interview-notification-service/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://serhatgiydiren.com/system-design-interview-notification-service/">
+  <meta property="og:site_name" content="Serhat Giydiren">
+  <meta property="og:title" content="System Design Interview - Notification Service">
+  <meta property="og:description" content="A deep-dive, expert-level guide to designing a scalable Notification Service. This massively expanded post explores detailed architectural patterns, technology trade-offs (Kafka vs. RabbitMQ), advanced reliability mechanisms, in-depth scaling strategies, API design with OpenAPI specs, and much more to create a truly comprehensive resource.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-04-05T09:27:27+00:00">
+    <meta property="article:modified_time" content="2021-04-05T09:27:27+00:00">
+    <meta property="article:tag" content="System Design">
+    <meta property="article:tag" content="Notification Service">
+    <meta property="article:tag" content="Interview Prep">
+    <meta property="article:tag" content="Architecture">
+    <meta property="article:tag" content="Scalability">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="System Design Interview - Notification Service">
+<meta name="twitter:description" content="A deep-dive, expert-level guide to designing a scalable Notification Service. This massively expanded post explores detailed architectural patterns, technology trade-offs (Kafka vs. RabbitMQ), advanced reliability mechanisms, in-depth scaling strategies, API design with OpenAPI specs, and much more to create a truly comprehensive resource.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://serhatgiydiren.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "System Design Interview - Notification Service",
+      "item": "https://serhatgiydiren.com/system-design-interview-notification-service/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "System Design Interview - Notification Service",
+  "name": "System Design Interview - Notification Service",
+  "description": "A deep-dive, expert-level guide to designing a scalable Notification Service. This massively expanded post explores detailed architectural patterns, technology trade-offs (Kafka vs. RabbitMQ), advanced reliability mechanisms, in-depth scaling strategies, API design with OpenAPI specs, and much more to create a truly comprehensive resource.",
+  "keywords": [
+    "system design", "notification service", "interview prep", "architecture", "scalability"
+  ],
+  "articleBody": "For a curated list of system design interview resources, check out our Helpful Resources for System Design Interviews page.\nFor a comprehensive list of resources for tech interviews, check out our Best Resources for Tech Interviews page.\n1. Introduction In today’s interconnected digital world, applications constantly need to communicate with their users. Whether it’s a social media mention, a shipping update, or a critical alert, notifications are the primary channel for proactive user engagement. A well-executed notification strategy can dramatically improve user retention and satisfaction, while a poorly designed one can lead to user churn and distrust.\nDesigning a system that can reliably deliver billions of such messages across multiple channels is a classic and revealing system design interview problem. It tests a candidate’s understanding of asynchronous workflows, distributed systems, scalability, and fault tolerance. This guide provides an expert-level deep dive into building such a system from the ground up.\n2. What is a Notification Service? A Notification Service is a dedicated backend system responsible for sending messages to users through various channels. Its core function is to abstract the immense complexity of communicating with different delivery providers and to manage the end-to-end lifecycle of a notification.\nThis abstraction is non-trivial. It involves handling:\nPlatform-Specific Protocols: APNS (Apple) and FCM (Google) have unique connection and payload requirements. Token Management: Securely storing and refreshing millions of device tokens. HTML Rendering: Crafting and rendering complex HTML for emails. Vendor APIs: Integrating with dozens of SMS and email provider APIs, each with its own rate limits and error codes. By centralizing this logic, the service empowers product developers to send notifications with a single API call, without needing to be experts in this complex domain.\n3. Use Cases Notification services are ubiquitous and support a wide range of use cases, including:\nTransactional Alerts: Critical, user-initiated updates like order confirmations, shipping statuses, password resets, and two-factor authentication codes. These demand the highest reliability and lowest latency. Social Engagement: Social-driven alerts such as new friend requests, likes, comments, and mentions. These are often high volume and require intelligent fan-out. Marketing \u0026 Promotional: Bulk messages sent to a large user base about new features, offers, or news. These are less time-sensitive but require high throughput and sophisticated targeting/throttling. System Alerts: Proactive monitoring alerts sent to users about system health, usage limits, or security events. Real-time Updates: Time-sensitive information like sports scores, stock price changes, or traffic alerts. 4. Requirements of the System Functional Requirements Multi-Channel Delivery: Support for Push Notifications (iOS/Android), SMS, and Email. Fan-out Capability: A single event must be able to trigger notifications for millions of subscribers. User Preference Management: Users must be able to opt-in or opt-out of different notification categories. Template-Based Content: Support for pre-defined templates with personalization (e.g., “Hi {{name}}, your order has shipped!”). Throttling: Limit the number of notifications a user can receive in a given time window to prevent spamming. Analytics: Track delivery status (Sent, Delivered, Failed), open rates, and engagement for product analysis. A/B Testing: Allow product teams to test different notification texts or delivery times. Non-Functional Requirements Extreme Reliability: Guarantee at-least-once delivery. No messages should be lost, especially transactional ones. High Scalability: The system must scale horizontally to handle growth in users and message volume (billions per day). Low Latency: Time-sensitive notifications should be delivered within seconds. Security: Protect user data and prevent the system from being used as a spam vector. Observability: Implement comprehensive logging, monitoring, and tracing to quickly diagnose issues in a complex distributed workflow. Cost-Effectiveness: Minimize costs by batching requests, using cheaper channels first, and optimizing vendor choices. 5. High-Level Design The architecture is built around a decoupled, asynchronous model to handle high throughput and ensure reliability.\n+----------------+ +----------------+ +--------------------+ +----------------+ | Client Service |--\u003e| API Gateway |--\u003e| Notification Service |---\u003e| Metadata DB | +----------------+ +----------------+ +--------------------+ | (PostgreSQL) | | +----------------+ | v +------------------------------+ | Message Queue (Kafka) | |------------------------------| | Topic: push | Topic: email | +------------------------------+ | | +------------------------+ +------------------------+ | | v v +-----------------------------------+ +-----------------------------------+ | Push Worker Fleet | | Email Worker Fleet | | (Consumes from `push` topic) | | (Consumes from `email` topic) | | 1. Fetch Token from Cache (Redis) | | 1. Fetch Email from DB/Cache | | 2. Construct Payload | | 2. Render HTML Template | | 3. Call APNS/FCM | | 3. Call SendGrid/SES API | | 4. Log Result to Analytics DB | | 4. Log Result to Analytics DB | +-----------------------------------+ +-----------------------------------+ | | v v +----------------+ +----------------+ | APNS/FCM | | SendGrid/SES | +----------------+ +----------------+ 6. Detailed Design API Design (OpenAPI 3.0 Spec) The API must be idempotent. We enforce this with a X-Request-ID header.\nopenapi: 3.0.0 info: title: Notification Service API version: 1.0.0 paths: /v1/send: post: summary: Send a notification requestBody: required: true content: application/json: schema: type: object properties: recipient_id: type: string channel: type: string enum: [PUSH, EMAIL, SMS] template_id: type: string template_context: type: object responses: '202': description: Accepted for processing. security: - bearerAuth: [] components: securitySchemes: bearerAuth: type: http scheme: bearer bearerFormat: JWT Message Queue: Kafka vs. RabbitMQ Feature Apache Kafka RabbitMQ Choice for Notification Service Paradigm Distributed Commit Log Smart Broker / Message Router Kafka. Its log-based nature is perfect for high-throughput, durable event streams and allows for easy replayability for analytics. Throughput Extremely High (Millions of messages/sec) High (Tens to hundreds of thousands of messages/sec) Kafka. Consumer Model Dumb Consumers (pull model, consumers track offset) Smart Broker (push model, broker tracks state) Kafka. The pull model gives consumers more control over consumption rate. Ordering Guaranteed within a partition Guaranteed within a single queue Kafka. We can partition by user_id to guarantee notification order for a specific user. Worker Design \u0026 Logic Workers are stateless and part of a consumer group for scalability and load balancing.\n# Pseudocode for a generic worker def main(): consumer = kafka.Consumer(\"push_topic\", group_id=\"push_workers\") for message in consumer: try: process_notification(message) consumer.commit(message.offset) # Mark as processed except Exception as e: # Log error move_to_dlq(message) def process_notification(message): # 1. Deserialize message notification_task = json.loads(message.value) # 2. Fetch data from cache/db user_profile = redis.get(f\"user:{notification_task.recipient_id}\") # 3. Apply business logic (throttling, user preferences) if not can_send(user_profile): return # Drop notification # 4. Call 3rd party gateway with retry logic send_with_retry(construct_payload(user_profile, notification_task)) # 5. Log result to analytics DB (e.g., Cassandra) log_event(status=\"SENT\", notification_id=notification_task.id) 7. Key Challenge: Reliability \u0026 Delivery Guarantees Ensuring at-least-once delivery is paramount.\nPersistence: The first step is the Notification Service persisting the task in a durable message queue like Kafka before returning a 202 Accepted response. The API call is synchronous, but the processing is asynchronous. Retries with Exponential Backoff \u0026 Jitter: Workers must not hammer a failing 3rd party service. A retry policy should be implemented, for example: wait 1s, 2s, 4s, 8s… with a small random jitter to prevent thundering herds of retries. Dead Letter Queue (DLQ): After 3-5 failed retries, the message is moved to a DLQ (another Kafka topic). This is critical. It prevents a single “poison pill” message (e.g., one with a malformed device token that always fails) from blocking the processing of all other valid messages in the partition. An alerting system must monitor the DLQ size. Tracking Delivery Status: Many gateways (especially for email) provide asynchronous feedback via webhooks. We need a separate service to ingest these webhook events, correlate them with the original notification, and update the status in our analytics database. 8. Scaling \u0026 Optimizations Database Scaling:\nPostgreSQL (Metadata): Use read replicas to offload traffic from analytics or services that only need to read preferences. For write scaling, consider vertical scaling or eventually moving to a distributed SQL DB like CockroachDB. Cassandra (Logs/Analytics): Cassandra is built for horizontal scaling. Simply add more nodes to the cluster to increase write throughput. Use a sensible partition key (e.g., (user_id, month)) to ensure even data distribution. Implement Time-to-Live (TTL) on logs to automatically purge old data and manage storage costs. Caching Strategy (Cache-Aside Pattern):\nA worker needing a user’s device token first checks Redis. Cache Hit: The data is returned from Redis. Cache Miss: The worker fetches the data from the source-of-truth DB (PostgreSQL), writes it to Redis with a TTL (e.g., 24 hours), and then proceeds. This ensures the cache stays reasonably fresh. Cost Optimization:\nBatching: For non-urgent notifications, workers can buffer messages for a short period (e.g., 100ms) and send them to providers in a single batch API call, reducing network overhead and cost. Intelligent Routing: Define a cost-based channel priority. Always try to send a Push notification first (virtually free). If it fails or the user has no device, fall back to Email, and finally to SMS (the most expensive). 9. Conclusion Designing a notification service is a masterclass in building a modern, asynchronous, and resilient distributed system. It’s far more than a simple “send” button. A production-grade system requires a deep understanding of message queues to decouple components, robust retry and DLQ strategies to ensure reliability, and multi-layered caching and database scaling patterns to handle massive volume with low latency. By carefully considering the trade-offs between different technologies (like Kafka vs. RabbitMQ) and implementing strategies for cost and latency optimization, we can build a system that not only meets today’s demands but is also prepared for future growth.\n",
+  "wordCount" : "1535",
+  "inLanguage": "en",
+  "datePublished": "2021-04-05T09:27:27Z",
+  "dateModified": "2021-04-05T09:27:27Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://serhatgiydiren.com/system-design-interview-notification-service/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Serhat Giydiren",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://serhatgiydiren.com/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://serhatgiydiren.com/" accesskey="h" title="Serhat Giydiren (Alt + H)">Serhat Giydiren</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://serhatgiydiren.com/archives" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://serhatgiydiren.com/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://serhatgiydiren.com/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://serhatgiydiren.com/categories" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      System Design Interview - Notification Service
+    </h1>
+    <div class="post-meta"><span title='2021-04-05 09:27:27 +0000 +0000'>April 5, 2021</span>&nbsp;·&nbsp;8 min
+
+</div>
+  </header> 
+  <div class="post-content"><p>For a curated list of system design interview resources, check out our <a href="/helpful-resources-for-system-design-interviews"
+   
+   >Helpful Resources for System Design Interviews</a>
+ page.</p>
+<p>For a comprehensive list of resources for tech interviews, check out our <a href="/best-resources-for-tech-interviews"
+   
+   >Best Resources for Tech Interviews</a>
+ page.</p>
+<h3 id="1-introduction">1. Introduction<a hidden class="anchor" aria-hidden="true" href="#1-introduction">#</a></h3>
+<p>In today&rsquo;s interconnected digital world, applications constantly need to communicate with their users. Whether it&rsquo;s a social media mention, a shipping update, or a critical alert, notifications are the primary channel for proactive user engagement. A well-executed notification strategy can dramatically improve user retention and satisfaction, while a poorly designed one can lead to user churn and distrust.</p>
+<p>Designing a system that can reliably deliver billions of such messages across multiple channels is a classic and revealing system design interview problem. It tests a candidate&rsquo;s understanding of asynchronous workflows, distributed systems, scalability, and fault tolerance. This guide provides an expert-level deep dive into building such a system from the ground up.</p>
+<h3 id="2-what-is-a-notification-service">2. What is a Notification Service?<a hidden class="anchor" aria-hidden="true" href="#2-what-is-a-notification-service">#</a></h3>
+<p>A Notification Service is a dedicated backend system responsible for sending messages to users through various channels. Its core function is to abstract the immense complexity of communicating with different delivery providers and to manage the end-to-end lifecycle of a notification.</p>
+<p>This abstraction is non-trivial. It involves handling:</p>
+<ul>
+<li><strong>Platform-Specific Protocols:</strong> APNS (Apple) and FCM (Google) have unique connection and payload requirements.</li>
+<li><strong>Token Management:</strong> Securely storing and refreshing millions of device tokens.</li>
+<li><strong>HTML Rendering:</strong> Crafting and rendering complex HTML for emails.</li>
+<li><strong>Vendor APIs:</strong> Integrating with dozens of SMS and email provider APIs, each with its own rate limits and error codes.</li>
+</ul>
+<p>By centralizing this logic, the service empowers product developers to send notifications with a single API call, without needing to be experts in this complex domain.</p>
+<h3 id="3-use-cases">3. Use Cases<a hidden class="anchor" aria-hidden="true" href="#3-use-cases">#</a></h3>
+<p>Notification services are ubiquitous and support a wide range of use cases, including:</p>
+<ul>
+<li><strong>Transactional Alerts:</strong> Critical, user-initiated updates like order confirmations, shipping statuses, password resets, and two-factor authentication codes. These demand the highest reliability and lowest latency.</li>
+<li><strong>Social Engagement:</strong> Social-driven alerts such as new friend requests, likes, comments, and mentions. These are often high volume and require intelligent fan-out.</li>
+<li><strong>Marketing &amp; Promotional:</strong> Bulk messages sent to a large user base about new features, offers, or news. These are less time-sensitive but require high throughput and sophisticated targeting/throttling.</li>
+<li><strong>System Alerts:</strong> Proactive monitoring alerts sent to users about system health, usage limits, or security events.</li>
+<li><strong>Real-time Updates:</strong> Time-sensitive information like sports scores, stock price changes, or traffic alerts.</li>
+</ul>
+<h3 id="4-requirements-of-the-system">4. Requirements of the System<a hidden class="anchor" aria-hidden="true" href="#4-requirements-of-the-system">#</a></h3>
+<h4 id="functional-requirements">Functional Requirements<a hidden class="anchor" aria-hidden="true" href="#functional-requirements">#</a></h4>
+<ul>
+<li><strong>Multi-Channel Delivery:</strong> Support for Push Notifications (iOS/Android), SMS, and Email.</li>
+<li><strong>Fan-out Capability:</strong> A single event must be able to trigger notifications for millions of subscribers.</li>
+<li><strong>User Preference Management:</strong> Users must be able to opt-in or opt-out of different notification categories.</li>
+<li><strong>Template-Based Content:</strong> Support for pre-defined templates with personalization (e.g., &ldquo;Hi {{name}}, your order has shipped!&rdquo;).</li>
+<li><strong>Throttling:</strong> Limit the number of notifications a user can receive in a given time window to prevent spamming.</li>
+<li><strong>Analytics:</strong> Track delivery status (Sent, Delivered, Failed), open rates, and engagement for product analysis.</li>
+<li><strong>A/B Testing:</strong> Allow product teams to test different notification texts or delivery times.</li>
+</ul>
+<h4 id="non-functional-requirements">Non-Functional Requirements<a hidden class="anchor" aria-hidden="true" href="#non-functional-requirements">#</a></h4>
+<ul>
+<li><strong>Extreme Reliability:</strong> Guarantee at-least-once delivery. No messages should be lost, especially transactional ones.</li>
+<li><strong>High Scalability:</strong> The system must scale horizontally to handle growth in users and message volume (billions per day).</li>
+<li><strong>Low Latency:</strong> Time-sensitive notifications should be delivered within seconds.</li>
+<li><strong>Security:</strong> Protect user data and prevent the system from being used as a spam vector.</li>
+<li><strong>Observability:</strong> Implement comprehensive logging, monitoring, and tracing to quickly diagnose issues in a complex distributed workflow.</li>
+<li><strong>Cost-Effectiveness:</strong> Minimize costs by batching requests, using cheaper channels first, and optimizing vendor choices.</li>
+</ul>
+<h3 id="5-high-level-design">5. High-Level Design<a hidden class="anchor" aria-hidden="true" href="#5-high-level-design">#</a></h3>
+<p>The architecture is built around a decoupled, asynchronous model to handle high throughput and ensure reliability.</p>
+<pre tabindex="0"><code class="language-ascii" data-lang="ascii">+----------------+   +----------------+   +--------------------+      +----------------+
+| Client Service |--&gt;|   API Gateway  |--&gt;| Notification Service |---&gt;|  Metadata DB   |
++----------------+   +----------------+   +--------------------+      |  (PostgreSQL)  |
+                                                     |                +----------------+
+                                                     |
+                                                     v
+                                     +------------------------------+
+                                     |   Message Queue (Kafka)      |
+                                     |------------------------------|
+                                     | Topic: push | Topic: email   |
+                                     +------------------------------+
+                                           |          |
+                  +------------------------+          +------------------------+
+                  |                                                            |
+                  v                                                            v
++-----------------------------------+            +-----------------------------------+
+|      Push Worker Fleet            |            |      Email Worker Fleet           |
+| (Consumes from `push` topic)      |            | (Consumes from `email` topic)     |
+| 1. Fetch Token from Cache (Redis) |            | 1. Fetch Email from DB/Cache      |
+| 2. Construct Payload              |            | 2. Render HTML Template           |
+| 3. Call APNS/FCM                  |            | 3. Call SendGrid/SES API          |
+| 4. Log Result to Analytics DB     |            | 4. Log Result to Analytics DB     |
++-----------------------------------+            +-----------------------------------+
+                  |                                                            |
+                  v                                                            v
+        +----------------+                                           +----------------+
+        |   APNS/FCM     |                                           | SendGrid/SES   |
+        +----------------+                                           +----------------+
+</code></pre><h3 id="6-detailed-design">6. Detailed Design<a hidden class="anchor" aria-hidden="true" href="#6-detailed-design">#</a></h3>
+<h4 id="api-design-openapi-30-spec">API Design (OpenAPI 3.0 Spec)<a hidden class="anchor" aria-hidden="true" href="#api-design-openapi-30-spec">#</a></h4>
+<p>The API must be idempotent. We enforce this with a <code>X-Request-ID</code> header.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">openapi</span>: <span style="color:#ae81ff">3.0.0</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">info</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">title</span>: <span style="color:#ae81ff">Notification Service API</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">version</span>: <span style="color:#ae81ff">1.0.0</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">paths</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">/v1/send</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">post</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Send a notification</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">requestBody</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">required</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">application/json</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">type</span>: <span style="color:#ae81ff">object</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">properties</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">recipient_id</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">channel</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">enum</span>: [<span style="color:#ae81ff">PUSH, EMAIL, SMS]</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">template_id</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">template_context</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">type</span>: <span style="color:#ae81ff">object</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">responses</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#39;202&#39;</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Accepted for processing.</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">security</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">bearerAuth</span>: []
+</span></span><span style="display:flex;"><span><span style="color:#f92672">components</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">securitySchemes</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">bearerAuth</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">type</span>: <span style="color:#ae81ff">http</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">scheme</span>: <span style="color:#ae81ff">bearer</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">bearerFormat</span>: <span style="color:#ae81ff">JWT</span>
+</span></span></code></pre></div><h4 id="message-queue-kafka-vs-rabbitmq">Message Queue: Kafka vs. RabbitMQ<a hidden class="anchor" aria-hidden="true" href="#message-queue-kafka-vs-rabbitmq">#</a></h4>
+<table>
+  <thead>
+      <tr>
+          <th>Feature</th>
+          <th>Apache Kafka</th>
+          <th>RabbitMQ</th>
+          <th>Choice for Notification Service</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Paradigm</strong></td>
+          <td>Distributed Commit Log</td>
+          <td>Smart Broker / Message Router</td>
+          <td><strong>Kafka</strong>. Its log-based nature is perfect for high-throughput, durable event streams and allows for easy replayability for analytics.</td>
+      </tr>
+      <tr>
+          <td><strong>Throughput</strong></td>
+          <td>Extremely High (Millions of messages/sec)</td>
+          <td>High (Tens to hundreds of thousands of messages/sec)</td>
+          <td><strong>Kafka</strong>.</td>
+      </tr>
+      <tr>
+          <td><strong>Consumer Model</strong></td>
+          <td>Dumb Consumers (pull model, consumers track offset)</td>
+          <td>Smart Broker (push model, broker tracks state)</td>
+          <td><strong>Kafka</strong>. The pull model gives consumers more control over consumption rate.</td>
+      </tr>
+      <tr>
+          <td><strong>Ordering</strong></td>
+          <td>Guaranteed within a partition</td>
+          <td>Guaranteed within a single queue</td>
+          <td><strong>Kafka</strong>. We can partition by <code>user_id</code> to guarantee notification order for a specific user.</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="worker-design--logic">Worker Design &amp; Logic<a hidden class="anchor" aria-hidden="true" href="#worker-design--logic">#</a></h4>
+<p>Workers are stateless and part of a consumer group for scalability and load balancing.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Pseudocode for a generic worker</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    consumer <span style="color:#f92672">=</span> kafka<span style="color:#f92672">.</span>Consumer(<span style="color:#e6db74">&#34;push_topic&#34;</span>, group_id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;push_workers&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> message <span style="color:#f92672">in</span> consumer:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>            process_notification(message)
+</span></span><span style="display:flex;"><span>            consumer<span style="color:#f92672">.</span>commit(message<span style="color:#f92672">.</span>offset) <span style="color:#75715e"># Mark as processed</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Log error</span>
+</span></span><span style="display:flex;"><span>            move_to_dlq(message)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">process_notification</span>(message):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 1. Deserialize message</span>
+</span></span><span style="display:flex;"><span>    notification_task <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>loads(message<span style="color:#f92672">.</span>value)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 2. Fetch data from cache/db</span>
+</span></span><span style="display:flex;"><span>    user_profile <span style="color:#f92672">=</span> redis<span style="color:#f92672">.</span>get(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;user:</span><span style="color:#e6db74">{</span>notification_task<span style="color:#f92672">.</span>recipient_id<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 3. Apply business logic (throttling, user preferences)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> can_send(user_profile):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#75715e"># Drop notification</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 4. Call 3rd party gateway with retry logic</span>
+</span></span><span style="display:flex;"><span>    send_with_retry(construct_payload(user_profile, notification_task))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 5. Log result to analytics DB (e.g., Cassandra)</span>
+</span></span><span style="display:flex;"><span>    log_event(status<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;SENT&#34;</span>, notification_id<span style="color:#f92672">=</span>notification_task<span style="color:#f92672">.</span>id)
+</span></span></code></pre></div><h3 id="7-key-challenge-reliability--delivery-guarantees">7. Key Challenge: Reliability &amp; Delivery Guarantees<a hidden class="anchor" aria-hidden="true" href="#7-key-challenge-reliability--delivery-guarantees">#</a></h3>
+<p>Ensuring at-least-once delivery is paramount.</p>
+<ol>
+<li><strong>Persistence:</strong> The first step is the Notification Service persisting the task in a durable message queue like Kafka before returning a <code>202 Accepted</code> response. The API call is synchronous, but the processing is asynchronous.</li>
+<li><strong>Retries with Exponential Backoff &amp; Jitter:</strong> Workers must not hammer a failing 3rd party service. A retry policy should be implemented, for example: wait 1s, 2s, 4s, 8s&hellip; with a small random jitter to prevent thundering herds of retries.</li>
+<li><strong>Dead Letter Queue (DLQ):</strong> After 3-5 failed retries, the message is moved to a DLQ (another Kafka topic). This is critical. It prevents a single &ldquo;poison pill&rdquo; message (e.g., one with a malformed device token that always fails) from blocking the processing of all other valid messages in the partition. An alerting system must monitor the DLQ size.</li>
+<li><strong>Tracking Delivery Status:</strong> Many gateways (especially for email) provide asynchronous feedback via webhooks. We need a separate service to ingest these webhook events, correlate them with the original notification, and update the status in our analytics database.</li>
+</ol>
+<h3 id="8-scaling--optimizations">8. Scaling &amp; Optimizations<a hidden class="anchor" aria-hidden="true" href="#8-scaling--optimizations">#</a></h3>
+<ul>
+<li>
+<p><strong>Database Scaling:</strong></p>
+<ul>
+<li><strong>PostgreSQL (Metadata):</strong> Use read replicas to offload traffic from analytics or services that only need to read preferences. For write scaling, consider vertical scaling or eventually moving to a distributed SQL DB like CockroachDB.</li>
+<li><strong>Cassandra (Logs/Analytics):</strong> Cassandra is built for horizontal scaling. Simply add more nodes to the cluster to increase write throughput. Use a sensible partition key (e.g., <code>(user_id, month)</code>) to ensure even data distribution. Implement Time-to-Live (TTL) on logs to automatically purge old data and manage storage costs.</li>
+</ul>
+</li>
+<li>
+<p><strong>Caching Strategy (Cache-Aside Pattern):</strong></p>
+<ul>
+<li>A worker needing a user&rsquo;s device token first checks Redis.</li>
+<li><strong>Cache Hit:</strong> The data is returned from Redis.</li>
+<li><strong>Cache Miss:</strong> The worker fetches the data from the source-of-truth DB (PostgreSQL), writes it to Redis with a TTL (e.g., 24 hours), and then proceeds. This ensures the cache stays reasonably fresh.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cost Optimization:</strong></p>
+<ul>
+<li><strong>Batching:</strong> For non-urgent notifications, workers can buffer messages for a short period (e.g., 100ms) and send them to providers in a single batch API call, reducing network overhead and cost.</li>
+<li><strong>Intelligent Routing:</strong> Define a cost-based channel priority. Always try to send a Push notification first (virtually free). If it fails or the user has no device, fall back to Email, and finally to SMS (the most expensive).</li>
+</ul>
+</li>
+</ul>
+<h3 id="9-conclusion">9. Conclusion<a hidden class="anchor" aria-hidden="true" href="#9-conclusion">#</a></h3>
+<p>Designing a notification service is a masterclass in building a modern, asynchronous, and resilient distributed system. It&rsquo;s far more than a simple &ldquo;send&rdquo; button. A production-grade system requires a deep understanding of message queues to decouple components, robust retry and DLQ strategies to ensure reliability, and multi-layered caching and database scaling patterns to handle massive volume with low latency. By carefully considering the trade-offs between different technologies (like Kafka vs. RabbitMQ) and implementing strategies for cost and latency optimization, we can build a system that not only meets today&rsquo;s demands but is also prepared for future growth.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://serhatgiydiren.com/tags/system-design/">System Design</a></li>
+      <li><a href="https://serhatgiydiren.com/tags/notification-service/">Notification Service</a></li>
+      <li><a href="https://serhatgiydiren.com/tags/interview-prep/">Interview Prep</a></li>
+      <li><a href="https://serhatgiydiren.com/tags/architecture/">Architecture</a></li>
+      <li><a href="https://serhatgiydiren.com/tags/scalability/">Scalability</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://serhatgiydiren.com/">Serhat Giydiren</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

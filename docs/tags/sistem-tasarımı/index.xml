@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sistem Tasarımı on Serhat Giydiren</title>
+    <link>http://localhost:1313/tags/sistem-tasar%C4%B1m%C4%B1/</link>
+    <description>Recent content in Sistem Tasarımı on Serhat Giydiren</description>
+    <generator>Hugo -- 0.149.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Apr 2021 09:27:27 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/sistem-tasar%C4%B1m%C4%B1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>System Design Interview - Notification Service</title>
+      <link>http://localhost:1313/system-design-interview-notification-service/</link>
+      <pubDate>Mon, 05 Apr 2021 09:27:27 +0000</pubDate>
+      <guid>http://localhost:1313/system-design-interview-notification-service/</guid>
+      <description>Bu yazıda, ölçeklenebilir ve güvenilir bir bildirim servisinin nasıl tasarlanacağını sistem tasarımı mülakatı perspektifiyle adım adım inceliyoruz. Gereksinim analizinden başlayarak yüksek seviye ve detaylı tasarıma, veritabanı şemasından API tasarımına kadar tüm kritik bileşenleri ele alıyoruz.</description>
+    </item>
+  </channel>
+</rss>

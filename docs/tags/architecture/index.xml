@@ -6,8 +6,15 @@
     <description>Recent content in Architecture on Serhat Giydiren</description>
     <generator>Hugo -- 0.149.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Mar 2021 09:25:27 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 05 Apr 2021 09:27:27 +0000</lastBuildDate>
     <atom:link href="https://serhatgiydiren.com/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>System Design Interview - Notification Service</title>
+      <link>https://serhatgiydiren.com/system-design-interview-notification-service/</link>
+      <pubDate>Mon, 05 Apr 2021 09:27:27 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/system-design-interview-notification-service/</guid>
+      <description>A deep-dive, expert-level guide to designing a scalable Notification Service. This massively expanded post explores detailed architectural patterns, technology trade-offs (Kafka vs. RabbitMQ), advanced reliability mechanisms, in-depth scaling strategies, API design with OpenAPI specs, and much more to create a truly comprehensive resource.</description>
+    </item>
     <item>
       <title>System Design Interview - Distributed Message Queue</title>
       <link>https://serhatgiydiren.com/system-design-interview-distributed-message-queue/</link>
