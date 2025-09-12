@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>System Design Interview - Top K Problem - Heavy Hitters | Serhat Giydiren</title>
+<meta name="keywords" content="system design, distributed systems, algorithms, data structures, interview prep">
+<meta name="description" content="An in-depth guide to the Top K Problem and Heavy Hitters in system design interviews. Explore exact and approximate solutions, distributed system considerations, and real-world applications for finding the most frequent elements in large datasets and data streams.">
+<meta name="author" content="">
+<link rel="canonical" href="https://serhatgiydiren.com/system-design-interview-top-k-problem-heavy-hitters/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://serhatgiydiren.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://serhatgiydiren.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://serhatgiydiren.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://serhatgiydiren.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://serhatgiydiren.com/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://serhatgiydiren.com/system-design-interview-top-k-problem-heavy-hitters/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://serhatgiydiren.com/system-design-interview-top-k-problem-heavy-hitters/">
+  <meta property="og:site_name" content="Serhat Giydiren">
+  <meta property="og:title" content="System Design Interview - Top K Problem - Heavy Hitters">
+  <meta property="og:description" content="An in-depth guide to the Top K Problem and Heavy Hitters in system design interviews. Explore exact and approximate solutions, distributed system considerations, and real-world applications for finding the most frequent elements in large datasets and data streams.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-06-07T09:31:03+00:00">
+    <meta property="article:modified_time" content="2021-06-07T09:31:03+00:00">
+    <meta property="article:tag" content="System Design">
+    <meta property="article:tag" content="Distributed Systems">
+    <meta property="article:tag" content="Algorithms">
+    <meta property="article:tag" content="Data Structures">
+    <meta property="article:tag" content="Interview Prep">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="System Design Interview - Top K Problem - Heavy Hitters">
+<meta name="twitter:description" content="An in-depth guide to the Top K Problem and Heavy Hitters in system design interviews. Explore exact and approximate solutions, distributed system considerations, and real-world applications for finding the most frequent elements in large datasets and data streams.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://serhatgiydiren.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "System Design Interview - Top K Problem - Heavy Hitters",
+      "item": "https://serhatgiydiren.com/system-design-interview-top-k-problem-heavy-hitters/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "System Design Interview - Top K Problem - Heavy Hitters",
+  "name": "System Design Interview - Top K Problem - Heavy Hitters",
+  "description": "An in-depth guide to the Top K Problem and Heavy Hitters in system design interviews. Explore exact and approximate solutions, distributed system considerations, and real-world applications for finding the most frequent elements in large datasets and data streams.",
+  "keywords": [
+    "system design", "distributed systems", "algorithms", "data structures", "interview prep"
+  ],
+  "articleBody": "For a curated list of system design interview resources, check out our Helpful Resources for System Design Interviews page.\nFor a comprehensive list of resources for tech interviews, check out our Best Resources for Tech Interviews page.\n1. Introduction to the Top K Problem The “Top K Problem” is a classic and frequently encountered challenge in system design interviews. It revolves around identifying the k most frequent or largest elements from a given dataset. This dataset can be static and finite, or more commonly in modern systems, a continuous, unbounded stream of data. The “Heavy Hitters” variant specifically refers to finding elements that appear with a frequency above a certain threshold, often implying a significant proportion of the total data.\nUnderstanding and effectively solving the Top K Problem is crucial for designing scalable and efficient systems that deal with large volumes of data, such as analytics platforms, recommendation engines, network monitoring tools, and search engines. Interviewers use this problem to assess a candidate’s knowledge of data structures, algorithms, distributed computing principles, and trade-offs between accuracy, memory, and processing time.\n2. Defining the Problem Space At its core, the Top K Problem asks us to find the k elements with the highest frequency or value. However, the context in which this problem arises significantly impacts the optimal solution.\nKey Dimensions:\nData Source:\nStatic Data: The entire dataset is available at once. This simplifies the problem as we can process all data without worrying about future arrivals. Examples include finding the top 10 most common words in a book or the top 5 highest scores in a game’s leaderboard. Streaming Data: Data arrives continuously and often at a high velocity. We cannot store the entire stream, and processing must be done in a single pass or with limited memory. This is the more challenging and common scenario in real-world distributed systems. Examples include finding trending topics on Twitter, top viewed videos on YouTube, or most frequent IP addresses accessing a server. Constraints:\nMemory: How much memory is available? For massive datasets or streams, storing all elements and their counts might be impossible. Time: What are the latency requirements? Can we afford to sort the entire dataset, or do we need real-time updates? Accuracy: Is an exact answer required, or is an approximate answer acceptable? For many streaming applications, a small margin of error is tolerable if it significantly reduces resource consumption. k Value: Is k small or large? A small k might allow for simpler data structures. 3. Core Concepts and Building Blocks Before diving into specific algorithms, let’s review some fundamental concepts.\n3.1 Frequency Counting The most basic operation is to count the occurrences of each item. A hash map (or dictionary) is the go-to data structure for this.\nKey: The item itself (e.g., word, IP address). Value: The frequency count. Map counts = new HashMap\u003c\u003e(); for (Item item : data) { counts.put(item, counts.getOrDefault(item, 0) + 1); } This approach works well for static data or streams where the number of unique items is small enough to fit in memory.\n3.2 Data Streams A data stream is an ordered sequence of items that arrives continuously. Key characteristics:\nUnbounded: The stream has no defined end. High Velocity: Items arrive rapidly. Single Pass: Algorithms typically process each item once due to memory constraints. Limited Memory: We cannot store the entire stream. 3.3 Approximate Solutions When dealing with massive data streams and strict memory constraints, exact solutions become infeasible. Approximate algorithms provide a trade-off: they use significantly less memory and time but might return results with a small error margin. For many applications (e.g., trending topics), this approximation is perfectly acceptable.\n4. Exact Solutions for Static or Small Datasets For scenarios where the entire dataset can be held in memory, or the stream is small enough to be fully processed, exact solutions are preferred.\n1. Hash Map + Sorting Approach:\nIterate through the dataset and use a hash map to store the frequency of each item. Once all items are processed, extract the entries (item, count) from the hash map. Sort these entries in descending order based on their counts. Take the top k elements from the sorted list. Time Complexity:\nCounting: O(N) where N is the total number of items. Sorting: O(U log U) where U is the number of unique items. In the worst case, U can be N. Overall: O(N + U log U). Space Complexity: O(U) for the hash map.\nPros: Simple to implement, provides exact results. Cons: Not suitable for very large N or U, especially when U is close to N, as sorting can be expensive. Infeasible for unbounded data streams.\n2. Min-Heap (Priority Queue) This is a more efficient approach when k is much smaller than the total number of unique items.\nApproach:\nUse a hash map to count the frequency of each item (same as above). Create a min-heap (priority queue) of size k. The heap will store (count, item) pairs, ordered by count. Iterate through the (item, count) pairs from the hash map: If the heap size is less than k, add the current pair to the heap. If the heap size is k and the current item’s count is greater than the count of the smallest element in the heap (the heap’s root), remove the root and insert the current pair. After processing all items, the heap will contain the k most frequent elements. Time Complexity:\nCounting: O(N). Heap operations: For each of the U unique items, a heap insertion/deletion takes O(log k). Overall: O(N + U log k). This is better than sorting when k is significantly smaller than U. Space Complexity: O(U) for the hash map, O(k) for the min-heap. Overall O(U + k).\nPros: More efficient than sorting when k is small. Provides exact results. Cons: Still requires storing all unique item counts in a hash map, making it unsuitable for very large U or unbounded streams.\n5. Approximate Solutions for Streaming Data (Heavy Hitters) When dealing with high-volume, unbounded data streams where memory is a critical constraint, we must resort to approximate algorithms. These algorithms aim to identify heavy hitters with high probability and bounded error, using sub-linear space (often poly-logarithmic or even constant space relative to the stream size).\n5.1 Count-Min Sketch The Count-Min Sketch is a probabilistic data structure used for estimating frequencies of items in a data stream. It’s particularly good for point queries (estimating the frequency of a specific item) and finding heavy hitters.\nHow it works:\nData Structure: A 2D array (matrix) of counters, CM[d][w], where d is the number of hash functions (depth) and w is the width of the array. d determines the probability of error (higher d means lower error probability). w determines the magnitude of error (higher w means lower error magnitude). Hash Functions: d independent hash functions, h_1, h_2, ..., h_d, each mapping an item to an index within [0, w-1]. Update (Processing an item x): For each hash function h_i: Increment CM[i][h_i(x)] by 1. Query (Estimating frequency of x): The estimated frequency of x is min(CM[1][h_1(x)], CM[2][h_2(x)], ..., CM[d][h_d(x)]). This minimum value is chosen because collisions can only cause overestimation, never underestimation. The true count is always less than or equal to the estimated count. Finding Heavy Hitters with Count-Min Sketch: After processing the stream, iterate through all items (or a sample of items) and query their estimated frequencies. If an item’s estimated frequency exceeds a certain threshold, it’s considered a heavy hitter. A common strategy is to maintain a small min-heap of potential heavy hitters alongside the sketch.\nTime Complexity:\nUpdate: O(d) per item. Query: O(d) per item. Space Complexity: O(d * w). This is sub-linear and often much smaller than O(U).\nPros:\nVery space-efficient for large streams. Fast update and query times. Provides probabilistic guarantees on error bounds. Cons: Provides approximate counts, not exact. Cannot detect items that are no longer heavy hitters (decaying counts). Requires careful selection of d and w based on desired error bounds. 5.2 Lossy Counting Algorithm Lossy Counting is another popular algorithm for finding frequent items (heavy hitters) in data streams with bounded error. It’s designed to be more accurate than Count-Min Sketch for finding items above a specific frequency threshold.\nHow it works:\nBuckets: The stream is divided into “windows” or “buckets” of size W = 1/ε, where ε is the maximum allowed error. Data Structure: A list of (item, frequency, delta) tuples. delta represents the maximum possible error in the frequency count for that item. Processing: When an item x arrives: If x is already in the list, increment its frequency. If x is new, add (x, 1, current_bucket_id - 1) to the list. At the end of each bucket (every W items): Scan the list. For any (item, frequency, delta) where frequency + delta \u003c= current_bucket_id, remove it. This “pruning” step removes items that are unlikely to be heavy hitters. Finding Heavy Hitters: After processing the entire stream, any item (item, frequency, delta) in the list where frequency \u003e= (s - ε) * N (where s is the support threshold, ε is the error, and N is the total stream length) is reported as a heavy hitter.\nTime Complexity:\nUpdate: Amortized O(1) on average, but can be O(U) during pruning. Query: O(U’) where U’ is the number of items in the list. Space Complexity: O(1/ε * log(N)) in the worst case, often much better in practice.\nPros:\nProvides strong guarantees on accuracy (no false negatives, bounded false positives). More accurate than Count-Min Sketch for finding items above a threshold. Cons: Can be more complex to implement. Space usage can be higher than Count-Min Sketch in some scenarios. 5.3 Frequent Algorithm (Misra-Gries Summary) The Misra-Gries algorithm (also known as the Frequent algorithm) is another single-pass algorithm for finding frequent items in a data stream. It’s simpler than Lossy Counting but offers similar guarantees.\nHow it works:\nData Structure: A list of (item, count) pairs, with a maximum size of k' = 1/ε. Processing: When an item x arrives: If x is in the list, increment its count. If x is not in the list and the list size is less than k', add (x, 1) to the list. If x is not in the list and the list size is k', decrement the count of all items in the list by 1. Remove any items whose count drops to 0. This is the “decrement” or “eviction” step. Finding Heavy Hitters: After processing the stream, any item (item, count) in the list where count \u003e= (s - ε) * N is reported as a heavy hitter.\nTime Complexity:\nUpdate: O(k’) in the worst case (during decrement step), O(1) on average. Query: O(k’). Space Complexity: O(k’) = O(1/ε). This is constant space relative to the stream size.\nPros:\nVery space-efficient (constant space). Relatively simple to implement. Provides strong guarantees on accuracy. Cons: Can have false positives (reports an item as frequent when it’s not). The k' parameter needs to be chosen carefully. 6. System Design Considerations for Distributed Top K When the data stream is so massive that it cannot be processed by a single machine, we need to consider distributed approaches.\n6.1 Sharding/Partitioning The most common strategy is to distribute the incoming data across multiple worker nodes.\nHash-based Sharding: Items are hashed, and the hash value determines which worker node processes the item. This ensures that all occurrences of a specific item go to the same worker, allowing that worker to maintain an accurate local count for that item. Challenge: Skewed data (some items are much more frequent than others) can lead to hot spots where certain worker nodes are overloaded. Random Sharding: Items are randomly distributed. This balances the load but means that occurrences of the same item can be spread across multiple workers, making global frequency counting difficult. 6.2 Aggregation and Merging Regardless of sharding strategy, a central aggregator or a multi-stage aggregation process is often needed.\nLocal Top K: Each worker node computes its local Top K items using one of the in-memory algorithms (e.g., Min-Heap). Global Aggregation: The local Top K lists (or sketches) are sent to a central aggregator. The aggregator then merges these lists/sketches to compute the global Top K. Merging Min-Heaps: If each worker sends its local min-heap, the aggregator can merge them by putting all elements into a single large min-heap of size k (or larger, then prune). Merging Count-Min Sketches: Multiple Count-Min Sketches can be merged by simply adding their corresponding counters element-wise. This is a powerful feature of CM sketches. 6.3 Windowing For continuous streams, we often want to find Top K items within a specific time window (e.g., “top 10 trending topics in the last hour”).\nSliding Windows: Tumbling Windows: Non-overlapping, fixed-size windows (e.g., process data for 10:00-10:05, then 10:05-10:10). Hopping Windows: Overlapping, fixed-size windows that “hop” forward by a smaller interval (e.g., process data for 10:00-10:10, then 10:01-10:11). Data Structures for Windows: Count-Min Sketch with Expiration: More complex, but can be adapted to decay counts over time. Bucketing by Time: Store counts in buckets corresponding to time intervals. When a window slides, old buckets are discarded, and new ones are added. 6.4 Fault Tolerance and Consistency Worker Failures: How do we handle a worker node going down? Data might be lost, or counts might become inaccurate. Replication or re-processing mechanisms are needed. Data Loss: What if some data items are dropped? The Top K results might be affected. Eventual Consistency: For many Top K applications, eventual consistency is acceptable. The system doesn’t need to be perfectly up-to-date at all times, as long as it converges to the correct (or approximately correct) state eventually. 6.5 Trade-offs Accuracy vs. Resources: Exact solutions require more resources (memory, CPU) but provide precise answers. Approximate solutions save resources but introduce error. The choice depends on the application’s requirements. Latency vs. Throughput: Real-time Top K requires low latency processing, potentially sacrificing some throughput. Batch processing can achieve higher throughput but with higher latency. Complexity: Distributed systems are inherently more complex to design, implement, and maintain. 7. Real-World Use Cases and Examples The Top K Problem and Heavy Hitters have numerous applications across various domains:\nSocial Media: Trending topics/hashtags (Twitter, Facebook). Most popular posts/videos. Identifying influential users. E-commerce: Top-selling products. Frequently viewed items. Personalized recommendations (based on popular items among similar users). Network Monitoring: Identifying heavy network users (IP addresses consuming most bandwidth). Detecting DDoS attacks (identifying IP addresses sending a large volume of requests). Most frequently accessed URLs. Search Engines: Popular search queries. Ranking search results based on relevance and popularity. Log Analysis: Most frequent error messages. Top accessed API endpoints. Identifying unusual patterns or anomalies. Database Systems: Query optimization (identifying frequently accessed columns or tables). Caching strategies (caching most popular items). 8. Conclusion The Top K Problem and Heavy Hitters are fundamental challenges in system design, particularly in the era of big data and real-time analytics. The choice of algorithm and system architecture depends heavily on the specific constraints and requirements of the application, including data volume, velocity, memory limitations, latency expectations, and the acceptable level of accuracy.\nFor static or small datasets, hash maps combined with sorting or min-heaps provide exact solutions. For massive, unbounded data streams, approximate algorithms like Count-Min Sketch, Lossy Counting, and Misra-Gries are indispensable, offering significant memory savings at the cost of a small, bounded error. When scaling to distributed environments, techniques like sharding, multi-stage aggregation, and windowing become crucial. A deep understanding of these concepts and their trade-offs is essential for any system designer.\n",
+  "wordCount" : "2587",
+  "inLanguage": "en",
+  "datePublished": "2021-06-07T09:31:03Z",
+  "dateModified": "2021-06-07T09:31:03Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://serhatgiydiren.com/system-design-interview-top-k-problem-heavy-hitters/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Serhat Giydiren",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://serhatgiydiren.com/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://serhatgiydiren.com/" accesskey="h" title="Serhat Giydiren (Alt + H)">Serhat Giydiren</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://serhatgiydiren.com/archives" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://serhatgiydiren.com/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://serhatgiydiren.com/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://serhatgiydiren.com/categories" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      System Design Interview - Top K Problem - Heavy Hitters
+    </h1>
+    <div class="post-meta"><span title='2021-06-07 09:31:03 +0000 +0000'>June 7, 2021</span>&nbsp;·&nbsp;13 min
+
+</div>
+  </header> 
+  <div class="post-content"><p>For a curated list of system design interview resources, check out our <a href="/helpful-resources-for-system-design-interviews"
+   
+   >Helpful Resources for System Design Interviews</a>
+ page.</p>
+<p>For a comprehensive list of resources for tech interviews, check out our <a href="/best-resources-for-tech-interviews"
+   
+   >Best Resources for Tech Interviews</a>
+ page.</p>
+<h2 id="1-introduction-to-the-top-k-problem">1. Introduction to the Top K Problem<a hidden class="anchor" aria-hidden="true" href="#1-introduction-to-the-top-k-problem">#</a></h2>
+<p>The &ldquo;Top K Problem&rdquo; is a classic and frequently encountered challenge in system design interviews. It revolves around identifying the <code>k</code> most frequent or largest elements from a given dataset. This dataset can be static and finite, or more commonly in modern systems, a continuous, unbounded stream of data. The &ldquo;Heavy Hitters&rdquo; variant specifically refers to finding elements that appear with a frequency above a certain threshold, often implying a significant proportion of the total data.</p>
+<p>Understanding and effectively solving the Top K Problem is crucial for designing scalable and efficient systems that deal with large volumes of data, such as analytics platforms, recommendation engines, network monitoring tools, and search engines. Interviewers use this problem to assess a candidate&rsquo;s knowledge of data structures, algorithms, distributed computing principles, and trade-offs between accuracy, memory, and processing time.</p>
+<h2 id="2-defining-the-problem-space">2. Defining the Problem Space<a hidden class="anchor" aria-hidden="true" href="#2-defining-the-problem-space">#</a></h2>
+<p>At its core, the Top K Problem asks us to find the <code>k</code> elements with the highest frequency or value. However, the context in which this problem arises significantly impacts the optimal solution.</p>
+<p><strong>Key Dimensions:</strong></p>
+<ol>
+<li>
+<p><strong>Data Source:</strong></p>
+<ul>
+<li><strong>Static Data:</strong> The entire dataset is available at once. This simplifies the problem as we can process all data without worrying about future arrivals. Examples include finding the top 10 most common words in a book or the top 5 highest scores in a game&rsquo;s leaderboard.</li>
+<li><strong>Streaming Data:</strong> Data arrives continuously and often at a high velocity. We cannot store the entire stream, and processing must be done in a single pass or with limited memory. This is the more challenging and common scenario in real-world distributed systems. Examples include finding trending topics on Twitter, top viewed videos on YouTube, or most frequent IP addresses accessing a server.</li>
+</ul>
+</li>
+<li>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li><strong>Memory:</strong> How much memory is available? For massive datasets or streams, storing all elements and their counts might be impossible.</li>
+<li><strong>Time:</strong> What are the latency requirements? Can we afford to sort the entire dataset, or do we need real-time updates?</li>
+<li><strong>Accuracy:</strong> Is an exact answer required, or is an approximate answer acceptable? For many streaming applications, a small margin of error is tolerable if it significantly reduces resource consumption.</li>
+<li><strong><code>k</code> Value:</strong> Is <code>k</code> small or large? A small <code>k</code> might allow for simpler data structures.</li>
+</ul>
+</li>
+</ol>
+<h2 id="3-core-concepts-and-building-blocks">3. Core Concepts and Building Blocks<a hidden class="anchor" aria-hidden="true" href="#3-core-concepts-and-building-blocks">#</a></h2>
+<p>Before diving into specific algorithms, let&rsquo;s review some fundamental concepts.</p>
+<h3 id="31-frequency-counting">3.1 Frequency Counting<a hidden class="anchor" aria-hidden="true" href="#31-frequency-counting">#</a></h3>
+<p>The most basic operation is to count the occurrences of each item. A hash map (or dictionary) is the go-to data structure for this.</p>
+<ul>
+<li><strong>Key:</strong> The item itself (e.g., word, IP address).</li>
+<li><strong>Value:</strong> The frequency count.</li>
+</ul>
+<pre tabindex="0"><code>Map&lt;Item, Integer&gt; counts = new HashMap&lt;&gt;();
+for (Item item : data) {
+    counts.put(item, counts.getOrDefault(item, 0) + 1);
+}
+</code></pre><p>This approach works well for static data or streams where the number of unique items is small enough to fit in memory.</p>
+<h3 id="32-data-streams">3.2 Data Streams<a hidden class="anchor" aria-hidden="true" href="#32-data-streams">#</a></h3>
+<p>A data stream is an ordered sequence of items that arrives continuously. Key characteristics:</p>
+<ul>
+<li><strong>Unbounded:</strong> The stream has no defined end.</li>
+<li><strong>High Velocity:</strong> Items arrive rapidly.</li>
+<li><strong>Single Pass:</strong> Algorithms typically process each item once due to memory constraints.</li>
+<li><strong>Limited Memory:</strong> We cannot store the entire stream.</li>
+</ul>
+<h3 id="33-approximate-solutions">3.3 Approximate Solutions<a hidden class="anchor" aria-hidden="true" href="#33-approximate-solutions">#</a></h3>
+<p>When dealing with massive data streams and strict memory constraints, exact solutions become infeasible. Approximate algorithms provide a trade-off: they use significantly less memory and time but might return results with a small error margin. For many applications (e.g., trending topics), this approximation is perfectly acceptable.</p>
+<h2 id="4-exact-solutions-for-static-or-small-datasets">4. Exact Solutions for Static or Small Datasets<a hidden class="anchor" aria-hidden="true" href="#4-exact-solutions-for-static-or-small-datasets">#</a></h2>
+<p>For scenarios where the entire dataset can be held in memory, or the stream is small enough to be fully processed, exact solutions are preferred.</p>
+<h3 id="1-hash-map--sorting">1. Hash Map + Sorting<a hidden class="anchor" aria-hidden="true" href="#1-hash-map--sorting">#</a></h3>
+<p><strong>Approach:</strong></p>
+<ol>
+<li>Iterate through the dataset and use a hash map to store the frequency of each item.</li>
+<li>Once all items are processed, extract the entries (item, count) from the hash map.</li>
+<li>Sort these entries in descending order based on their counts.</li>
+<li>Take the top <code>k</code> elements from the sorted list.</li>
+</ol>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>Counting: O(N) where N is the total number of items.</li>
+<li>Sorting: O(U log U) where U is the number of unique items. In the worst case, U can be N.</li>
+<li>Overall: O(N + U log U).</li>
+</ul>
+<p><strong>Space Complexity:</strong> O(U) for the hash map.</p>
+<p><strong>Pros:</strong> Simple to implement, provides exact results.
+<strong>Cons:</strong> Not suitable for very large N or U, especially when U is close to N, as sorting can be expensive. Infeasible for unbounded data streams.</p>
+<h3 id="2-min-heap-priority-queue">2. Min-Heap (Priority Queue)<a hidden class="anchor" aria-hidden="true" href="#2-min-heap-priority-queue">#</a></h3>
+<p>This is a more efficient approach when <code>k</code> is much smaller than the total number of unique items.</p>
+<p><strong>Approach:</strong></p>
+<ol>
+<li>Use a hash map to count the frequency of each item (same as above).</li>
+<li>Create a min-heap (priority queue) of size <code>k</code>. The heap will store <code>(count, item)</code> pairs, ordered by count.</li>
+<li>Iterate through the <code>(item, count)</code> pairs from the hash map:
+<ul>
+<li>If the heap size is less than <code>k</code>, add the current pair to the heap.</li>
+<li>If the heap size is <code>k</code> and the current item&rsquo;s count is greater than the count of the smallest element in the heap (the heap&rsquo;s root), remove the root and insert the current pair.</li>
+</ul>
+</li>
+<li>After processing all items, the heap will contain the <code>k</code> most frequent elements.</li>
+</ol>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>Counting: O(N).</li>
+<li>Heap operations: For each of the U unique items, a heap insertion/deletion takes O(log k).</li>
+<li>Overall: O(N + U log k). This is better than sorting when <code>k</code> is significantly smaller than U.</li>
+</ul>
+<p><strong>Space Complexity:</strong> O(U) for the hash map, O(k) for the min-heap. Overall O(U + k).</p>
+<p><strong>Pros:</strong> More efficient than sorting when <code>k</code> is small. Provides exact results.
+<strong>Cons:</strong> Still requires storing all unique item counts in a hash map, making it unsuitable for very large U or unbounded streams.</p>
+<h2 id="5-approximate-solutions-for-streaming-data-heavy-hitters">5. Approximate Solutions for Streaming Data (Heavy Hitters)<a hidden class="anchor" aria-hidden="true" href="#5-approximate-solutions-for-streaming-data-heavy-hitters">#</a></h2>
+<p>When dealing with high-volume, unbounded data streams where memory is a critical constraint, we must resort to approximate algorithms. These algorithms aim to identify heavy hitters with high probability and bounded error, using sub-linear space (often poly-logarithmic or even constant space relative to the stream size).</p>
+<h3 id="51-count-min-sketch">5.1 Count-Min Sketch<a hidden class="anchor" aria-hidden="true" href="#51-count-min-sketch">#</a></h3>
+<p>The Count-Min Sketch is a probabilistic data structure used for estimating frequencies of items in a data stream. It&rsquo;s particularly good for point queries (estimating the frequency of a specific item) and finding heavy hitters.</p>
+<p><strong>How it works:</strong></p>
+<ol>
+<li><strong>Data Structure:</strong> A 2D array (matrix) of counters, <code>CM[d][w]</code>, where <code>d</code> is the number of hash functions (depth) and <code>w</code> is the width of the array.
+<ul>
+<li><code>d</code> determines the probability of error (higher <code>d</code> means lower error probability).</li>
+<li><code>w</code> determines the magnitude of error (higher <code>w</code> means lower error magnitude).</li>
+</ul>
+</li>
+<li><strong>Hash Functions:</strong> <code>d</code> independent hash functions, <code>h_1, h_2, ..., h_d</code>, each mapping an item to an index within <code>[0, w-1]</code>.</li>
+<li><strong>Update (Processing an item <code>x</code>):</strong>
+<ul>
+<li>For each hash function <code>h_i</code>:
+<ul>
+<li>Increment <code>CM[i][h_i(x)]</code> by 1.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Query (Estimating frequency of <code>x</code>):</strong>
+<ul>
+<li>The estimated frequency of <code>x</code> is <code>min(CM[1][h_1(x)], CM[2][h_2(x)], ..., CM[d][h_d(x)])</code>.</li>
+<li>This minimum value is chosen because collisions can only cause overestimation, never underestimation. The true count is always less than or equal to the estimated count.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Finding Heavy Hitters with Count-Min Sketch:</strong>
+After processing the stream, iterate through all items (or a sample of items) and query their estimated frequencies. If an item&rsquo;s estimated frequency exceeds a certain threshold, it&rsquo;s considered a heavy hitter. A common strategy is to maintain a small min-heap of potential heavy hitters alongside the sketch.</p>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>Update: O(d) per item.</li>
+<li>Query: O(d) per item.</li>
+</ul>
+<p><strong>Space Complexity:</strong> O(d * w). This is sub-linear and often much smaller than O(U).</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Very space-efficient for large streams.</li>
+<li>Fast update and query times.</li>
+<li>Provides probabilistic guarantees on error bounds.
+<strong>Cons:</strong></li>
+<li>Provides approximate counts, not exact.</li>
+<li>Cannot detect items that are no longer heavy hitters (decaying counts).</li>
+<li>Requires careful selection of <code>d</code> and <code>w</code> based on desired error bounds.</li>
+</ul>
+<h3 id="52-lossy-counting-algorithm">5.2 Lossy Counting Algorithm<a hidden class="anchor" aria-hidden="true" href="#52-lossy-counting-algorithm">#</a></h3>
+<p>Lossy Counting is another popular algorithm for finding frequent items (heavy hitters) in data streams with bounded error. It&rsquo;s designed to be more accurate than Count-Min Sketch for finding items above a specific frequency threshold.</p>
+<p><strong>How it works:</strong></p>
+<ol>
+<li><strong>Buckets:</strong> The stream is divided into &ldquo;windows&rdquo; or &ldquo;buckets&rdquo; of size <code>W = 1/ε</code>, where <code>ε</code> is the maximum allowed error.</li>
+<li><strong>Data Structure:</strong> A list of <code>(item, frequency, delta)</code> tuples. <code>delta</code> represents the maximum possible error in the frequency count for that item.</li>
+<li><strong>Processing:</strong>
+<ul>
+<li>When an item <code>x</code> arrives:
+<ul>
+<li>If <code>x</code> is already in the list, increment its frequency.</li>
+<li>If <code>x</code> is new, add <code>(x, 1, current_bucket_id - 1)</code> to the list.</li>
+</ul>
+</li>
+<li>At the end of each bucket (every <code>W</code> items):
+<ul>
+<li>Scan the list. For any <code>(item, frequency, delta)</code> where <code>frequency + delta &lt;= current_bucket_id</code>, remove it. This &ldquo;pruning&rdquo; step removes items that are unlikely to be heavy hitters.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Finding Heavy Hitters:</strong>
+After processing the entire stream, any item <code>(item, frequency, delta)</code> in the list where <code>frequency &gt;= (s - ε) * N</code> (where <code>s</code> is the support threshold, <code>ε</code> is the error, and <code>N</code> is the total stream length) is reported as a heavy hitter.</p>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>Update: Amortized O(1) on average, but can be O(U) during pruning.</li>
+<li>Query: O(U&rsquo;) where U&rsquo; is the number of items in the list.</li>
+</ul>
+<p><strong>Space Complexity:</strong> O(1/ε * log(N)) in the worst case, often much better in practice.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Provides strong guarantees on accuracy (no false negatives, bounded false positives).</li>
+<li>More accurate than Count-Min Sketch for finding items above a threshold.
+<strong>Cons:</strong></li>
+<li>Can be more complex to implement.</li>
+<li>Space usage can be higher than Count-Min Sketch in some scenarios.</li>
+</ul>
+<h3 id="53-frequent-algorithm-misra-gries-summary">5.3 Frequent Algorithm (Misra-Gries Summary)<a hidden class="anchor" aria-hidden="true" href="#53-frequent-algorithm-misra-gries-summary">#</a></h3>
+<p>The Misra-Gries algorithm (also known as the Frequent algorithm) is another single-pass algorithm for finding frequent items in a data stream. It&rsquo;s simpler than Lossy Counting but offers similar guarantees.</p>
+<p><strong>How it works:</strong></p>
+<ol>
+<li><strong>Data Structure:</strong> A list of <code>(item, count)</code> pairs, with a maximum size of <code>k' = 1/ε</code>.</li>
+<li><strong>Processing:</strong>
+<ul>
+<li>When an item <code>x</code> arrives:
+<ul>
+<li>If <code>x</code> is in the list, increment its count.</li>
+<li>If <code>x</code> is not in the list and the list size is less than <code>k'</code>, add <code>(x, 1)</code> to the list.</li>
+<li>If <code>x</code> is not in the list and the list size is <code>k'</code>, decrement the count of all items in the list by 1. Remove any items whose count drops to 0. This is the &ldquo;decrement&rdquo; or &ldquo;eviction&rdquo; step.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Finding Heavy Hitters:</strong>
+After processing the stream, any item <code>(item, count)</code> in the list where <code>count &gt;= (s - ε) * N</code> is reported as a heavy hitter.</p>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>Update: O(k&rsquo;) in the worst case (during decrement step), O(1) on average.</li>
+<li>Query: O(k&rsquo;).</li>
+</ul>
+<p><strong>Space Complexity:</strong> O(k&rsquo;) = O(1/ε). This is constant space relative to the stream size.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Very space-efficient (constant space).</li>
+<li>Relatively simple to implement.</li>
+<li>Provides strong guarantees on accuracy.
+<strong>Cons:</strong></li>
+<li>Can have false positives (reports an item as frequent when it&rsquo;s not).</li>
+<li>The <code>k'</code> parameter needs to be chosen carefully.</li>
+</ul>
+<h2 id="6-system-design-considerations-for-distributed-top-k">6. System Design Considerations for Distributed Top K<a hidden class="anchor" aria-hidden="true" href="#6-system-design-considerations-for-distributed-top-k">#</a></h2>
+<p>When the data stream is so massive that it cannot be processed by a single machine, we need to consider distributed approaches.</p>
+<h3 id="61-shardingpartitioning">6.1 Sharding/Partitioning<a hidden class="anchor" aria-hidden="true" href="#61-shardingpartitioning">#</a></h3>
+<p>The most common strategy is to distribute the incoming data across multiple worker nodes.</p>
+<ul>
+<li><strong>Hash-based Sharding:</strong> Items are hashed, and the hash value determines which worker node processes the item. This ensures that all occurrences of a specific item go to the same worker, allowing that worker to maintain an accurate local count for that item.
+<ul>
+<li><strong>Challenge:</strong> Skewed data (some items are much more frequent than others) can lead to hot spots where certain worker nodes are overloaded.</li>
+</ul>
+</li>
+<li><strong>Random Sharding:</strong> Items are randomly distributed. This balances the load but means that occurrences of the same item can be spread across multiple workers, making global frequency counting difficult.</li>
+</ul>
+<h3 id="62-aggregation-and-merging">6.2 Aggregation and Merging<a hidden class="anchor" aria-hidden="true" href="#62-aggregation-and-merging">#</a></h3>
+<p>Regardless of sharding strategy, a central aggregator or a multi-stage aggregation process is often needed.</p>
+<ul>
+<li><strong>Local Top K:</strong> Each worker node computes its local Top K items using one of the in-memory algorithms (e.g., Min-Heap).</li>
+<li><strong>Global Aggregation:</strong> The local Top K lists (or sketches) are sent to a central aggregator. The aggregator then merges these lists/sketches to compute the global Top K.
+<ul>
+<li><strong>Merging Min-Heaps:</strong> If each worker sends its local min-heap, the aggregator can merge them by putting all elements into a single large min-heap of size <code>k</code> (or larger, then prune).</li>
+<li><strong>Merging Count-Min Sketches:</strong> Multiple Count-Min Sketches can be merged by simply adding their corresponding counters element-wise. This is a powerful feature of CM sketches.</li>
+</ul>
+</li>
+</ul>
+<h3 id="63-windowing">6.3 Windowing<a hidden class="anchor" aria-hidden="true" href="#63-windowing">#</a></h3>
+<p>For continuous streams, we often want to find Top K items within a specific time window (e.g., &ldquo;top 10 trending topics in the last hour&rdquo;).</p>
+<ul>
+<li><strong>Sliding Windows:</strong>
+<ul>
+<li><strong>Tumbling Windows:</strong> Non-overlapping, fixed-size windows (e.g., process data for 10:00-10:05, then 10:05-10:10).</li>
+<li><strong>Hopping Windows:</strong> Overlapping, fixed-size windows that &ldquo;hop&rdquo; forward by a smaller interval (e.g., process data for 10:00-10:10, then 10:01-10:11).</li>
+</ul>
+</li>
+<li><strong>Data Structures for Windows:</strong>
+<ul>
+<li><strong>Count-Min Sketch with Expiration:</strong> More complex, but can be adapted to decay counts over time.</li>
+<li><strong>Bucketing by Time:</strong> Store counts in buckets corresponding to time intervals. When a window slides, old buckets are discarded, and new ones are added.</li>
+</ul>
+</li>
+</ul>
+<h3 id="64-fault-tolerance-and-consistency">6.4 Fault Tolerance and Consistency<a hidden class="anchor" aria-hidden="true" href="#64-fault-tolerance-and-consistency">#</a></h3>
+<ul>
+<li><strong>Worker Failures:</strong> How do we handle a worker node going down? Data might be lost, or counts might become inaccurate. Replication or re-processing mechanisms are needed.</li>
+<li><strong>Data Loss:</strong> What if some data items are dropped? The Top K results might be affected.</li>
+<li><strong>Eventual Consistency:</strong> For many Top K applications, eventual consistency is acceptable. The system doesn&rsquo;t need to be perfectly up-to-date at all times, as long as it converges to the correct (or approximately correct) state eventually.</li>
+</ul>
+<h3 id="65-trade-offs">6.5 Trade-offs<a hidden class="anchor" aria-hidden="true" href="#65-trade-offs">#</a></h3>
+<ul>
+<li><strong>Accuracy vs. Resources:</strong> Exact solutions require more resources (memory, CPU) but provide precise answers. Approximate solutions save resources but introduce error. The choice depends on the application&rsquo;s requirements.</li>
+<li><strong>Latency vs. Throughput:</strong> Real-time Top K requires low latency processing, potentially sacrificing some throughput. Batch processing can achieve higher throughput but with higher latency.</li>
+<li><strong>Complexity:</strong> Distributed systems are inherently more complex to design, implement, and maintain.</li>
+</ul>
+<h2 id="7-real-world-use-cases-and-examples">7. Real-World Use Cases and Examples<a hidden class="anchor" aria-hidden="true" href="#7-real-world-use-cases-and-examples">#</a></h2>
+<p>The Top K Problem and Heavy Hitters have numerous applications across various domains:</p>
+<ul>
+<li><strong>Social Media:</strong>
+<ul>
+<li>Trending topics/hashtags (Twitter, Facebook).</li>
+<li>Most popular posts/videos.</li>
+<li>Identifying influential users.</li>
+</ul>
+</li>
+<li><strong>E-commerce:</strong>
+<ul>
+<li>Top-selling products.</li>
+<li>Frequently viewed items.</li>
+<li>Personalized recommendations (based on popular items among similar users).</li>
+</ul>
+</li>
+<li><strong>Network Monitoring:</strong>
+<ul>
+<li>Identifying heavy network users (IP addresses consuming most bandwidth).</li>
+<li>Detecting DDoS attacks (identifying IP addresses sending a large volume of requests).</li>
+<li>Most frequently accessed URLs.</li>
+</ul>
+</li>
+<li><strong>Search Engines:</strong>
+<ul>
+<li>Popular search queries.</li>
+<li>Ranking search results based on relevance and popularity.</li>
+</ul>
+</li>
+<li><strong>Log Analysis:</strong>
+<ul>
+<li>Most frequent error messages.</li>
+<li>Top accessed API endpoints.</li>
+<li>Identifying unusual patterns or anomalies.</li>
+</ul>
+</li>
+<li><strong>Database Systems:</strong>
+<ul>
+<li>Query optimization (identifying frequently accessed columns or tables).</li>
+<li>Caching strategies (caching most popular items).</li>
+</ul>
+</li>
+</ul>
+<h2 id="8-conclusion">8. Conclusion<a hidden class="anchor" aria-hidden="true" href="#8-conclusion">#</a></h2>
+<p>The Top K Problem and Heavy Hitters are fundamental challenges in system design, particularly in the era of big data and real-time analytics. The choice of algorithm and system architecture depends heavily on the specific constraints and requirements of the application, including data volume, velocity, memory limitations, latency expectations, and the acceptable level of accuracy.</p>
+<p>For static or small datasets, hash maps combined with sorting or min-heaps provide exact solutions. For massive, unbounded data streams, approximate algorithms like Count-Min Sketch, Lossy Counting, and Misra-Gries are indispensable, offering significant memory savings at the cost of a small, bounded error. When scaling to distributed environments, techniques like sharding, multi-stage aggregation, and windowing become crucial. A deep understanding of these concepts and their trade-offs is essential for any system designer.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://serhatgiydiren.com/tags/system-design/">System Design</a></li>
+      <li><a href="https://serhatgiydiren.com/tags/distributed-systems/">Distributed Systems</a></li>
+      <li><a href="https://serhatgiydiren.com/tags/algorithms/">Algorithms</a></li>
+      <li><a href="https://serhatgiydiren.com/tags/data-structures/">Data Structures</a></li>
+      <li><a href="https://serhatgiydiren.com/tags/interview-prep/">Interview Prep</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://serhatgiydiren.com/">Serhat Giydiren</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

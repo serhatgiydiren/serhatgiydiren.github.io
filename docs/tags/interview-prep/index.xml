@@ -16,6 +16,13 @@
       <description>A comprehensive list of the best books and online courses to prepare for coding and system design interviews.</description>
     </item>
     <item>
+      <title>System Design Interview - Top K Problem - Heavy Hitters</title>
+      <link>https://serhatgiydiren.com/system-design-interview-top-k-problem-heavy-hitters/</link>
+      <pubDate>Mon, 07 Jun 2021 09:31:03 +0000</pubDate>
+      <guid>https://serhatgiydiren.com/system-design-interview-top-k-problem-heavy-hitters/</guid>
+      <description>An in-depth guide to the Top K Problem and Heavy Hitters in system design interviews. Explore exact and approximate solutions, distributed system considerations, and real-world applications for finding the most frequent elements in large datasets and data streams.</description>
+    </item>
+    <item>
       <title>System Design Interview - Notification Service</title>
       <link>https://serhatgiydiren.com/system-design-interview-notification-service/</link>
       <pubDate>Mon, 05 Apr 2021 09:27:27 +0000</pubDate>
