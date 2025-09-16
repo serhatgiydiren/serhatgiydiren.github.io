@@ -10,10 +10,13 @@ publishDir = "docs"
 [permalinks]
   posts = "/:slug/"
 
+[services]
+  [services.googleAnalytics]
+    id = "G-RTZX9R4PB3"
+
 [params]
   ShowCodeCopyButtons = true
   ShowReadingTime = true
-  googleAnalytics = "G-RTZX9R4PB3"
   defaultTheme = "auto"
 
   [params.homeInfoParams]
