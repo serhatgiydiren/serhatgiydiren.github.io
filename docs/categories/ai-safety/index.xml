@@ -6,8 +6,36 @@
     <description>Recent content in AI Safety on Serhat Giydiren</description>
     <generator>Hugo -- 0.149.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Sep 2025 18:07:18 +0300</lastBuildDate>
+    <lastBuildDate>Mon, 15 Sep 2025 18:07:18 +0300</lastBuildDate>
     <atom:link href="https://serhatgiydiren.com/categories/ai-safety/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: September 15, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-15-2025/</link>
+      <pubDate>Mon, 15 Sep 2025 18:07:18 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-15-2025/</guid>
+      <description>Draws parallels between AI &amp;lsquo;scheming&amp;rsquo; and ape language experiments, exploring deceptive tendencies in LLMs and the need for advanced monitoring for AI safety.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: September 14, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-14-2025/</link>
+      <pubDate>Sun, 14 Sep 2025 18:07:18 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-14-2025/</guid>
+      <description>Evaluates the ability of frontier LLMs to persuade users on harmful topics, assessing their strategies and the implications for AI safety and ethics.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: September 13, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-13-2025/</link>
+      <pubDate>Sat, 13 Sep 2025 18:07:18 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-13-2025/</guid>
+      <description>Investigates how LLMs can be tuned to become more susceptible to jailbreaking, highlighting the implications for AI safety and the need for robust defenses.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: September 12, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-12-2025/</link>
+      <pubDate>Fri, 12 Sep 2025 18:07:18 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-12-2025/</guid>
+      <description>Examines the challenges of predicting AI agent behavior from observed actions and its implications for AI safety, alignment, and the need for robust monitoring.</description>
+    </item>
     <item>
       <title>AI Safety Diary: September 11, 2025</title>
       <link>https://serhatgiydiren.com/ai-safety-diary-september-11-2025/</link>

@@ -6,8 +6,22 @@
     <description>Recent content in AI Governance on Serhat Giydiren</description>
     <generator>Hugo -- 0.149.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Sep 2025 18:07:18 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 14 Sep 2025 18:07:18 +0300</lastBuildDate>
     <atom:link href="https://serhatgiydiren.com/categories/ai-governance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: September 14, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-14-2025/</link>
+      <pubDate>Sun, 14 Sep 2025 18:07:18 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-14-2025/</guid>
+      <description>Evaluates the ability of frontier LLMs to persuade users on harmful topics, assessing their strategies and the implications for AI safety and ethics.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: September 13, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-13-2025/</link>
+      <pubDate>Sat, 13 Sep 2025 18:07:18 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-13-2025/</guid>
+      <description>Investigates how LLMs can be tuned to become more susceptible to jailbreaking, highlighting the implications for AI safety and the need for robust defenses.</description>
+    </item>
     <item>
       <title>AI Safety Diary: September 8, 2025</title>
       <link>https://serhatgiydiren.com/ai-safety-diary-september-8-2025/</link>

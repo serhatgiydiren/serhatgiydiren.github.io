@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Predicting Agents on Serhat Giydiren</title>
+    <link>https://serhatgiydiren.com/tags/predicting-agents/</link>
+    <description>Recent content in Predicting Agents on Serhat Giydiren</description>
+    <generator>Hugo -- 0.149.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 12 Sep 2025 18:07:18 +0300</lastBuildDate>
+    <atom:link href="https://serhatgiydiren.com/tags/predicting-agents/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: September 12, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-12-2025/</link>
+      <pubDate>Fri, 12 Sep 2025 18:07:18 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-12-2025/</guid>
+      <description>Examines the challenges of predicting AI agent behavior from observed actions and its implications for AI safety, alignment, and the need for robust monitoring.</description>
+    </item>
+  </channel>
+</rss>
