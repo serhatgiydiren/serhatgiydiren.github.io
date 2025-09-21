@@ -9,11 +9,12 @@ tags:
   - "effective altruism"
   - "community"
   - "critical thinking"
-summary: "Completed Chapter 7 of the Effective Altruism Handbook. This chapter, 'What do you think?', emphasizes the importance of critical thinking, questioning assumptions, and actively contributing personal insights to the community discourse."
+summary: "Completed Chapter 7 of the Effective Altruism Handbook, 'What do you think?', which emphasizes the importance of critical thinking and actively contributing personal insights to the community discourse."
 ---
 
-Today, I explored a resource as part of my AI safety studies. Below is the resource I reviewed.
+Today, I explored a chapter from the [Effective Altruism Handbook](https://forum.effectivealtruism.org/handbook) as part of my AI safety studies. Below is the resource I reviewed.
 
-## Resource: Effective Altruism Handbook - Chapter 7
-- **Source**: [Effective Altruism Handbook: What do you think?](https://forum.effectivealtruism.org/s/32FKXByGNgHLPaHnj)
+## Resource: Effective Altruism Handbook (Chapter 7)
+
+- **Source**: [What do you think?](https://forum.effectivealtruism.org/s/32FKXByGNgHLPaHnj), Effective Altruism Forum, Chapter 7 of the Introduction to Effective Altruism Handbook.
 - **Summary**: This chapter encourages readers to move from passive learning to active engagement. It highlights the value of individual critical analysis and the contribution of diverse perspectives to the ongoing conversation within the Effective Altruism community, which is highly relevant for the open and collaborative nature of AI safety research.

@@ -15,5 +15,6 @@ summary: "Watched the introductory lecture from the AI Safety Book series. The v
 Today, I explored a resource as part of my AI safety studies. Below is the resource I reviewed.
 
 ## Resource: Lecture 1 | AI Safety, Ethics, & Society
-- **Source**: [Lecture 1 | AI Safety, Ethics, & Society: Introduction and Overview of AI Risks](https://youtu.be/ixdfqY3Xyao?si=hzzJdGGAUHj6hdcC)
+
+- **Source**: The lecture is the first chapter of the [AI Safety Book](https://aisafetybook.com/), presented in video format on the [Center for AI Safety YouTube Channel](https://www.youtube.com/@centerforaisafety2291). The specific video is [Lecture 1 | AI Safety, Ethics, & Society: Introduction and Overview of AI Risks](https://youtu.be/ixdfqY3Xyao?si=hzzJdGGAUHj6hdcC).
 - **Summary**: This lecture serves as the starting point for the AI Safety Book course. It provides a comprehensive introduction to the field, covering the fundamental concepts of AI safety, the ethical dimensions of developing advanced AI, and a broad overview of the various risks that researchers are working to mitigate.
