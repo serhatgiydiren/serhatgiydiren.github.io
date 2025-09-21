@@ -6,8 +6,15 @@
     <description>Recent content in Interpretability on Serhat Giydiren</description>
     <generator>Hugo -- 0.149.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Sep 2025 18:07:18 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 21 Sep 2025 19:00:00 +0300</lastBuildDate>
     <atom:link href="https://serhatgiydiren.com/tags/interpretability/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: September 21, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-21-2025/</link>
+      <pubDate>Sun, 21 Sep 2025 19:00:00 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-21-2025/</guid>
+      <description>Studied Chapter 9 of the AI Safety Atlas, which delves into interpretability. The chapter covers techniques and the importance of understanding the internal workings of complex &amp;lsquo;black box&amp;rsquo; AI models to ensure they are safe and aligned.</description>
+    </item>
     <item>
       <title>AI Safety Diary: September 4, 2025</title>
       <link>https://serhatgiydiren.com/ai-safety-diary-september-4-2025/</link>

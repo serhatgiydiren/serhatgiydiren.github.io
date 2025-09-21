@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Scalable Oversight on Serhat Giydiren</title>
+    <link>https://serhatgiydiren.com/tags/scalable-oversight/</link>
+    <description>Recent content in Scalable Oversight on Serhat Giydiren</description>
+    <generator>Hugo -- 0.149.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 20 Sep 2025 19:00:00 +0300</lastBuildDate>
+    <atom:link href="https://serhatgiydiren.com/tags/scalable-oversight/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: September 20, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-20-2025/</link>
+      <pubDate>Sat, 20 Sep 2025 19:00:00 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-20-2025/</guid>
+      <description>Engaged with Chapter 8 of the AI Safety Atlas on scalable oversight. This chapter explores methods for supervising and guiding AI systems that are more capable than humans, a critical challenge for long-term AI alignment.</description>
+    </item>
+  </channel>
+</rss>

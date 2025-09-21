@@ -6,8 +6,36 @@
     <description>Recent content in Ai Safety Atlas on Serhat Giydiren</description>
     <generator>Hugo -- 0.149.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Sep 2025 18:07:18 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 21 Sep 2025 19:00:00 +0300</lastBuildDate>
     <atom:link href="https://serhatgiydiren.com/tags/ai-safety-atlas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: September 21, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-21-2025/</link>
+      <pubDate>Sun, 21 Sep 2025 19:00:00 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-21-2025/</guid>
+      <description>Studied Chapter 9 of the AI Safety Atlas, which delves into interpretability. The chapter covers techniques and the importance of understanding the internal workings of complex &amp;lsquo;black box&amp;rsquo; AI models to ensure they are safe and aligned.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: September 20, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-20-2025/</link>
+      <pubDate>Sat, 20 Sep 2025 19:00:00 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-20-2025/</guid>
+      <description>Engaged with Chapter 8 of the AI Safety Atlas on scalable oversight. This chapter explores methods for supervising and guiding AI systems that are more capable than humans, a critical challenge for long-term AI alignment.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: September 19, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-19-2025/</link>
+      <pubDate>Fri, 19 Sep 2025 19:00:00 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-19-2025/</guid>
+      <description>Covered Chapter 7 of the AI Safety Atlas, focusing on generalization. The material discusses the challenge of ensuring AI systems behave reliably when encountering new situations or data distributions different from their training environment.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: September 18, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-18-2025/</link>
+      <pubDate>Thu, 18 Sep 2025 19:00:00 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-18-2025/</guid>
+      <description>Reviewed Chapter 6 of the AI Safety Atlas on misspecification. The chapter explains how AI systems can fail by pursuing unintended goals that are technically correct according to their specified objectives but lead to harmful outcomes.</description>
+    </item>
     <item>
       <title>AI Safety Diary: September 3, 2025</title>
       <link>https://serhatgiydiren.com/ai-safety-diary-september-3-2025/</link>
