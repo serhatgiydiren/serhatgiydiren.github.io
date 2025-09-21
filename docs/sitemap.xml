@@ -35,10 +35,16 @@
     <loc>https://serhatgiydiren.com/tags/</loc>
     <lastmod>2025-09-21T19:00:00+03:00</lastmod>
   </url><url>
-    <loc>https://serhatgiydiren.com/tags/ai-alignment/</loc>
-    <lastmod>2025-09-20T19:00:00+03:00</lastmod>
+    <loc>https://serhatgiydiren.com/tags/transparency/</loc>
+    <lastmod>2025-09-21T19:00:00+03:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-september-20-2025/</loc>
+    <lastmod>2025-09-20T19:00:00+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/ai-supervision/</loc>
+    <lastmod>2025-09-20T19:00:00+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/human-in-the-loop/</loc>
     <lastmod>2025-09-20T19:00:00+03:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/tags/scalable-oversight/</loc>
@@ -53,6 +59,9 @@
     <loc>https://serhatgiydiren.com/tags/generalization/</loc>
     <lastmod>2025-09-19T19:00:00+03:00</lastmod>
   </url><url>
+    <loc>https://serhatgiydiren.com/tags/robustness/</loc>
+    <lastmod>2025-09-19T19:00:00+03:00</lastmod>
+  </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-september-18-2025/</loc>
     <lastmod>2025-09-18T19:00:00+03:00</lastmod>
   </url><url>
@@ -60,6 +69,9 @@
     <lastmod>2025-09-18T19:00:00+03:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/tags/misspecification/</loc>
+    <lastmod>2025-09-18T19:00:00+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/proxy-goals/</loc>
     <lastmod>2025-09-18T19:00:00+03:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/tags/ai-ethics/</loc>
@@ -91,6 +103,9 @@
   </url><url>
     <loc>https://serhatgiydiren.com/tags/effective-altruism/</loc>
     <lastmod>2025-09-16T19:00:00+03:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/ai-alignment/</loc>
+    <lastmod>2025-09-15T18:07:18+03:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-september-15-2025/</loc>
     <lastmod>2025-09-15T18:07:18+03:00</lastmod>
@@ -225,9 +240,6 @@
     <lastmod>2025-09-03T18:07:18+03:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/tags/evaluations/</loc>
-    <lastmod>2025-09-03T18:07:18+03:00</lastmod>
-  </url><url>
-    <loc>https://serhatgiydiren.com/tags/robustness/</loc>
     <lastmod>2025-09-03T18:07:18+03:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/tags/ai-cybercrime/</loc>

@@ -1,6 +1,6 @@
 ---
 title: "AI Safety Diary: September 18, 2025"
-date: 2025-09-18T19:00:00+03:00
+date: '2025-09-18T19:00:00+03:00'
 categories:
   - "AI Safety"
   - "AI Alignment"
@@ -9,11 +9,13 @@ tags:
   - "ai safety atlas"
   - "misspecification"
   - "goal alignment"
-summary: "Reviewed Chapter 6 of the AI Safety Atlas on misspecification. The chapter explains how AI systems can fail by pursuing unintended goals that are technically correct according to their specified objectives but lead to harmful outcomes."
+  - "proxy goals"
+summary: "A diary entry on Chapter 6 of the AI Safety Atlas, focusing on the challenge of misspecification, where AI systems pursue flawed or incomplete goals, leading to unintended and potentially harmful outcomes."
 ---
 
-Today, I explored a resource as part of my AI safety studies. Below is the resource I reviewed.
+Today, I explored the audio version of a chapter from the [AI Safety Atlas](https://ai-safety-atlas.com/) as part of my AI safety studies. Below is the resource I reviewed.
 
-## Resource: AI Safety Atlas - Chapter 6: Misspecification
-- **Source**: [AI Safety Atlas: Misspecification](https://ai-safety-atlas.com/chapters/06)
-- **Summary**: This chapter delves into the problem of misspecification, a core challenge in AI safety. It explains how even with good intentions, defining objectives for AI systems can be difficult, leading them to exploit loopholes or pursue proxy goals in ways that diverge from the intended outcome, causing potentially negative consequences.
+## Resource: AI Safety Atlas (Chapter 6: Misspecification Audio)
+
+- **Source**: [Chapter 6: Misspecification](https://ai-safety-atlas.com/chapters/06), AI Safety Atlas by Markov Grey and Charbel-Raphaël Segerie et al., French Center for AI Safety (CeSIA), 2025.
+- **Summary**: The audio version of this chapter delves into misspecification, a core AI safety problem where the stated objective for an AI fails to capture the true desired outcome. It covers how systems can exploit proxies and loopholes in their goals, leading to behaviors that are technically correct but practically dangerous, highlighting the difficulty of creating robust and comprehensive goal specifications for advanced AI.
