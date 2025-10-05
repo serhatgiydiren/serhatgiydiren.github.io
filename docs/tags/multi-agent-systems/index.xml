@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Multi-Agent Systems on Serhat Giydiren</title>
+    <link>https://serhatgiydiren.com/tags/multi-agent-systems/</link>
+    <description>Recent content in Multi-Agent Systems on Serhat Giydiren</description>
+    <generator>Hugo -- 0.149.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 Sep 2025 19:00:00 +0300</lastBuildDate>
+    <atom:link href="https://serhatgiydiren.com/tags/multi-agent-systems/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: September 29, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-29-2025/</link>
+      <pubDate>Mon, 29 Sep 2025 19:00:00 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-29-2025/</guid>
+      <description>A diary entry on the 5th chapter of the AI Safety Book, exploring the safety challenges that arise from the interaction of multiple AI agents and the emergent properties of complex AI ecosystems.</description>
+    </item>
+  </channel>
+</rss>

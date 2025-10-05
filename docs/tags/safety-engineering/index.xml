@@ -6,8 +6,15 @@
     <description>Recent content in Safety Engineering on Serhat Giydiren</description>
     <generator>Hugo -- 0.149.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Aug 2025 12:45:43 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Sep 2025 19:00:00 +0300</lastBuildDate>
     <atom:link href="https://serhatgiydiren.com/tags/safety-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: September 28, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-28-2025/</link>
+      <pubDate>Sun, 28 Sep 2025 19:00:00 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-28-2025/</guid>
+      <description>A diary entry on the 4th chapter of the AI Safety Book, which discusses the engineering principles required to build robust and reliable AI systems, drawing parallels with traditional safety engineering fields.</description>
+    </item>
     <item>
       <title>AI Safety Diary: August 9, 2025</title>
       <link>https://serhatgiydiren.com/ai-safety-diary-august-9-2025/</link>

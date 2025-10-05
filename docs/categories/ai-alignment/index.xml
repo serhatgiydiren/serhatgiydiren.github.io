@@ -6,8 +6,29 @@
     <description>Recent content in AI Alignment on Serhat Giydiren</description>
     <generator>Hugo -- 0.149.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Sep 2025 19:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 28 Sep 2025 19:00:00 +0300</lastBuildDate>
     <atom:link href="https://serhatgiydiren.com/categories/ai-alignment/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: September 28, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-28-2025/</link>
+      <pubDate>Sun, 28 Sep 2025 19:00:00 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-28-2025/</guid>
+      <description>A diary entry on the 4th chapter of the AI Safety Book, which discusses the engineering principles required to build robust and reliable AI systems, drawing parallels with traditional safety engineering fields.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: September 27, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-27-2025/</link>
+      <pubDate>Sat, 27 Sep 2025 19:00:00 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-27-2025/</guid>
+      <description>A diary entry on the 3rd chapter of the AI Safety Book, focusing on the core challenges of single-agent safety, such as specifying correct reward functions and preventing unintended behaviors in a single AI system.</description>
+    </item>
+    <item>
+      <title>AI Safety Diary: September 24, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-24-2025/</link>
+      <pubDate>Wed, 24 Sep 2025 19:00:00 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-24-2025/</guid>
+      <description>A diary entry on the 3rd chapter of the AI Safety Atlas, which covers the different high-level strategies being pursued to mitigate AI risks, including technical alignment, policy, and strategy research.</description>
+    </item>
     <item>
       <title>AI Safety Diary: September 21, 2025</title>
       <link>https://serhatgiydiren.com/ai-safety-diary-september-21-2025/</link>

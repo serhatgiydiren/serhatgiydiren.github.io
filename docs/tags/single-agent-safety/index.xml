@@ -6,8 +6,15 @@
     <description>Recent content in Single-Agent Safety on Serhat Giydiren</description>
     <generator>Hugo -- 0.149.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Aug 2025 12:45:43 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 27 Sep 2025 19:00:00 +0300</lastBuildDate>
     <atom:link href="https://serhatgiydiren.com/tags/single-agent-safety/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Safety Diary: September 27, 2025</title>
+      <link>https://serhatgiydiren.com/ai-safety-diary-september-27-2025/</link>
+      <pubDate>Sat, 27 Sep 2025 19:00:00 +0300</pubDate>
+      <guid>https://serhatgiydiren.com/ai-safety-diary-september-27-2025/</guid>
+      <description>A diary entry on the 3rd chapter of the AI Safety Book, focusing on the core challenges of single-agent safety, such as specifying correct reward functions and preventing unintended behaviors in a single AI system.</description>
+    </item>
     <item>
       <title>AI Safety Diary: August 9, 2025</title>
       <link>https://serhatgiydiren.com/ai-safety-diary-august-9-2025/</link>
