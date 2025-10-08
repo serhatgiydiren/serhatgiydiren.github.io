@@ -16,7 +16,7 @@ tags:
   - "ai governance"
 ---
 
-You can find the book on Amazon: [If Anyone Builds It, Everyone Dies](https://amzn.to/4pY960o)
+You can find the book on Amazon: [If Anyone Builds It, Everyone Dies](https://amzn.to/4pW5o7D)
 
 # Introduction to the Book
 
