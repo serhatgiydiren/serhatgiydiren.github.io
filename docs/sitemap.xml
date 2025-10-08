@@ -2,19 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://serhatgiydiren.com/posts/</loc>
-    <lastmod>2025-10-08T13:51:06+00:00</lastmod>
-  </url><url>
-    <loc>https://serhatgiydiren.com/</loc>
-    <lastmod>2025-10-08T13:51:06+00:00</lastmod>
+    <loc>https://serhatgiydiren.com/tags/ai-alignment/</loc>
+    <lastmod>2025-10-08T10:51:06+00:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/tags/ai-governance/</loc>
-    <lastmod>2025-10-02T19:00:00+03:00</lastmod>
-  </url><url>
-    <loc>https://serhatgiydiren.com/categories/ai-governance/</loc>
-    <lastmod>2025-10-02T19:00:00+03:00</lastmod>
+    <lastmod>2025-10-08T10:51:06+00:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/categories/ai-safety/</loc>
+    <lastmod>2025-10-08T10:51:06+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/categories/book-review/</loc>
+    <lastmod>2025-10-08T10:51:06+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/book-review/</loc>
+    <lastmod>2025-10-08T10:51:06+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/categories/</loc>
+    <lastmod>2025-10-08T10:51:06+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/eliezer-yudkowsky/</loc>
+    <lastmod>2025-10-08T10:51:06+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/existential-risk/</loc>
+    <lastmod>2025-10-08T10:51:06+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/if-anyone-builds-it-everyone-dies-book-review/</loc>
+    <lastmod>2025-10-08T10:51:06+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/miri/</loc>
+    <lastmod>2025-10-08T10:51:06+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/posts/</loc>
+    <lastmod>2025-10-08T10:51:06+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/</loc>
+    <lastmod>2025-10-08T10:51:06+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/superintelligence/</loc>
+    <lastmod>2025-10-08T10:51:06+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/tags/</loc>
+    <lastmod>2025-10-08T10:51:06+00:00</lastmod>
+  </url><url>
+    <loc>https://serhatgiydiren.com/categories/ai-governance/</loc>
     <lastmod>2025-10-02T19:00:00+03:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/tags/ai-safety-book/</loc>
@@ -26,16 +56,10 @@
     <loc>https://serhatgiydiren.com/ai-safety-diary-october-2-2025/</loc>
     <lastmod>2025-10-02T19:00:00+03:00</lastmod>
   </url><url>
-    <loc>https://serhatgiydiren.com/categories/</loc>
-    <lastmod>2025-10-02T19:00:00+03:00</lastmod>
-  </url><url>
     <loc>https://serhatgiydiren.com/tags/international-coordination/</loc>
     <lastmod>2025-10-02T19:00:00+03:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/tags/policy/</loc>
-    <lastmod>2025-10-02T19:00:00+03:00</lastmod>
-  </url><url>
-    <loc>https://serhatgiydiren.com/tags/</loc>
     <lastmod>2025-10-02T19:00:00+03:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-october-1-2025/</loc>
@@ -140,9 +164,6 @@
     <loc>https://serhatgiydiren.com/ai-safety-diary-september-23-2025/</loc>
     <lastmod>2025-09-23T19:00:00+03:00</lastmod>
   </url><url>
-    <loc>https://serhatgiydiren.com/tags/existential-risk/</loc>
-    <lastmod>2025-09-23T19:00:00+03:00</lastmod>
-  </url><url>
     <loc>https://serhatgiydiren.com/tags/misuse/</loc>
     <lastmod>2025-09-23T19:00:00+03:00</lastmod>
   </url><url>
@@ -226,9 +247,6 @@
   </url><url>
     <loc>https://serhatgiydiren.com/tags/critical-thinking/</loc>
     <lastmod>2025-09-16T19:00:00+03:00</lastmod>
-  </url><url>
-    <loc>https://serhatgiydiren.com/tags/ai-alignment/</loc>
-    <lastmod>2025-09-15T18:07:18+03:00</lastmod>
   </url><url>
     <loc>https://serhatgiydiren.com/ai-safety-diary-september-15-2025/</loc>
     <lastmod>2025-09-15T18:07:18+03:00</lastmod>
